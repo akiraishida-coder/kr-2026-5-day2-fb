@@ -148,15 +148,15 @@ nav.back a:hover {
   line-height: 1.75;
 }
 
-.feedback .fb-quote-inline {
-  display: inline;
-  background: #f0f0f0;
-  border-left: 3px solid #bdbdbd;
-  padding: 2px 10px;
-  margin: 0 2px;
-  border-radius: 4px;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+.feedback .fb-quote-plain {
+  color: #444;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+.feedback blockquote.fb-quote + .fb-p,
+.feedback .fb-p + blockquote.fb-quote {
+  margin-top: 0;
 }
 
 .kaitou-link-wrap {
