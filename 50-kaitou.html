@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hs — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="50.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">Hs님의 과제 답변</h2>
+      <p class="meta">2일차 #50</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<p class="missing">1일차 과제 답변을 찾지 못했습니다（이메일·닉네임 매칭을 확인해 주세요）.</p>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">강의를 보면서 내가 하고싶었던 사업과 방법이 추상적이었는데 구체적으로 타겟 고객과 아이템을 선점 할수 있어서 좋았다</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">[자신의 데이터]
+Q1. 주요 경력: [여기에 답변 입력]
+    직장인보다는 사업가를 해보고 싶었는데 ‘1년만 경력쌓고 사업을 하자’ 이마인드 였는데
+           6년간 방황하고 이제 겨우 일한지 4개월차 되었다. 계속 사업에 대한 갈망이 있는데 실천을 못하는상태 
+‘심리, 사주, 상담, 감정, 영성, 타로’ 힐링등 그러한 주제에대해서 관심이 너무많고 6년간 공부했다.
+사주는 운명적인 것이나 힘들지만 감정을 다루고 마음을 다룰수 있으면 인생에 발전을 하는 것을 느꼈고 
+그러한 상태를 매일 명상이나 지속한다.
+
+Q2. 가장 큰 고민과 극복 경험: [여기에 답변 입력]
+  당신이 일이나 인생에서 깊이 고민했던 것은 무엇인가요?
+    -자꾸만 사람들과 같이 일하는 과정에서 섬세하고 다르고 예민하다고 많이 들었는데 내가 문제라고 생각했다.
+     어딜가나 항상 뒷말이 들고 사람들과 어울리지 못했다.
+    
+    그리고 그것을 어떻게 극복했나요?
+   -심리, 상담, 영성등을 공부하고 마음과 감정을 다루는 법을 공부를 많이 했다. 그러면서 남들에 대한 시선이나
+   열등감을 극복할 수 있었다.
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: [여기에 답변 입력]
+   지금까지의 인생에서 가장 많은 “시간”이나 “돈”을 쏟아온 것은 무엇인가요?
+   -나를 위해 가치발전이나 사업을 하는 마케팅, 인생컨설팅, 연애 에 대해서 고민을 했고 시간이나 돈을쓰고
+    공부를 했다. 
+   
+   혹은 시간 가는 줄 모르고 몰입하거나 연구하거나 열중하게 되는 것은 무엇인가요?
+  -나의 감정이나 심리, 가치발전, 마음공부, 연애심리와 사람들과 관계에 대한 것 마인드 컨트롤에 대해서 
+  계속 연구하고 열중한다.
+Q4. 자기 돈을 들여 해결하거나 배운 것: [여기에 답변 입력]
+    과거에 당신이 “자기 돈을 들여”, 즉 돈을 지불해서 누군가에게 해결받은 고민이나 배운 것은 무엇인가요?
+-자꾸 사람들앞에서 위축되거나 눈치고보 예민한 사실에 대해서 상담을 받고 같이 연기수업을 하고
+또는 비즈니스나 돈을벌기 위해서 배운적이 있다.
+
+Q5. 상담받는 것: [여기에 답변 입력]
+    친구나 동료로부터 자주 “상담받는 것”이나 “조언을 구하는 것”이 있나요?
+   -사업을 해야하는데 어떻게 주제가 정해주지 않고 실천을 하지 않아서 계속 방황하는 모습에 대해서 조언을 
+   구했다. 
+
+   그것은 어떤 장르의 고민인가요?
+  -예를들어서 대학을 나와서 6년간 방황을 하고 1년만 경력쌓고 비즈니스를 하자였는데 계속 미루기만 해왔다.
+  일을 하면서 투잡으로 하는게 고민이었다.
+    
+또 그에 대해 평소 어떤 식으로 조언해 주고 있나요?
+-그냥 일단은 생각을 하지말고 작은 시도라도 해라고 실행이 중요하다고 사업을 해주신 멘토님 4명이 있었는데 
+해라고 했다.
+
+Q6. 자기도 모르게 열변을 토하는 것: [여기에 답변 입력]
+  술자리나 잡담 중에, 누가 묻지도 않았는데 “자기도 모르게 열변을 토하게 되는 것”이나, 
+시간이 가는 줄 모르고 이야기하게 되는 “주제”가 있나요?
+-인간의 감정을 다루는 것, 어떻게 하면 세상이 더욱더 섬세해지고 거칠게 변하는데 어떻게 감정을 다스리고 
+자신이 세상에 적응 할수 있는가? 라이프 컨설팅이나 그러한 일에대해서 이야기한다.
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: [여기에 답변 입력]
+일이나 취미에서, 다른 사람은 신경 쓰지 않을 법한 세세한 부분에 유독 “집착하게 되는 것”이 있나요?
+  -사람들과의 관계, 끌어당김의 법칙, 인간의 감정, 이성관계, 성적관계, 이끌림, 매력등 사람에대한 것에 관심을가짐
+  ‘내면소통’이다.
+  
+  또한 다른 사람에게 평가받았거나 스스로 잘한다고 생각하는 것은 무엇인가요?
+ -내가 스스로 마음공부나 마음을 단단하게 하기위해서 명상, 연기, 심리, 감정등을 배운 것이다.
+
+Q8. 질투의 대상: [여기에 답변 입력]
+   동종업계 사람이나 타인을 보면서 “좋겠다”, “분하다”라고 질투하게 되는 사람은 누구인가요?
+   -이상하게 타인을 보면서 ‘좋겠다‘, 분하다 하는 부분은 나에게 있다. 나같은 경우에는 주변에 좋은 선생님, 사업      가등이 많고 인맥만 많다. 그사람들고 얼른 실천해라고 하는데 나는 6년간 직장 1년경력을 위해 준비만 하고      지금 일한지 4개월차 되었고 계속 실천하지 못하는 나에게 분노가 있다.
+ 
+   또는 어떤 상태를 보면 그런 감정이 드나요?
+  -준비를 하면 귀찮고 그런게 있다. 하지만 현실이 바뀌지 않고 실천을 안하는 상태에서 나에게 분노가 느껴진다.
+
+Q9. 분노나 의분: [여기에 답변 입력]
+    최근 세상이나 당신의 업계에 대해 “이건 이상하다”, “좀 더 이렇게 되어야 한다”라고 분노나 의로운 분노를 느끼는 것이 있나요?
+-세상에 연애나 상담업이나 정말로 힘들어서 컨설팅을 해주는곳은 많지만 진짜 진심으로 마음을 담아서 사람들에게 
+상담이나 컨설팅을 해주는 것은 못보았다. 나 또한 거기에서 도움을 주는 역할을 하는 선지자가 되고싶지만 
+추상적인데 구체적인 방법을 몰라서 어렵다.
+
+Q10. 무료로라도 돕고 싶은 사람: [여기에 답변 입력]
+    돈 걱정이 전혀 없고 완전히 자원봉사라고 하더라도, “이 사람을 위해서라면 힘이 되어주고 싶다”고 생각하는 사람은 구체적으로 어떤 사람인가요?
+-정말 성격이 섬세하고 민감해서 멘탈이 약해서 겁먹어서 사회에 적응하지 못하는 사람들에게 위안이 되고싶다.
+남들에게 상담하는게 아닌 스스로 감정을 터특하고 마음을 다스리는 법을 알려주고 싶다. 더불어 라이프 컨설팅도 해주고 싶다. 나같은 경우도 6년을 방황하다 이제 직장 막적응하는데 4개월이지만 지금도 힘들지만 마음을 다스린다.
+
+Q11. 인생의 목표: [여기에 답변 입력]
+   당신의 인생이 끝났을 때, 묘비에 한마디가 새겨진다면 어떤 말이 새겨지기를 바라나요?
+   -많은 사람들이 세상에 적응하지 못할 때 한줄기 도움이 되어서 좋다.
+ 
+   또는 어떤 인물이었다고 기록되기를 바라나요?
+  -유명해 지지않아도 된다. 그냥 멘토로서 한사람의 인생에서 도움이 되는 사람이 되고싶다.
+
+​【아이디어 1: HSP(매우 민감한 사람)를 위한 &#x27;사회 적응 멘탈 설계&#x27; 12주 코칭】
+​1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+​왜 당신인가: Q2에서 스스로를 &#x27;예민하고 섬세한 문제아&#x27;라 생각했지만, Q3·Q4에서 수천만 원과 6년의 시간을 들여 연기, 심리, 명상을 통해 이를 &#x27;사회적 무기&#x27;로 바꾼 실전 증명자이기 때문입니다. &quot;방황만 6년 했던 나도 4개월째 직장에 적응 중이다&quot;라는 서사는 동일한 고통을 겪는 이들에게 대체 불가능한 신뢰(USP)를 줍니다.
+​2. 제공 스타일: 동반 지원형
+​이유: 민감한 사람들은 단순 지식보다 &#x27;매일의 감정 기복&#x27;을 잡아줄 지지자가 필요합니다. 질문자님이 매일 실천하는 명상과 내면 소통법을 타깃의 일상에 이식하는 밀착 관리가 적합합니다.
+​3. 타깃 고객과 깊은 고민
+​타깃: 직장 내 인간관계나 업무 강도에 압도되어 퇴사를 반복하거나, 사회 진입을 두려워하는 &#x27;HSP(민감자)&#x27;.
+​고민: &quot;나만 유별난 걸까?&quot;, &quot;이 거친 세상에서 어떻게 나를 지키며 돈을 벌 수 있을까?&quot;라는 생존적 공포.
+​4. 제공하는 가치 (Before → After)
+​Before: 작은 지적에도 무너지고 사람 눈치 보느라 에너지를 다 쓰는 상태.
+​After: 자신의 예민함을 &#x27;섬세한 업무 감각&#x27;으로 전환하고, 감정 컨트롤을 통해 조직 내에서 평온하게 생존하는 상태.
+​5. 벤치마크 리서치
+​키워드: &quot;HSP 생존 전략&quot;, &quot;민감한 사람들을 위한 커리어 코칭&quot;, &quot;내면 소통 루틴&quot;
+​사례: 유튜버 &#x27;단희TV&#x27;의 마인드셋 강의 또는 클래스101의 &#x27;섬세한 사람들을 위한 심리 가이드&#x27;.
+​6. 상품 설계 로드맵
+​스텝 1: [90분 멘탈 진단 세션] - 현재 스트레스 지수 측정 및 맞춤형 명상/감정 정리법 처방 (5~10만 원)
+​스텝 2: [3개월 사회 적응 동반 지원] - 주 1회 코칭 + 데일리 감정 일기 피드백 + 긴급 멘탈 채팅 (250만 원 이상)
+​【아이디어 2: 영성 기반의 &#x27;현실주의 비즈니스 컨셉&#x27; 컨설팅】
+​1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+​왜 당신인가: Q1·Q7에서 사주, 타로, 영성을 6년간 공부하면서도, Q8·Q9처럼 &#x27;실천 없는 추상성&#x27;에 분노를 느껴본 사람입니다. &quot;뜬구름 잡는 영성이 아니라 돈이 되는 영성&quot;을 직접 설계하고 고민해온 시간(Q3)이 비즈니스 아이디어와 결합되어 강력한 설득력을 갖습니다.
+​2. 제공 스타일: 강의 및 프로젝트형
+​이유: 질문자님이 가진 사주, 심리, 마케팅 지식은 매우 희소한 조합입니다. 이를 &#x27;비즈니스 언어&#x27;로 체계화하여 전달하는 전문 스쿨 형식이 적합합니다.
+​3. 타깃 고객과 깊은 고민
+​타깃: 재능은 많지만 &#x27;실행력&#x27;이 부족해 수익화를 못 하는 예비 창업자나 힐러.
+​고민: &quot;내 사주나 영적 재능을 어떻게 돈으로 바꿀까?&quot;, &quot;실행이 너무 힘든데 내 운명에 맞는 방식은 뭘까?&quot;
+​4. 제공하는 가치 (Before → After)
+​Before: 공부만 하다가 행동하지 못하고 자책하며 방황하는 상태.
+​After: 자신의 영적 베이스를 명확한 &#x27;비즈니스 모델&#x27;로 확정하고 첫 수익을 내는 상태.
+​5. 벤치마크 리서치
+​키워드: &quot;영성 비즈니스 수익화&quot;, &quot;사주 기반 브랜딩&quot;, &quot;의식 성장 마케팅&quot;
+​사례: 해외의 &#x27;Manifestation Coach&#x27; 또는 국내 브런치/크몽의 &#x27;라이프 브랜딩 컨설턴트&#x27;.
+​6. 상품 설계 로드맵
+​스텝 1: [사주/성향 기반 비즈니스 적성 분석] - 타고난 기질에 맞는 사업 아이템 3가지 제안 (15만 원)
+​스텝 2: [제로이치 창업 런칭 프로그램] - 아이템 선정부터 첫 판매까지 8주간 실전 동반 실행 (300만 원 이상)
+​【아이디어 3: 섬세한 남자를 위한 &#x27;매력 소통 &amp; 관계&#x27; 마스터 코스】
+​1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+​왜 당신인가: Q7에서 이성 관계, 성적 이끌림, 매력, 연기 수업(Q4)까지 섭렵하며 &#x27;사람을 끄는 법&#x27;을 연구했습니다. 특히 &#x27;섬세한 남자&#x27;로서 겪는 위축감을 어떻게 &#x27;부드러운 카리스마&#x27;로 바꿀 수 있는지 본인이 직접 체득했습니다.
+​2. 제공 스타일: 동반 지원형
+​이유: 매력은 지식이 아니라 &#x27;태도&#x27;입니다. 타겟과 함께 현장에 나가거나 실시간 소통을 통해 행동 교정을 도와주는 밀착 지원이 필수적입니다.
+​3. 타깃 고객과 깊은 고민
+​타깃: 착하고 섬세하지만, 이성 앞이나 사회적 관계에서 매력이 없어 고민인 남성들.
+​고민: &quot;왜 나는 만만하게 보일까?&quot;, &quot;내 진심을 어떻게 매력적으로 전달할 수 있을까?&quot;
+​4. 제공하는 가치 (Before → After)
+​Before: 눈치 보고 위축되어 관계에서 주도권이 없는 상태.
+​After: 내면 소통을 통해 단단한 자존감을 세우고, 섬세함을 무기로 상대를 매료시키는 상태.
+​5. 벤치마크 리서치
+​키워드: &quot;섬세한 남자의 연애 심리&quot;, &quot;내면 소통 매력학&quot;, &quot;연기 기반 커뮤니케이션&quot;
+​사례: 유튜브 &#x27;희렌최&#x27;의 대화법 또는 남성 심리 전문 커뮤니티의 프리미엄 코칭.
+​6. 상품 설계 로드맵
+​스텝 1: [매력 보이스 &amp; 마인드셋 원데이 클래스] - 첫인상과 대화 패턴 진단 및 교정 (10만 원)
+​스텝 2: [남성 매력 재건 100일 프로젝트] - 스타일링, 대화법 실전 연습, 마인드 컨트롤 동반 케어 (400만 원 이상
+
+-&gt;아이디어에 대해서는 내면의 결핍이있어서 바로하고싶습니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">1.고객에게 제공할때 아무래도 밀착형 코친으로 들어가서 시간 배분과 상담시간을 어떻게 조절할지?
+
+2.마인즈 측면에서 이사람이 얼마나 아픔을 견뎠고 지금까지 어떠한 고통을 겪은것을 어떻게 나타날지? 
+
+3.유튜브나 인스타로 채널을 만들거나 시간이 없으면 메타광고를 돈을내고 돌릴것이다</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">손실</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">오픈채팅이나 커뮤니티등에서 비슷한 주제로 고민하는 사람들을 찾아모을것입니다. 블라인드등</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

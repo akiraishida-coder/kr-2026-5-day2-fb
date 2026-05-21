@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김회원 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="index.html">← 목록으로</a></nav>
+    
+    <article class="card">
+      <h2 class="person">김회원님께</h2>
+      <p class="meta">2일차 #15</p>
+      <p class="kaitou-link-wrap">
+        과제 답변 내용：
+        <a class="kaitou-link" href="15-kaitou.html">15-kaitou.html</a>
+      </p>
+      <section class="feedback">
+        <h3>피드백</h3>
+        <p class="prewrap">「바로 해보고 싶지 않다」「남을 서포트할 준비가 필요」— 이 판단 자체를 존중하는 편이 좋습니다. 억지로 안 1을 본命으로 하지 않아도 됩니다.</p>
+<p class="prewrap">벽에는</p>
+<blockquote>「경험을 돈 받고 제공한 적 없음·노하우가 아닐까 두려움·3가지 모두 장벽」</blockquote>
+<p class="prewrap">이 있었습니다. AI안 ① 「매출 제로 탈출—기술창업 CEO 영업 동행」은 Q10·Q2와 연결됩니다. 방향이 나쁜 것은 아닙니다.</p>
+<p class="prewrap">다만 여기서 한번 멈춰 보셨으면 하는 점이 있습니다.</p>
+<p class="prewrap">**혹시 AI안은 「앞으로 잘 팔리는 쪽의 코치·동행자」라는 미래만 그리고, 지금 당신의 위치—제조 스타트업 대표 7년차인데 아직 「우리 제품이 안 팔린다」는 고통을 현재진행형으로 안고 있는—까지는 충분히 보지 못한 것은 아닐까요.**</p>
+<p class="prewrap">그 위치에서 「다른 CEO의 영업 동행」「월 100~300만」 같은 컨설 그림을 짊어지면, 고객도 「실적은?」「우리보다 잘 팔리나?」라고 묻게 됩니다. 당신도 거기서 걸리는 것 같았습니다. B2B 영업 동행은 **자기 회사에서 첫 계약·반복 계약이 움직이기 시작한 뒤**에야 설득력이 확 달라집니다.</p>
+<p class="prewrap">1·2일차 11문을 읽으면 다른 축도 있습니다.</p>
+<ul><li>Q5·Q6: 직장에서의 처신·비전·미래 준비를 전략적으로 말하는 데 열이 있음</li><li>Q7: 창의성·실행력·영업력 평가</li><li>Q10: 언젠가 「기술은 있는데 안 파는 CEO」를 돕고 싶음—다만 **지금은 그 화살의 ‘출구 쪽’이 되기 전**</li></ul>
+<p class="prewrap">**아이디어 베이스로, 지금 움직이기 쉬운 다른 한 걸음**（안 ①과 다른 축）을 하나만 제안합니다.</p>
+<p class="prewrap">**「직장·커리어의 막힘을 전략적으로 정리하는 60~90분 대화」**
+— 무료여도, 처음엔 아주 낮은 금액이어도 됩니다. 원래 Q5에서 하시던 「처신·비전」 상담의 확장입니다. B2B 영업 컨설보다 허들이 낮고, 「가르치는 비즈니스」도 「매출 제로 탈출 전문가」도 아닙니다. 사례를 만들면서 「듣고 다음 한 수를 함께 정하는」경험이 쌓입니다.</p>
+<p class="prewrap">물론 자세히 듣지 못한 부분도 있어, 제가 느낀 점을 나누는 것입니다. 지금 당신에게 맞는 **순서**를 생각하기 위한 제안입니다.</p>
+<p class="prewrap">안 ①을 나중에 하고 싶어도, 0→1은 위의 작은 대화나, 원액션 「커뮤니티」에서 같은 고민(매출·설명·첫 계약)의 이야기를 듣는 것부터로 충분합니다. 반도체·스타트업 대표 경험은, 그 과정에서 메모를 남기면 나중에 안 ①에 힘이 됩니다.</p>
+<p class="prewrap">과제2 원액션 「커뮤니티 살펴보기」는 그대로 진행하세요. 다만 「조사했다」로 끝내지 마세요. 커뮤니티·SNS는 입구이지 목표가 아닙니다. 비슷한 고민 글을 읽었으면 짧게 답장해 **대화 한 가닥**까지. 내 말로 「무엇을 물어봤는지」 메모하는 연습이 다음 소구 한 줄이 됩니다.</p>
+<p class="prewrap">입구 한 줄 예(나중용): Before 「기술은 있는데 왜 안 팔리지」→ After 「첫 계약까지 구조를 함께 짠다」. 워크숍 라이브 최종일은, 언제 상품화하든 입구 말의 생각으로 보시면 좋습니다.</p>
+<p class="prewrap">30일 캠프는 혼자 조사만 하다 멈추기 쉬운 한 달을 덜 외롭게 하는 장입니다.</p>
+<p class="prewrap">---</p>
+      </section>
+    </article>
+    
+  </main>
+</body>
+</html>

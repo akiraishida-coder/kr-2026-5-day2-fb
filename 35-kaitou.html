@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>황춘원 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="35.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">황춘원님의 과제 답변</h2>
+      <p class="meta">2일차 #35</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">오늘 강의를 들으면서 가장 크게 와닿은 건, 서포트 비즈니스의 본질이 결국 &#x27;내가 직접 겪어본 사람&#x27;이어야 한다는 점이었습니다. 저는 외식 프랜차이즈 업계에서 오랜 시간 일하면서 수백 개 매장의 오픈과 폐점을 지켜봤는데, 돌이켜보면 성공한 가맹점주들의 공통점은 기술이 뛰어나서가 아니라 옆에서 끝까지 같이 뛰어주는 사람이 있었기 때문이었습니다. 강의에서 말한 것처럼, 사람들은 정보가 아니라 &#x27;이 사람이면 나를 끝까지 붙잡아주겠다&#x27;는 믿음에 돈을 내는 거라는 말이 정말 와닿았습니다.
+그리고 처음부터 완벽한 상품을 만들려 하지 말고, 가까운 사람을 먼저 진심으로 도와보라는 이야기도 인상 깊었습니다. 저도 그동안은 조직 안에서 시스템을 만드는 일을 해왔지, 개인 사업자를 1:1로 도와본 경험은 사실 많지 않거든요. 그 부분에서 시작점을 다시 생각하게 됐습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">식당 창업을 준비하는 사람들을 돕는 서포트 비즈니스를 구상하고 있습니다. 프랜차이즈에 가입하지 않고 독립 매장으로 시작하려는 분들이 특히 초기에 많이 헤매는데, 상권 분석부터 메뉴 구성, 인테리어 동선, 초기 운영 세팅까지 실질적으로 옆에서 잡아주는 사람이 거의 없습니다. 컨설팅이라고 하면 보고서만 던져주고 끝나는 경우가 많은데, 저는 오픈 전후로 직접 현장에서 같이 뛰면서 자리 잡을 때까지 동행하는 형태를 만들고 싶습니다.
+
+지금까지 쌓아온 프랜차이즈 본사 운영 경험, 매장 개설 노하우, 메뉴 개발과 원가 관리 경험을 개인 창업자 눈높이에 맞게 풀어내는 게 핵심이라고 생각합니다. 우선은 주변에서 실제로 식당 창업을 고민하는 분들을 무료로 도와보면서 제 방식이 통하는지 검증해보려 합니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">솔직히 말하면, 오랫동안 조직 안에서 일해온 사람이 혼자 힘으로 돈을 벌 수 있을까 하는 불안이 있습니다. 회사라는 간판이 있을 때는 자연스럽게 사람들이 모이고 일이 만들어졌는데, 그걸 벗어나서 온전히 제 이름으로 누군가에게 가치를 전달하고 대가를 받는 건 전혀 다른 일이라는 걸 알고 있습니다.
+
+또 하나는, 아는 것을 상품으로 만드는 과정이 생각보다 막막하다는 겁니다. 머릿속에는 도와줄 수 있는 게 많은데, 그걸 어떤 형태로 포장하고 어떤 사람에게 먼저 다가가야 하는지 아직 명확하지 않습니다. 결국은 강의에서 말한 것처럼 생각만 하지 말고 한 명이라도 먼저 도와보는 게 답이겠다는 생각이 듭니다. 그 한 명의 성공 사례가 제 스토리가 되고, 그 스토리가 다음 고객을 데려올 테니까요.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">개인사업의 고민을 명확한 사업 방향으로 이끌어 갈 수 있는 방법론을 알게 되어 좋았습니다</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">서포트 비즈니스 관련해서 식당 코치의 진짜 목표는 사장님을 노동에서 해방시켜 &#x27;진짜 경영인&#x27;으로 만드는 일이라고 생각 합니다. 코치의 커뮤니케이션을 통해 사장님은 장사 스트레스에서 완전히 벗어나서. 돈은 시원하게 벌면서 내 시간까지 잘 챙기는 &#x27;갓생&#x27; 장사를 돕고 싶습니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">“사장님 해방”을 말로만 하면 안 되고, 실제로 매장이 굴러가게 만들어야 합니다. 사장님이 없어도 매장이 돌아가는 구조를 어떻게 만들 것인가?의 답을 만들어야 합니다. 그래서 식당 코치가 고객에게 제공해야 할 기술은 단순 조언이 아니라 운영 시스템 구축 능력입니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2(손실) 입니다.</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">“실제 식당 사장님 3명에게 연락해서, ‘매장에 묶여 사는 스트레스’와 ‘사장님 없이도 돌아가는 매장’에 대한 진짜 니즈가 있는지 직접 물어봅니다.”</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

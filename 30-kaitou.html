@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>지원 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="30.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">지원님의 과제 답변</h2>
+      <p class="meta">2일차 #30</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">오늘 강의 깨달음
+뭔가 특별하다는것을 잘하는것에서만 찾지말고 평범해도 할 수 있다는 생각으로 찾아보면 나도 할 수 있을것 같다.
+현 시점의 비즈니스 아이디어
+구체적인것은 없지만 사람들의 고민을 들어주고 방향성을 제시해 주는 일을 하고 싶다.
+지금 안고 있는 인생의 고민
+직장에서 말고 내일을 하면서 돈을 많이 벌고싶고 나이가 들어서도 계속 할 수 있는 일을 찾고싶다</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">타로상담이나 로고 디자인</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">돈을 많이 벌고 오래 할 수 있는 일이 뭐가 있을지 고민입니다</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">내가 해 왔던 일들이 그래도 가치가 있다는 생각이 들었고 사업 아이템이 될 수 있다는게 신기하고 이걸 실행했을 때 과연 이루어질까라는 기대감도 있습니다. 어떤 경험도 다른 사람에게는 도움이 될 수 있다는 생각을 하면서 내가 진짜 어떻게 적용할 수 있을지 계속 생각해봐야할 것 같습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1.Q1. 주요 경력: 면세점에서 18년 근무중 Q2. 가장 큰 고민과 극복 경험: 항상 돈 때문에 문제가 많이 생겼고 지금도 해결중 Q3. 시간과 돈을 투자하거나 몰입한 것: 새로운 강의를 듣는것 Q4. 자기 돈을 들여 해결하거나 배운 것: 항상 현재가 불안하다고 느껴 여러가지 강의를 들었다. 로고, 마케팅, 타로 Q5. 상담받는 것: 고민이 있거나 미래에 대한 이야기를 많이 하는 편이다 Q6. 자기도 모르게 열변을 토하는 것:딱히 없음 Q7. 비정상적일 정도의 집착과 잘하는 것:집착하는것도 잘하는것도 없는것 같다. Q8. 질투의 대상:자신의 일에 확신이 있고 당당한 사람 Q9. 분노나 의분: 불합리하거나 기본상식에서 벗어나는 일 Q10. 무료로라도 돕고 싶은 사람: 어린 학생들을 돕고 싶고 성장하기 위해 애쓰는 사람들 Q11. 인생의 목표: 자유롭고 다른 사람을 도와줬던 사람
+2. 【아이디어 1: 미래불안 탈출 실전 코칭 — ‘퇴근 후 두 번째 인생 설계소’】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+당신은:
+
+18년 직장 생활
+미래 불안
+돈 문제
+자기계발 중독 수준의 학습
+여러 분야 탐색 경험
+
+을 모두 가지고 있습니다.
+
+즉 당신은:
+“퇴사하고 싶은데 무서운 사람”
+“뭘 해야 할지 몰라 계속 강의만 듣는 사람”
+을 너무 잘 이해합니다.
+
+이 시장의 핵심 문제는 정보 부족이 아닙니다.
+
+이미:
+
+유튜브
+클래스101
+블로그
+
+다 넘쳐납니다.
+
+하지만 사람들은:
+
+“그래서 내가 뭘 해야 하는데?”
+에서 멈춥니다.
+
+당신의 가치는:
+
+방향 정리
+현실적인 첫 수익 구조 설계
+감정 지지
+지속 실행 관리
+
+입니다.
+
+즉:
+“혼자서는 못 움직이는 사람의 실행 동반자”
+
+포지션입니다.
+
+2. 제공 스타일 — 동반 지원형
+
+이건 강의형보다:
+
+카톡 피드백
+주간 체크
+현실적인 실행 코칭
+
+이 핵심입니다.
+
+왜냐하면 타깃의 문제는:
+“정보 부족”이 아니라
+“불안 때문에 실행 못함”
+이기 때문입니다.
+
+3. 타깃 고객과 깊은 고민
+타깃
+30~50대 직장인
+미래가 불안한 사람
+강의만 계속 사는 사람
+부업 시작 못하는 사람
+퇴사 생각하는 사람
+깊은 고민
+“나만 뒤처진 느낌”
+“이대로 늙을까 무섭다”
+“돈이 계속 불안하다”
+“잘하는 게 없는 것 같다”
+“뭘 해야 할지 모르겠다”
+
+이건 매우 강력한 시장입니다.
+
+4. 제공 가치 — Before → After
+Before
+강의만 듣는다
+실행 못한다
+미래가 막막하다
+계속 비교한다
+After
+첫 실행 시작
+자기 강점 발견
+작은 수익 경험
+삶의 방향 회복
+5. 벤치마크 리서치
+참고 사례
+퇴사학교
+라이프해킹스쿨
+MKYU
+검색 키워드
+“직장인 부업 코칭”
+“퇴근 후 창업”
+“미래 불안 극복”
+“직장인 퍼스널브랜딩”
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+
+내용:
+
+현재 상황 분석
+강점 정리
+부업 방향 설계
+현실 실행 플랜
+
+형태:
+90분 줌 코칭
+
+예상 가격:
+5만~15만 원
+
+스텝 2 — 고가 동반 지원 패키지
+
+내용:
+
+3개월 실행 동반
+매주 체크인
+콘텐츠 제작 피드백
+수익화 방향 설계
+마인드 관리
+
+예상 가격:
+150만~300만 원
+
+【아이디어 2: 감정 회복형 타로 코칭 — ‘현실 타로 멘토링’】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+당신은 단순 점술형보다:
+“불안한 사람의 감정 흐름을 읽는 능력”
+이 강합니다.
+
+그리고 중요한 건:
+당신은 스스로도 미래 불안과 돈 문제를 오래 겪어왔습니다.
+
+그래서:
+“현실 조언 없는 감성 타로”
+와 다르게 갈 수 있습니다.
+
+USP는:
+
+“현실 회복형 타로”
+
+입니다.
+
+2. 제공 스타일 — 동반 지원형
+
+타로는 단발보다:
+
+감정 회복
+관계 회복
+자기 확신 회복
+
+의 지속 관리가 핵심입니다.
+
+3. 타깃 고객과 깊은 고민
+타깃
+연애 불안
+진로 불안
+자기 확신 부족
+감정 기복 심한 사람
+깊은 고민
+“나는 왜 확신이 없을까”
+“사람 관계가 힘들다”
+“계속 흔들린다”
+“누가 내 얘기를 들어줬으면 좋겠다”
+4. 제공 가치 — Before → After
+Before
+감정 소모
+반복 연애
+미래 불안
+After
+자기 감정 이해
+현실 선택 가능
+자기 확신 회복
+5. 벤치마크 리서치
+참고 사례
+Teal Swan
+Biddy Tarot
+검색 키워드
+“심리 타로”
+“힐링 타로”
+“자기이해 타로”
+“감정코칭 타로”
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+
+내용:
+
+연애/진로/감정 리딩
+현실 방향 조언
+감정 정리
+
+예상 가격:
+3만~7만 원
+
+스텝 2 — 장기 동반 프로그램
+
+내용:
+
+주간 감정 체크
+타로+현실 코칭
+자기 확신 회복 훈련
+
+예상 가격:
+80만~200만 원
+
+【아이디어 3: “평범한 사람 브랜딩” 실전 컨설팅 — ‘나도 브랜드가 될 수 있다’ 프로젝트】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 아이디어가 사실 가장 강력합니다.
+
+왜냐하면 당신은:
+
+로고
+마케팅
+블로그
+릴스
+퍼스널 브랜딩
+타로
+플레이스 마케팅
+
+등을 전부 “현실 생존용”으로 배웠습니다.
+
+즉:
+브랜딩을 예술이 아니라
+“먹고 살기 위한 무기”
+로 이해합니다.
+
+이건 시장에서 굉장히 강력합니다.
+
+2. 제공 스타일 — 동반 지원형
+
+브랜딩은:
+
+디자인보다
+실행과 지속이 중요합니다.
+
+그래서:
+“함께 만드는 구조”
+가 가장 적합합니다.
+
+3. 타깃 고객과 깊은 고민
+타깃
+소상공인
+1인샵
+초보 창업자
+자신감 없는 전문가
+깊은 고민
+“내가 너무 평범하다”
+“홍보를 못하겠다”
+“브랜드가 없다”
+“고객이 기억하지 않는다”
+4. 제공 가치 — Before → After
+Before
+그냥 평범한 가게
+방향 없는 SNS
+자신감 부족
+After
+브랜드 정체성 구축
+고객 기억 강화
+자신감 있는 운영
+5. 벤치마크 리서치
+참고 사례
+The Futur
+아는디자이너
+Gary Vaynerchuk
+검색 키워드
+“1인 브랜드 구축”
+“소상공인 브랜딩”
+“퍼스널 브랜딩 코칭”
+“작은 가게 브랜딩”
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+
+내용:
+
+브랜드 진단
+SNS 방향
+로고/콘셉트 피드백
+콘텐츠 전략
+
+예상 가격:
+10만~30만 원
+
+스텝 2 — 고가 동반 패키지
+
+내용:
+
+3~6개월 브랜딩 동행
+콘텐츠 피드백
+SNS 운영 전략
+고객 유입 설계
+브랜딩 문장 제작
+
+예상 가격:
+200만~500만 원
+3. 아이디어에 대한 방향은 좋은데 여기서도 내가 할 수 있을까 라는 생각이 먼저 들어서 그 부분먼저 생각을 좀 바꿔야할것 같아요. 평범한 사람브랜딩에 관심이 가긴 합니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">내가 주도적으로 할 수 있을까에 대한 자신감에 대한 생각이 많이 들고 고객에게 방향성을 제시해주지만 내가 성공을 한적이 없음에도 그게 먹힐 수 있을지에 대한 생각도 듭니다. 고객 유치를 하기 위해서는 블로그나 인스타를 통해 나를 알리면서 고객을 모아야할 것 같습니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2.0</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">sns를 살펴보면서 나와 같은 방향성을 가진 사람들을 찾아보고 어떻게 하고 있는지 조사를 해보겠습니다</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

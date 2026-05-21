@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>박진영 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="index.html">← 목록으로</a></nav>
+    
+    <article class="card">
+      <h2 class="person">박진영님께</h2>
+      <p class="meta">2일차 #32</p>
+      <p class="kaitou-link-wrap">
+        과제 답변 내용：
+        <a class="kaitou-link" href="32-kaitou.html">32-kaitou.html</a>
+      </p>
+      <section class="feedback">
+        <h3>피드백</h3>
+        <p class="prewrap">박진영님, 물리치료·공인중개·직종 10— 「나다움」「디지털 노마드」 동경과, 과제2의 **「서비스보다 물판」「준비가 안 됨」** 이 동시에 나왔습니다. 지금 본심에 가까운 건 장기 코칭보다 **짧은 「정리·실험」 상품**입니다.</p>
+<p class="prewrap">입구 한 줄은 워크숍 라이브 최종일에서 다룹니다. 녹화 후 프롬프트→1인용 한 줄→상담 순이 좋습니다.</p>
+<p class="prewrap">세컨드 오피니언: 안 1의 「동행 실험」은 「상담·코칭에 돈 쓴 경험」과 맞지만, **「팔고 싶다」면 4주 「진단 리포트+첫 제안문」 단발**이 부담이 적습니다. **「10개를 1문 가치로 압축하는 90분」**이 대화로 정리하는 강점과 직결됩니다.</p>
+<p class="prewrap">벽 「바로 시작 어렵다」— 과제2 「프롬프트 재작성+받은 상담·코칭 더」는 그대로 OK. **유료(소액) 1회 진단**을 시험하면 물판 감각에 가깝습니다.</p>
+<p class="prewrap">과제2 원액션 「次の一歩」는 그대로 진행하세요. 다만 「次の一歩」만으로 「조사했다」고 끝내지 마세요.</p>
+<p class="prewrap">커뮤니티·SNS 읽기는 고민의 말을 모으는 입구이지, 목표가 아닙니다. 「次の一歩」 다음은 「대화 한 가닥」까지.</p>
+<p class="prewrap">다만 혼자만 하면 멈추기 쉽습니다. 30일 캠프는 「1. 우선 바로 시작하기가 어렵다.…」 같은 고민을 안은 채로, 1달 동안 발신·대화를 이어가는 장입니다.</p>
+<p class="prewrap">&lt;!-- 3日目追記 --&gt;</p>
+<p class="prewrap">3일차 과제를 읽었습니다. 서포트라는 단어와 시야의 확장… 벽은 자신감·돈 쪽. 「조금씩」은 2일차 흐름과 잘 맞습니다. 30일 캠프 구체 질문은 별도 정리 예정입니다.</p>
+<p class="prewrap">---</p>
+      </section>
+    </article>
+    
+  </main>
+</body>
+</html>

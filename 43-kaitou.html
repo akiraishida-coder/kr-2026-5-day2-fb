@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>박진희심리컨설턴트 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="43.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">박진희심리컨설턴트님의 과제 답변</h2>
+      <p class="meta">2일차 #43</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">현재 대학생 소상공인 대상으로 제가 하고 있는 일이어서 크게 깨달음은 없었습니다. 일본의 활동사례를 보면서 국내에도 활용하는 사람들이 많아졌음 좋겠다는 생각이 들었습니다</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">사례를 모아 정리할 계획</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">더많은 사람들에게 영향력을 주어서 문제를 해결하는데 도움을 주고 싶다는 생각이고 고민이나 불안은 없고 감사합니다</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">사업을 수익화할수있는 시트가 인상적이었고, 모든 질문에 성실하게 답하는 이치로코치님 좋았습니다</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">①[자신의 데이터]
+Q1. 주요 경력: [어린이집 운영20년 / 기업강의 10년
+    대학교 강의(취창업 진로 인간동물학 기후변화) 10년 / 
+    소상공인 심리컨설턴트 5년]
+Q2. 가장 큰 고민과 극복 경험: [브랜딩해서 나의 가치를 올리는 것이 고민— 블로그를 통해 마케팅함]
+Q3. 시간과 돈을 투자하거나 몰입한 것: [NCS교재 출판, 목표와 성취감]
+Q4. 자기 돈을 들여 해결하거나 배운 것: [마케팅노하우]
+Q5. 상담받는 것: [상담을 주로 하고 상담을 받은 것은 박사논문]
+Q6. 자기도 모르게 열변을 토하는 것: [심리, 진로조언]
+Q7. 비정상적일 정도의 집착과 잘하는 것: [트렌드에 빠르고 통찰력,직관력이 뛰어나서 상담을 잘한다]
+Q8. 질투의 대상: [아이디어가 같은데 먼저 수익화를 하여 성공한 사업가]
+Q9. 분노나 의분: [깊이가 없는 강의팔이로 힘든 사람들의 주머니를 열게 하는 행위
+]
+Q10. 무료로라도 돕고 싶은 사람: [심리적으로 상처가 있어서 재기를 못하는 사람]
+Q11. 인생의 목표: [ 영혼을 살린 심리상담사
+]②【아이디어 1: &quot;재기심리 창업 나침반&quot; — 심리적 폐업 후유증을 안고 있는 소상공인의 재출발 동반 지원 프로그램】
+
+1. 콘셉트 개요와 &quot;왜 당신이 제공하면 팔리는가&quot;
+소상공인 심리컨설턴트 5년 + 대학 취창업 강의 10년 + 기업강의 10년이라는 조합은 시장에서 거의 존재하지 않습니다. 대부분의 창업 컨설턴트는 심리를 모르고, 대부분의 심리상담사는 창업·사업 실패의 맥락을 모릅니다. 진 선생님은 이 둘을 모두 보유한 희소 인재입니다.
+Q10의 &quot;심리적 상처로 재기 못하는 사람&quot;이 핵심 타깃이며, Q9의 분노(&quot;깊이 없는 강의팔이로 상처받은 사람들&quot;)가 이 서비스의 존재 이유가 됩니다. 즉, &quot;내가 이 사람들을 지켜야 한다&quot;는 사명감 자체가 USP입니다. 이런 절박한 진정성은 경쟁자가 흉내 낼 수 없습니다.
+Q7의 트렌드 통찰력과 직관력은 &quot;이 사람이 왜 실패했는가, 다음에는 어떤 방향으로 가야 하는가&quot;를 빠르게 진단하는 능력으로 직결됩니다. 마케팅 노하우(Q4)는 재기 방향을 설정할 때 실질적 수익화 전략까지 연결해주는 무기가 됩니다.
+
+USP 언어화: &quot;폐업의 상처를 안고 있는 당신에게 필요한 건 또 다른 창업 정보가 아닙니다. 심리적 응급처치 + 현실적 재출발 전략을 동시에 받을 수 있는 유일한 전문가입니다.&quot;
+
+
+2. 제공 스타일 — 동반 지원형 — 과 그 이유
+폐업 후 심리적 회복은 단발 강의로 해결되지 않습니다. 이 타깃은 정보가 아니라 &quot;곁에 있어주는 사람&quot;이 필요합니다. Q11의 &quot;영혼을 살린 심리상담사&quot;라는 인생 목표와도 완전히 일치하는 형태입니다. 동반 지원형이 적합합니다.
+
+3. 타깃 고객과 깊은 고민
+
+타깃: 폐업 후 1~3년 이내, 재취업도 재창업도 못하고 심리적으로 멈춰 있는 40~60대 소상공인 (특히 여성)
+깊은 고민:
+
+&quot;나는 실패한 사람이다&quot;라는 자기낙인
+가족과 지인에게 실패를 들키기 싫어 상담을 못 받음
+다시 도전하고 싶은데 또 실패할까봐 두려움
+저가 창업 강의에 돈을 썼다가 더 깊은 상처를 받은 경험
+
+
+
+
+4. 제공 가치 — Before → After
+BeforeAfter폐업 = 나의 실패, 자기혐오폐업은 경험 자산, 자기이해의 출발점아무것도 못 하고 멈춰 있음작은 재출발 행동을 매주 실천또 실패할 것 같은 막연한 공포나에게 맞는 재기 방향이 명확해짐혼자 고립감 속에서 버팀전문가와 함께 이야기하며 앞으로 나아감
+
+5. 벤치마크 리서치
+
+검색 키워드 (국내): 소상공인 심리지원 컨설팅, 폐업 후 재기 코칭, 희망리턴패키지 심리상담, 자영업자 심리회복 프로그램
+참고 기관 벤치마크: 소상공인진흥공단 희망리턴패키지 — 이 프로그램이 제도적으로는 존재하지만 심리 + 전략 동반 지원의 민간 심화 버전은 거의 없음 → 블루오션
+SNS 참고 방향: 브런치 또는 블로그에서 &quot;폐업 후 이야기&quot;를 솔직하게 쓰는 계정들 — 공감 기반 콘텐츠 마케팅과 궁합이 좋음
+일본 유사 사례 키워드: 廃業後 再起支援 コーチング, 起業失敗 メンタルサポート
+
+
+6. 상품 설계 로드맵
+스텝 1: 단발 세션 — &quot;재기 나침반 진단 세션&quot;
+
+내용: 90분 1:1 온라인 세션. 폐업 경험 심리 청취 + HTP·생애그래프 간이 분석 + 재기 방향 3가지 제시
+예상 가격: 5만~8만 원
+
+스텝 2: 고가 동반 지원 패키지 — &quot;3개월 재기 동행 프로그램&quot;
+
+내용: 매주 1회 60분 세션 (총 12회) + 카카오톡 채팅 무제한 + 월별 재기 실행 플랜 수립 + 마케팅 방향성 설계 포함
+예상 가격: 220만~280만 원
+③ 챗gpt,제미나이,클로드 3개 도구에 질문해서 나온 결과 중 가장 마음에 듭니다</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">현재 하고 있는 일을 비즈니스화하는 거라서 어려움을 느끼는 부분은 없습니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">긴급</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">커뮤니티 살펴보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

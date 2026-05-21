@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>황민호 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="18.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">황민호님의 과제 답변</h2>
+      <p class="meta">2일차 #18</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">사업을 하면서 많은 실패를 해왔는데 그 점을 강점으로 살려 스토리화하는 것이 중요하다고 알려주셔서 감사합니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">쉽게 고객의 유입을 유도하는 Saas 사이트를 개발</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">경제가 어려워져서 일거리가 없다는 게 제일 큰 문제</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">그동안 사업을 있어도 되고 없어도 되는 상품화에 주력했던 것 같습니다. 손실이나 위험 단계로 발전할 수 있는 방법을 모색해야 할 것 같습니다. 아스피린과 수술에 대한 비유로 말씀해주시니 이해가 빨랐습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">Q1. 주요 경력: [홈페이지 개발 서버관리(리눅스)]
+Q2. 가장 큰 고민과 극복 경험: [서버를 통째로 날려서 몇일밤을 새워 복구해본경험이 4-5번 있다.]
+Q3. 시간과 돈을 투자하거나 몰입한 것: [홈자서 디자인 개발 관리등을 다 해야하기 때문에 돈이 없으니까 스스로 독학으로 배움]
+Q4. 자기 돈을 들여 해결하거나 배운 것: [코인 투자등을 했으나 결국 망한다는 것을 배움]
+Q5. 상담받는 것: [정신과 상담을 받고 있다.]
+Q6. 자기도 모르게 열변을 토하는 것: [사이트개발과 제작에 관한 것]
+Q7. 비정상적일 정도의 집착과 잘하는 것: [잘 안된다고 하는것에대한 집착과 열의를 보인다.]
+Q8. 질투의 대상: [AI로 홈페이지를 만들어 돈을 많이 벌고 있다는 사람.]
+Q9. 분노나 의분: [과연 AI로 홈페이지를 만들어 수주가 많이 들어올까?]
+Q10. 무료로라도 돕고 싶은 사람: [선교사]
+Q11. 인생의 목표: [많은 매출을 올려 어려운 사람을 돕고싶다.]
+
+【아이디어 1: 비즈니스 심폐소생, ‘디지털 인프라 가디언’】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+단순한 홈페이지 제작이 아닙니다. “사고 터진 뒤에 찾으면 늦습니다. 당신의 디지털 자산을 지키는 최후의 보루”가 콘셉트입니다.
+
+Q2(복구 경험): 4~5번의 서버 복구 경험은 ‘이론’이 아닌 ‘생존 기술’입니다. 사고가 터졌을 때의 공포를 누구보다 잘 알기에 고객은 귀하의 말을 신뢰하게 됩니다.
+
+Q5·Q7(상담·집착): 정신과 상담을 받을 정도의 고통과 이를 극복하려는 집착은, 고객이 겪는 기술적 장애에 대해 단순 업무 이상의 ‘공감과 책임감’으로 승화됩니다. &quot;안 된다는 것에 더 열의를 보이는&quot; 귀하의 기질은 고객에게 압도적인 신뢰를 줍니다.
+
+2. 제공 스타일 — 동반 지원형
+
+이유: 서버와 백엔드는 단발성 강의로 해결되지 않습니다. 지속적인 모니터링과 위기 시 즉각적인 개입이 필요한 영역이기에 ‘연간 관리형 동반 지원’이 필수적입니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 데이터 유실이 곧 사업 종료인 1인 지식 창업자, 온라인 쇼핑몰 운영자.
+
+고민: &quot;갑자기 사이트가 안 뜨면 어떡하지?&quot;, &quot;해킹이나 데이터 삭제가 무서운데 물어볼 곳이 없다.&quot; AI가 해줄 수 없는 ‘책임’의 영역에 갈증을 느낍니다.
+
+4. 제공하는 가치 — Before → After
+
+Before: 보안 불안증과 서버 장애 공포로 밤잠을 설침.
+
+After: &quot;내 뒤엔 서버 장인이 있다&quot;는 확신 속에 본업(마케팅·판매)에만 집중하는 환경 구축.
+
+5. 벤치마크 리서치
+
+유사 사례: &#x27;서버 관리 대행 서비스&#x27;, &#x27;워드프레스 유지보수 전문업체&#x27;.
+
+키워드: 워드프레스 보안 솔루션, 서버 복구 컨설팅, 24시간 사이트 모니터링 대행.
+
+6. 상품 설계 로드맵
+
+스텝 1 (단발): [디지털 보안 및 서버 건전성 정밀 진단 세션]
+
+내용: 현재 사이트의 취약점 분석 및 백업 체계 점검 (90분)
+
+예상 가격: 15만 원
+
+스텝 2 (장기): [VIP 인프라 가디언 패키지 (1년)]
+
+내용: 실시간 모니터링, 월간 보안 리포트, 장애 발생 시 무제한 긴급 복구 지원.
+
+예상 가격: 월 30만 원 이상 (연간 360만 원+)
+
+바로 실행하고 싶으나 인프라를 구축할 시간과 자원이 필요하다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">1. 고객에게 제공할 때의 기술적인 어려움
+고객마다 이용하는 호스팅사, CMS(워드프레스 등), 플러그인 등 개발 환경이 모두 제각각이라 서비스를 하나로 표준화하기 어렵고, 서버 장애나 해킹을 100% 완벽하게 방어해 내야 한다는 기술적 책임감에 부담을 느낍니다.
+
+2. 첫걸음을 내딛을 때 마인드 측면에서 느끼는 어려움
+과거에 서버를 날려 몇 일 밤을 새우며 복구했던 트라우마가 있어 타인의 사이트를 관리하다가 유사한 사고가 터질까 봐 심리적 불안감이 있으며, 정규 교육이 아닌 독학으로 다진 기술이라 고가의 비용을 당당하게 청구하는 것에 위축감을 느낍니다.
+
+3. 구체적인 고객 유치(마케팅) 측면의 어려움
+데이터 백업이나 서버 보안은 평소에는 중요성을 체감하기 어려운 &#x27;예방형 상품&#x27;이라 문제가 터지기 전인 고객들을 설득해 결제까지 이끌어내기 어렵고, AI를 활용한 저가형 웹 제작 공세 속에서 본질적인 인프라 관리의 가치를 전달하기가 쉽지 않습니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2.손실</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">주변 거래처나 업체들의 고충을 들어봐야 할 것 같다.</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

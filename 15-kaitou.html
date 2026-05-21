@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김회원 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="15.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">김회원님의 과제 답변</h2>
+      <p class="meta">2일차 #15</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">서포트비즈니스를 보면 대부분이 지식 컨텐츠 사업이 많아서 내가 해당하는 사항이 있을까 걱정하면서 들었는데, 제가 전문가가 아니어도 저의 실패나 경험을 통해 타인에게 뭔가를 줄 수 있다면 된다는 것에 조금은 자신감을 얻었습니다. 앞으로 나머지 수업들도 기대가 됩니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">스타트업 7년차로서 사업을 하면서 망하지 않고, 오래 살아남는 법에 대한 비즈니스 아이디어가 떠오릅니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">회사 경영목표 달성을 할 수 있을까?
+내가 진짜 원하는 IPO를 할 수 있을까? 
+나의 은퇴후 생활은 어떨까?</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">2일차 프롬프트를 작성하면서 많은 생각이 들었습니다. 첫번째는 내가 이런 질문에 답할게 이렇게도 없이 그동안 살아왔던가하는 부분이고, 두번째는 남은 인생은 지나간 것처럼 살면 안되겠다는 생각이 들었습니다. 남들을 서포트하면서 이것을 비즈니스로 하기에는 내가 아직 너무 많이 부족함을 느끼게 되는 2일차였네요. 어찌되었건 이것도 하나의 깨달음이고 중요한 것이라 생각됩니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1.Q1. 주요 경력: [여기에 답변 입력]
+ - 반도체 클린룸 기술영업 20년, 제조분야 스타트업 대표이사 7년차로 총 경력 27년입니다.
+ - 현재는 제조 스타트업 대표이사로서 회사의 경영과 성장을 위해 고군분투하고 있습니다.
+Q2. 가장 큰 고민과 극복 경험: [여기에 답변 입력]
+ - 20여년간 직장생활하다보면서 직장생활의 무료함과 권태기를 느껴서 창업을 하여 새로운 스타트업을 맡다보니,
+     회사의 전반적인 업무에 대해 신경을 써야하고, 회사의 성장을 위해 노력해야하다보니, 직장생활할때와는 비교가
+     안될 정도로 육체적으로나 정신적으로 힘들었어요.
+ - 현재도 이 어려운 환경을 극복했다고 보기는 어렵고, 더 나은 나의 미래를 꿈꾸면 참고 견디며 이겨내고 있어요.
+Q3. 시간과 돈을 투자하거나 몰입한 것: [여기에 답변 입력]
+- 현재까지 내 인생에서 가장 많은 시간을 할애한 것은 나 스스로의 성장을 위한 배움이었던것 같습니다.
+- 새로운 사업을 기획하거나, 새로운 지식을 학습하는데 있어 가장 많은 열중을 하게 되는 것 같습니다. 
+Q4. 자기 돈을 들여 해결하거나 배운 것: [여기에 답변 입력]
+- 돈을 들여 배운 것은 있으나 제대로 배운 것을 활용하거나 해결하지는 못했습니다. 
+  내가 돈을 들여 배운 것은 디지털 노마드를 위한 여러가지 방법들이었습니다. 
+Q5. 상담받는 것: [여기에 답변 입력]
+- 직장생활에서 처신에 대한 고민 상담을 여러차례 받는데, 항상 도전적이고 전략적으로 접근하도록 조언하고 있습니다.
+Q6. 자기도 모르게 열변을 토하는 것: [여기에 답변 입력]
+- 주로 직장생활에서 있었던 나의 무용담이나, 아쉬운 점들에 대해 많이 얘기하는 것 같아요. 그리고 특히 개인의 비젼과 미래를 준비하는 것에 대해 얘기를 많이 합니다.
+Q7. 비정상적일 정도의 집착과 잘하는 것: [여기에 답변 입력]
+- 다른 사람들로부터 창의적이고 실행력이 좋다는 얘기를 자주 들어요. 그래서 다른 사람들로부터 도전적이고, 한번 집중하면 과할정도록 집착을 한다는
+    얘기를 많이 들어요. 특히, 기술영업을 오래해서 그런지 영업력이 뛰어나다는 얘기를 많이 듣습니다.
+Q8. 질투의 대상: [여기에 답변 입력]
+ - 나보다 더 많은 노력을 하지 않고 조용히 있으면서 나보다 더 좋은 직위에 있을 경우 그런 생각을 많이 합니다.
+    내가 더 큰 성과를 냈음에도 다른 사람보다 승진이나 처우가 더 좋지 않을때 그런 기분이 듭니다.
+Q9. 분노나 의분: [여기에 답변 입력]
+- 스타트업계에서 나같이 실제로 사업에 집중하여 매출을 만들고 많은 세금을 내는 부류가 있는가하면, 오직 정부지원사업 수주와
+  외부투자유치에 집중하는 스타트업도 있어요. 이런걸보면 정말 제대로 성장할 수 있는 현재 그 결과물을 내고 있는 진성한 스타트업 기업들을
+  지원하는게 맞지 않나는 생각이 들고, 이런 불합리함에 분노를 느낍니다.
+Q10. 무료로라도 돕고 싶은 사람: [여기에 답변 입력]
+- 좋은 기술, 제품, 서비스는 있는데 경험과 기업가 정신, 사업가 정신이 부족해서 제대로 된 매출을 못 만들고, 사업과 영업에 어려움을 겪고 있는 스타트업 
+    CEO들이 잘 성장할 수 있도록 돕고 싶어요.
+Q11. 인생의 목표: [여기에 답변 입력]
+- 무에서 유를 창조한 사람으로 실패를 두려워하지 않고 도전을 즐기고 결국에는 성공한 사람으로 남고 싶어요.
+  - 내 목표인 IPO를 통해서 증권거래소에서 빨간 자켓을 입는 것이 내 인생의 마지막 꿈입니다.
+
+2.# 제로이치 창업 전략 컨설팅 — 3가지 비즈니스 콘셉트 제안</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">3가지 모두 그자체 나에게는 큰 장벽으로 느껴집니다. 한번도 나의 경험을 타인한테 제공하고 돈을 받은 적이 없으니까요. 내가 아는게 노하우가 아니라 일반적인 경험일 수도 있겠다는 두려움도 있고요.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">손실</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">커뮤니티 살펴보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

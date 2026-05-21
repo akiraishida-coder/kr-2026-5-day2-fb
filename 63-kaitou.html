@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>안정호 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="63.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">안정호님의 과제 답변</h2>
+      <p class="meta">2일차 #63</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">서프트 비즈니스라는 것을 처음 알게 됐는데 신선했어요.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">정부지원사업 컨설팅</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">모객, 계약, 수익</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">해도 그만 안해도 별로 문제 없는 것에는 돈을 지불하지 않는다 이것을 어떻게 꼭 필요한 것으로 만들 것인가에 대한 고민이 필요하다고 생각했음</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">제공해주신 11개 답변을 기준으로, “정부지원사업 전문성”과 “관객을 이끄는 밴드 리더십”을 함께 살려 3개 콘셉트로 정리해보겠습니다. 벤치마크는 실제 참고 가능한 사례를 확인해서 붙이겠습니다.
+
+중간 판단부터 말씀드리면, 가장 강한 USP는 “평가위원 관점으로 문서를 고치고, 무대 경험으로 발표까지 끌고 가는 사람”입니다. 단순 사업계획서 대필보다 “선발형·동반형·발표형”으로 포지셔닝하는 쪽이 훨씬 고가화에 유리합니다.
+
+1m 28s 동안 생각함
+
+아래 답변 기준으로 보면, 가장 고가화 가능성이 높은 방향은 “사업계획서 컨설턴트”가 아니라 “평가위원 관점 + 창업 동반 코치 + 발표 무대 코치”입니다.
+특히 정부지원사업 시장은 이미 컨설팅 업체가 많고, 최근에는 ‘100% 합격 보장’, 대필, 리베이트형 불법 컨설팅 이슈도 있어 신뢰 기반 포지셔닝이 중요합니다. 따라서 “합격 보장”이 아니라 “좋은 아이템을 평가위원이 이해할 수 있는 사업으로 구조화하고, 발표까지 함께 완성한다”는 방향이 가장 안전하고 강합니다.
+
+【아이디어 1: 제로백 합격동행 파트너십】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+콘셉트:
+좋은 창업 아이템은 있지만 정부지원사업 선정 구조, 사업계획서 문장, 발표평가 대응이 약한 예비·초기창업자를 대상으로 지원사업 선정 가능성이 있는 아이템만 선별해 8~12주 동안 사업계획서, 발표자료, 질의응답까지 동반 완성하는 프리미엄 컨설팅 서비스입니다.
+
+왜 팔리는가:
+당신은 단순히 글을 대신 써주는 사람이 아니라, 본인이 직접 불안정한 직장 상황을 겪고, 3개월 준비 끝에 정부지원사업에 합격한 뒤, 5년 이상 다른 사람들의 합격을 도운 경험이 있습니다. 즉 고객 입장에서는 “이론만 아는 강사”가 아니라 직접 위기를 겪고 정부지원사업을 통해 방향을 바꾼 사람으로 보입니다.
+
+또한 누적 30억 원 이상 합격 실적, 50명 이상 합격자 배출, 평가위원 활동 경험은 강력한 신뢰 요소입니다. 기존 시장에도 정부지원사업 강의나 컨설팅은 많습니다. 예를 들어 리치업스쿨은 90일 수강, 템플릿, AI 활용, 합격 이후 사업화까지 다루는 강의를 운영하고 있고, 홀릭스 강의도 유튜브 콘텐츠와 코칭 경험을 기반으로 예비창업패키지 사업계획서 특강을 제공합니다.
+
+하지만 당신의 차별점은 “평가위원의 눈으로 아이템을 보고, 창업자의 언어를 합격 문서와 발표 언어로 바꿔주는 동반자”라는 점입니다.
+
+USP 문장:
+“좋은 아이디어를 가진 밝은 창업자를 선별해, 평가위원이 이해하고 선택할 수 있는 사업계획서와 발표로 끝까지 동행합니다.”
+
+2. 제공 스타일 — 동반 지원형 or 강의형 — 과 그 이유
+
+추천 스타일: 동반 지원형 80% + 강의형 20%
+
+정부지원사업은 유튜브나 무료 강의로 기본 정보는 얻을 수 있습니다. 실제로 유튜브, 온라인 강의, 템플릿 기반 시장은 이미 형성되어 있습니다. 하지만 고객이 돈을 크게 지불하는 지점은 “정보”가 아니라 내 아이템을 어떻게 바꿔야 하는지, 어느 사업에 넣어야 하는지, 발표 때 어떤 질문을 받을지입니다.
+
+따라서 메인 상품은 강의가 아니라 선발형 1:1 또는 소수정예 동반 패키지가 맞습니다. 참고로 MM컨설팅랩은 정부지원사업 컨설팅에서 아이템 분석, 지원사업 매칭, 사업계획서 피드백, 발표자료 구성, 발표 전략 등을 묶어 100만~220만 원대 상품으로 제시하고 있습니다.
+
+당신은 이보다 더 프리미엄하게 가려면 “아무나 받지 않음”을 전면에 내세워야 합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+핵심 타깃:
+좋은 창업 아이템은 있지만 사업계획서와 발표평가에서 계속 막히는 예비창업자, 초기창업자, 재도전자.
+
+깊은 고민:
+이들은 단순히 “지원금 받고 싶다”가 아닙니다. 실제 고민은 다음에 가깝습니다.
+
+“내 아이디어가 괜찮은 것 같은데, 평가위원 앞에서는 왜 약해 보일까?”
+“돈이 없어서 시작을 못 하고 있는데, 지원사업에 떨어지면 이 아이템도 포기해야 하나?”
+“내가 쓴 사업계획서가 왜 설득력이 없는지 모르겠다.”
+“컨설턴트가 너무 많아서 누구를 믿어야 할지 모르겠다.”
+
+Q9에서 드러난 당신의 분노 지점, 즉 “실력 없는 컨설턴트가 많아지고, 고객이 제대로 판단하지 못한다”는 감정은 오히려 포지셔닝 자산이 됩니다. 이 감정을 **‘정직한 선발형 컨설팅’**으로 바꾸면 됩니다.
+
+4. 제공하는 가치 — Before → After
+
+Before
+아이템은 있지만 사업계획서가 산만함
+지원사업 선택 기준을 모름
+평가위원 질문을 예상하지 못함
+발표 때 핵심을 못 잡음
+컨설턴트 선택에 불안함
+
+After
+아이템이 지원사업 평가항목에 맞게 재구성됨
+사업계획서 목차별 핵심 논리가 정리됨
+시장성, 실현가능성, 차별성, 사업비 사용계획이 연결됨
+예상 질문과 답변 스크립트가 준비됨
+“내가 왜 선정되어야 하는지”를 창업자가 스스로 설명할 수 있음
+
+5. 벤치마크 리서치
+
+참고할 만한 방향은 다음입니다.
+
+리치업스쿨 정부지원사업 강의
+90일 수강, 사업계획서 작성, AI 활용, 템플릿 제공, 합격 이후 사업화까지 다루는 구조입니다. 당신은 여기서 “강의+템플릿” 요소를 참고하되, 메인은 1:1 동반형으로 가져가면 좋습니다.
+홀릭스 예비창업패키지 사업계획서 특강
+유튜브 채널과 강의 콘텐츠를 연결해 신뢰를 쌓는 방식입니다. 당신도 Threads, YouTube Shorts, 무료 특강을 통해 “평가위원 관점” 콘텐츠를 축적하면 좋습니다.
+MM컨설팅랩 정부지원사업 컨설팅
+아이템 분석, 지원사업 매칭, 사업계획서 피드백, 발표자료 구성까지 패키지화한 사례입니다. 가격대와 구성 참고에 좋습니다.
+검색 키워드
+“예비창업패키지 사업계획서 코칭”
+“정부지원사업 발표평가 컨설팅”
+“청년창업사관학교 사업계획서 합격반”
+“지원사업 사업계획서 피드백”
+6. 상품 설계 로드맵
+・스텝 1: 먼저 여기서부터 — “합격가능성 진단 세션”
+
+내용:
+90분 1:1 진단
+아이템 적합성 점검
+지원사업 매칭
+사업계획서 기존 문서 1차 리뷰
+평가위원 관점의 탈락 위험요소 5개 정리
+최종적으로 “지원 가능 / 보류 / 아이템 수정 필요” 판단
+
+예상 가격:
+10만~30만 원
+
+・스텝 2: 장기적으로는 — “8~12주 합격동행 패키지”
+
+내용:
+지원사업 선정 전략
+사업계획서 목차별 구조 설계
+주 1회 피드백
+카톡/문서 코멘트 지원
+발표자료 구성
+예상질문 30개 작성
+모의 발표 2회
+최종 제출 전 점검
+
+예상 가격:
+300만~800만 원
+단, “합격 보장”이 아니라 “완성도 보장, 평가 대응력 강화, 선정 가능성 극대화”로 표현하는 것이 안전합니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">가장 좋은 고객 유치 방식은 무료 정보 제공 → 유료 진단 → 고가 동반 패키지입니다.
+
+처음부터 고가 상품을 팔기보다, 고객이 자신의 문제를 깨닫게 만드는 콘텐츠를 먼저 만들어야 합니다.
+
+예를 들면 다음 흐름이 좋습니다.
+
+1단계: 콘텐츠 유입
+
+Threads, 블로그, 유튜브 쇼츠, 카카오채널에 아래 주제로 콘텐츠를 올립니다.
+
+정부지원사업 떨어지는 사업계획서 특징 5가지
+평가위원이 싫어하는 문장
+지원사업 합격자는 아이템을 이렇게 설명한다
+예비창업패키지에서 절대 쓰면 안 되는 표현
+좋은 아이템인데 떨어지는 이유
+사업계획서에서 시장성이 약해 보이는 이유
+2단계: 저가 진단 상품
+
+콘텐츠를 본 사람이 바로 고가 컨설팅을 신청하기는 어렵습니다.
+그래서 먼저 90분 합격가능성 진단 세션을 판매합니다.
+
+가격은 10만~30만 원 정도가 적당합니다.
+
+3단계: 선발형 고가 패키지
+
+진단 후 가능성이 있는 고객만 선별해서 8~12주 패키지로 연결합니다.
+
+상품명 예시는 다음과 같습니다.
+
+제로백 합격동행 8주 패키지
+평가위원 관점 사업계획서 완성반
+정부지원사업 선정전략 프리미엄 코칭
+
+가격은 300만~800만 원까지 확장 가능합니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">손실</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">관련 결과를 가지고 채널톡 컨텐츠 업데이트</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

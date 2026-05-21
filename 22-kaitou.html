@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>h — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="22.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">h님의 과제 답변</h2>
+      <p class="meta">2일차 #22</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">접근방식이 다르고 단순해졌습니다</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">요통통증 케어,</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">건강때문에 일을 못하고 있음</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">질문이 체계적이고 나를 돌아보게 됩니다</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">[역할]
+당신은 개인의 숨겨진 강점과 열정을 발굴하여, 독자성 있는 비즈니스로 승화시키는 “제로이치 창업 전문 전략 컨설턴트”입니다.
+
+초보자가 경쟁자들 사이에 묻히지 않고, 자신감을 가지고 첫걸음을 내딛으며, 최종적으로 고가 상품을 제공할 수 있도록 이끄는 것이 당신의 사명입니다.
+[목표]
+아래 “11개의 질문”에 대한 저의 답변을 다각도로 분석하여, 저의 경험·강점·열정이 가장 잘 살아나는 “서포트 비즈니스, 즉 강사·코치·컨설턴트 등”의 콘셉트 아이디어를 3가지 제안해 주세요.
+
+[제약 사항]
+1.단순히 “정보나 노하우를 판매하는 것”이 아니라, “성과가 날 때까지 지원하는 것, 즉 동반 지원”의 관점으로 설계해 주세요.
+2. YouTube 등에서 무료로 얻을 수 있는 정보에 가치를 두는 것이 아니라, 저의 개입 가치에 중점을 둡니다.
+3. 단, 답변 내용으로 판단했을 때 그 노하우 자체가 매우 희소하고, 타인이 쉽게 따라 할 수 없는 압도적인 가치, 즉 비밀성·전문성이 있다고 판단되는 경우에는 강의 형식이나 스쿨 형식의 제안도 허용합니다.
+4.타깃의 “인생이나 비즈니스의 근본적인 고통을 수반하는 깊은 고민”을 해결하는 주제를 선택해 주세요.
+    이 깊은 고민은 Q6, Q8, Q9, Q10에서 추정해 주세요.
+5. 저의 “스스로 어려움을 극복한 경험이나 무의식적 집착”, 즉 Q2, Q5, Q7과, “시간과 돈을 들여 몰입한 지식”, 즉 Q3, Q4를 결합해 주세요.
+6. 그리고 이를 타깃에게 있어 “최대의 신뢰 요소이자 독자적 가치, 즉 USP”로 언어화하여 포함해 주세요.
+7. 각 아이디어를 구체화하기 위해 시장에 존재하는 “벤치마크, 즉 유사한 성공 사례”를 리서치하고, 참고할 만한 SNS 계정, YouTube 채널, 블로그 등의 URL을 제시해 주세요. 또는 구체적인 검색 키워드와 특징을 제시해 주세요.
+
+
+[자신의 데이터]
+Q1. 주요 경력: [경리,영상편집,마케팅 관심있음,블로그 운영 간간이 하고있음 글 쓰는 게 재밌고 설득하는 글로 돈버는 거에 관심이 많음]
+
+Q2. 가장 큰 고민과 극복 경험: [건강때문에 일을 못하는 데 극복하려 노력 중]
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: [글쓰기]
+
+Q4. 자기 돈을 들여 해결하거나 배운 것: [해외구매대행,디지털노마드 강의]
+
+Q5. 상담받는 것: [여기에 답변 입력]
+
+Q6. 자기도 모르게 열변을 토하는 것: [배당주,투자]
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: [잘한다고 생각되는 건 뭔지 모르겠다 그치만 빠른 템포의 영상 편집에 시간가는 줄 모르고 재미를 느낀적이 있다 이건 취미로 적당하다 생각된다 주관적인거고,자기만의 스타일이 있으니까]
+
+Q8. 질투의 대상: [배당주로 여행하며 경제적 자유를 이룬 사람]
+
+Q9. 분노나 의분: [정치에 관심없는 사람]
+
+Q10. 무료로라도 돕고 싶은 사람: [핸드폰 어려워 하시는 분들 어르신들 가르쳐드리는 일]
+
+Q11. 인생의 목표: [디지털노마드로 자유롭게 나만의 일도 하고 경제적 자유를 이룬 사람]
+
+
+[출력 형식]
+제안하는 3개의 아이디어 각각에 대해, 아래 항목을 출력해 주세요.
+
+【아이디어: [매력적인 서비스명]】
+
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+Q2의 극복 경험, Q3·Q4에서의 자기투자 사실, Q5·Q7의 요소가 어떻게 타깃의 강한 공감과“돈을 지불할 이유, 즉 신뢰”로 이어지는지 논리적으로 설명해 주세요.
+
+2. 제공 스타일 — 동반 지원형 or 강의형 — 과 그 이유
+
+노하우의 희소성이나 당신의 경험을 바탕으로, 어떤 스타일이 가장 적합한지 판단 이유를 덧붙여 주세요.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+Q4의 구매 경험과 Q6, Q8, Q9, Q10에 근거하여, 어떤 절실한 고민에 돈을 지불하고 싶어 하는 사람인지 설명해 주세요.
+
+4. 제공하는 가치 — Before → After
+
+그 사람이 어떻게 변화할 수 있는지 설명해 주세요.
+
+5. 벤치마크 리서치
+
+유사한 비즈니스를 전개하고 있는 사례, 참고 URL, 또는 검색해야 할 키워드를 제시해 주세요.
+
+6. 상품 설계 로드맵
+
+・스텝 1: 먼저 여기서부터 — “단발 세션” 단기 체험 제공
+
+내용:
+예: 90분 개별 상담, 진단, 체험 등
+
+예상 가격:
+예: 3만~10만 원
+
+・스텝 2: 장기적으로는 — “고가 동반 지원 패키지” 장기 지속 제공
+
+내용:
+예: 3개월간 완전 동반 지원, 채팅 무제한 등
+
+예상 가격:
+예: 200만 원 이상
+
+② AI에 입력하여 나온 비즈니스 아이디어 
+
+【아이디어 1: 배당노마드 리빌드 프로젝트】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+핵심 콘셉트
+
+“건강 때문에 일반 직장 지속이 어려운 사람이, 온라인 기반 소득과 배당 투자 기반을 함께 구축하도록 동반 지원하는 서비스”
+
+【아이디어 2: 스마트폰 생존학교 — 중장년 디지털 자립 코치】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이건 Q10이 핵심입니다.
+【아이디어 3: 설득형 글쓰기 × 소형 1인 비즈니스 구축 코치】
+
+③ 아이디어에 대해 어떻게 느끼시나요? 바로 해보고 싶으신가요?
+
+아직 모르겠다</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">아직 실력이 부족하다 뭔가 기반은 다져져야 할 단계라고 냉정하게 판단된다</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2.0</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">커뮤니티 살펴보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

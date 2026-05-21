@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오광택 (GTO) — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="20.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">오광택 (GTO)님의 과제 답변</h2>
+      <p class="meta">2일차 #20</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">서포트 말그대로 지원해주거나, 도움을 주는 일을 비즈니스라고 정의하니 좀더 쉽게 이해되고 무언가 할 수 있을 것 같단 생각은 드는데 
+
+무엇을 해야할지는 아직 많이 고민 됩니다 내가 무엇을 잘 도와줄 수 있는지 지난밤에 생각이 많았던 것 같아요
+
+이번 워크숍을 계기로 비즈니스 씨앗을 찾고, 한발 나아가는 계기가 될 것 같은 기대감이 있습니다~!</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">현재, 기업에서 운영하는 바크만 진단이란 도구가 있는데 이 바크만 진단이란 도구의 활용이 기업과 조직만 필여한게 아니라 개인에게도 잘 적용할 수 있는 진단이라는 생각이들어 이 진단을 자신의 성향과 잘하는 것을 알려주는 진단으로 비즈니스를 연결하고 싶습니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">현재 둘째 아이가 3세인데 희귀병으로 중증장애2급을 판정 받았습니다. 아이는 몸도 못 움직이는 상황으로 아직까진 안고 다닐수 있지만, 더 크거나 몸무게가 불어나면 많은 어려움이 예상되고,
+
+언제든 병원과 재활을 원화히 다니기 위해서는 시간적 공간적 자유로운이 필요한데, 이번 계기로  인터넷 비즈니스 또는 온라인 비즈니스로 생계의 어려움을 타파하고자 합니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">AI로 내 사업에 대해 물어보고, 진행한적은 있지만,  항상 답변이 불만이였는데
+이번 프롬프트로 인해 11가지 질문과 함께 적용해 보니 조금더 제가 생각한 비즈니스에 한발자국 다가간것 같습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">**********
+ ① 11가지 질문에 대한 당신의 답변
+**********
+
+1. 주요 경력
+    당신의 “주요 경력”을 알려주세요.
+    업계, 직종, 연수, 구체적인 업무 내용을 포함해 주세요.
+
+유아체육 강사 16년 동안 어린이집 및 유치원 문화세터에서 수업, 
+부모참여 수업 및 운동회 이벤트 MC 진행
+
+
+2. 가장 큰 고민과 극복 경험
+    당신이 일이나 인생에서 깊이 고민했던 것은 무엇인가요?
+    그리고 그것을 어떻게 극복했나요?
+
+나는 무엇을 잘하는걸까?? 내가 잘하는 것은 무엇일까?
+앞으로 가장으로서 어떻게 가정을 가꾸며 살아가야 하나?
+일반 직장인으로서는 평범한 가정의 경제를 유지하기 어렵고, 내 사업을 내 비즈니스를 해야 한다는 결론을 얻었습니다.
+
+
+3. 시간과 돈을 투자하거나 몰입한 것
+    지금까지의 인생에서 가장 많은 “시간”이나 “돈”을 쏟아온 것은 무엇인가요?
+    혹은 시간 가는 줄 모르고 몰입하거나 연구하거나 열중하게 되는 것은 무엇인가요?
+
+어린이집 행사와 이벤트 수업에 많은 시간을 써왔습니다.
+최근 버크만 진단이라는 기업 진단 도구를 배워서 사용 상담도 하고, 지금 업무에 적용하려고 노력하고 있습니다. 
+
+
+4. 자기 돈을 들여 해결하거나 배운 것  과거에 당신이 “자기 돈을 들여”, 즉 돈을 지불해서 누군가에게 해결받은 고민이나 배운 것은 무엇인가요?
+
+최근 버크만 진단이라는 기업 진단 도구를 배워서 사용 상담도 하고, 지금 업무에 적용하려고 노력하고 있습니다.
+인터넷 비즈니스로 돈버는 방법 등을 많이 배웠는데 적용을 못해 돈만 날렸던 일이 많습니다.
+
+5. 상담받는 것
+    친구나 동료로부터 자주 “상담받는 것”이나 “조언을 구하는 것”이 있나요?
+    그것은 어떤 장르의 고민인가요?
+    또 그에 대해 평소 어떤 식으로 조언해 주고 있나요?
+
+가정에 대한것, 사업에 대한것, 사랑에 대한것 등 삶의 영역에서 고민인 부분을 나누기도 하고
+들어가지고 합니다. 평소에는 나의 경험에 비추어 많이 조언을 하는것 같습니다.
+
+
+6. 자기도 모르게 열변을 토하는 것
+    술자리나 잡담 중에, 누가 묻지도 않았는데 “자기도 모르게 열변을 토하게 되는 것”이나, 시간이 가는 줄 모르고 이야기하게 되는 “주제”가 있나요?
+
+ 나의 실패 경험담과 미래의 일들에 대한것, 본인 사업을 해야되는 이유, 연애애기 등 잡다한 애기
+특별한 주제는 없는것 같아요
+사람에 따라 주제를 다르게 애기 하는 것 같아요
+
+7. 비정상적일 정도의 집착과 잘하는 것
+    일이나 취미에서, 다른 사람은 신경 쓰지 않을 법한 세세한 부분에 유독 “집착하게 되는 것”이 있나요?
+    또한 다른 사람에게 평가받았거나 스스로 잘한다고 생각하는 것은 무엇인가요?
+
+집착하는 것은 모르겠고,
+대중 앞에서 발표를 어렵지 않게 하는 것 같습니다.
+
+
+8. 질투의 대상
+    동종업계 사람이나 타인을 보면서 “좋겠다”, “분하다”라고 질투하게 되는 사람은 누구인가요?
+    또는 어떤 상태를 보면 그런 감정이 드나요?
+
+같은 회사의 동료, 부러움과 이기고 싶은 경쟁심이 생김 
+
+
+9. 분노나 의로운 분노
+    최근 세상이나 당신의 업계에 대해 “이건 이상하다”, “좀 더 이렇게 되어야 한다”라고 분노나 의로운 분노를 느끼는 것이 있나요?
+
+오랫동안 강사로 수업을 해왔는데
+업계에는 많은 강사가 있지만, 내 강사 실력이 더 좋고, 더 잘하는데 
+지역적 가격 특성이 있어, 그 가격을 넘어서기가 힘들다.
+남들과 비슷한 금액을 받거나, 강사 능력에 대한 합당한 가격을 못받는 것이 불만입니다.
+
+
+10. 무료로라도 돕고 싶은 사람
+    돈 걱정이 전혀 없고 완전히 자원봉사라고 하더라도, “이 사람을 위해서라면 힘이 되어주고 싶다”고 생각하는 사람은 구체적으로 어떤 사람인가요?
+
+이제 막 사회 경험에 나온 20대 중후반 또는 30대 초반의 청년들에게
+나와 같이 어렵게 시작한 사람들을 도와주고 싶다. 돌아가지 않게 잘 앞으로 나갈 수 있도록 
+
+
+
+
+************
+2)  AI에 입력하여 나온 비즈니스 아이디어 
+************
+
+【아이디어 1: 베테랑의 인생 2막 ‘강점 치환’ 컨설팅】
+“16년 현장 짬바와 버크만 데이터로 찾는, 당신의 ‘진짜’ 고가 비즈니스 모델”
+
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+귀하는 스스로 &quot;무엇을 잘하는 걸까?&quot;를 깊이 고민하며 비즈니스를 개척해 온 당사자입니다(Q2). 버크만 진단을 통해 본인의 데이터와 16년의 경험을 대조해 본 경험은, 같은 고민을 하는 베테랑들에게 엄청난 신뢰를 줍니다.
+
+신뢰 요소(USP): &quot;이론만 배운 코치는 당신의 현장을 모릅니다. 저는 16년의 현장 직관에 버크만이라는 과학적 렌즈를 씌워, 당신이 왜 지금 저가 경쟁에서 고통받는지(Q9), 그리고 당신의 성향상 어떤 &#x27;고가 상품&#x27;이 몸에 맞는지 정확히 짚어냅니다.&quot;
+
+2. 제공 스타일: 동반 지원형
+진단 결과만 던져주는 것이 아니라, 그 결과가 고객의 실제 경력(10~20년 차)과 어떻게 연결되어 돈이 되는지 함께 사업 구조를 짭니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 한 분야에서 10년 이상 일했지만, 정작 자기 사업을 하려니 &quot;내가 뭘 잘하지?&quot;라며 멈춰버린 전문가(Q2 반영).
+
+고민: &quot;내 기술은 흔한 것 같은데, 이걸로 어떻게 돈을 벌지?&quot;, &quot;마케팅 강의(Q3, Q4)를 들어도 내 사업에 적용이 안 된다.&quot;
+
+4. 제공하는 가치 — Before → After
+
+Before: 자신의 강점을 &#x27;운&#x27;이나 &#x27;감&#x27;으로 치부하며 낮은 몸값에 머물러 있는 상태.
+
+After: 자신의 고유한 성향(버크만 데이터)에 기반한 독보적인 사업 콘셉트와 자신감을 장착한 상태.
+
+5. 벤치마크 리서치
+
+사례: 버크만 기반 커리어 전환 코칭, &#x27;퇴사 후 자기 사업&#x27; 전문 컨설턴트.
+
+검색 키워드: [버크만 커리어 코칭], [전문가 브랜딩 전략], [강점 기반 비즈니스 설계].
+
+6. 상품 설계 로드맵
+
+스텝 1: [버크만 정밀 진단 + 비즈니스 강점 발견 90분 세션] / 15만 원
+
+스텝 2: [3개월 &#x27;비즈니스 DNA&#x27; 확립 및 고가 상품 런칭 동반] / 350만 원 이상
+
+【아이디어 2: 성과 중심 ‘팀-빌딩 MC’ 서비스】
+“분위기만 띄우는 레크리에이션은 끝났다, 버크만 데이터로 조직의 혈관을 뚫어주는 팀 빌딩”
+
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+귀하는 대중 앞에서 발표하고 분위기를 이끄는 데 천부적인 MC 자질이 있습니다(Q7). 여기에 버크만 팀 보고서(Team Report) 분석 능력을 더하면, 노는 시간이 아니라 ‘성과가 나는 조직’을 만드는 고가의 기업 워크숍이 됩니다.
+
+신뢰 요소(USP): &quot;저는 16년 동안 현장에서 &#x27;사람들의 기운&#x27;을 읽어왔습니다. 이제 버크만 데이터를 통해 우리 팀원들이 왜 서로 스트레스를 주는지, 어떤 환경에서 성과를 내는지 &#x27;눈에 보이게&#x27; 만들어 드립니다.&quot;
+
+2. 제공 스타일: 강의형 + 현장 지원형
+워크숍에서 분석 결과를 재미있게 풀어내고(MC 역량), 이후 실제 업무 현장에서 팀원들이 서로 소통하는 방식을 밀착 가이드합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 팀원 간 갈등으로 성과가 저하되거나 이탈률이 높은 중소기업 및 센터 운영자.
+
+고민: &quot;왜 우리 선생님들은 내 맘 같지 않지?&quot;, &quot;워크숍을 해도 그때뿐이고 바뀌는 게 없다.&quot;(Q8, Q9 연관)
+
+4. 제공하는 가치 — Before → After
+
+Before: 서로의 성향을 몰라 오해와 스트레스만 쌓이는 불편한 조직.
+
+After: 데이터 기반으로 서로의 &#x27;니즈(Needs)&#x27;를 채워주며 효율적으로 일하는 고성과 조직.
+
+5. 벤치마크 리서치
+
+사례: 기업 교육 전문 기관의 버크만 팀 빌딩 프로그램, 조직 문화 컨설팅.
+
+검색 키워드: [기업 버크만 워크숍], [성과 기반 팀빌딩 컨설팅], [조직 소통 MC].
+
+6. 상품 설계 로드맵
+
+스텝 1: [팀원 성향 분포도 진단 및 원데이 아이스브레이킹] / 기업 규모별 50~100만 원
+
+스텝 2: [6개월 조직 문화 체질 개선 프로젝트 - 월 1회 피드백 포함] / 500만 원 이상
+
+【아이디어 3: 2030 청년 창업가 ‘시행착오 제로’ 가이드】
+“너의 MBTI가 아니라 ‘버크만 니즈’에 맞는 첫 사업을 찾아라”
+
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+귀하는 어렵게 시작한 청년들을 돕고 싶은 진심이 있습니다(Q10). 마케팅 강의에 돈을 써봤지만 실천이 어려웠던 본인의 경험(Q3, Q4)을 바탕으로, 청년들이 &#x27;의지력&#x27;의 문제가 아니라 &#x27;성향&#x27;에 맞지 않는 마케팅을 하고 있음을 버크만으로 증명해 줍니다.
+
+신뢰 요소(USP): &quot;유튜브 마케팅이 정답일까요? 버크만 진단 결과 당신은 혼자 일할 때 스트레스 수치가 높습니다. 당신에게는 마케팅 기술보다 &#x27;신뢰할 수 있는 파트너(Q5)&#x27; 연결이 먼저입니다.&quot;
+
+2. 제공 스타일: 동반 지원형 (Mentoring)
+청년이 창업을 준비하는 초기 3개월 동안, 버크만 결과에 맞는 실행 도구(SNS 종류, 영업 방식 등)를 정해주고 함께 실행합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 창업하고 싶지만 본인의 강점을 몰라 유행하는 마케팅 강의만 전전하는 2030 예비 사장(Q10).
+
+고민: &quot;남들 다 하는 인스타, 유튜브... 나랑은 너무 안 맞는데 참아야 하나요?&quot;, &quot;어떤 비즈니스를 해야 행복할까요?&quot;(Q11).
+
+4. 제공하는 가치 — Before → After
+
+Before: 자신에게 맞지 않는 비즈니스 옷을 입고 고통받으며 시간과 돈을 낭비하는 청년.
+
+After: 자신의 성향(Needs)을 충족하면서도 수익을 내는 &#x27;지속 가능한&#x27; 비즈니스를 시작한 청년.
+
+5. 벤치마크 리서치
+
+사례: 청년 창업 인큐베이팅 프로그램, 성격 유형별 비즈니스 코칭.
+
+검색 키워드: [창업 성향 진단], [청년 비즈니스 멘토링], [자기 이해 기반 창업].
+
+6. 상품 설계 로드맵
+
+스텝 1: [창업가 성향 정밀 진단 및 아이템 매칭 1:1 세션] / 10만 원
+
+스텝 2: [12주 창업 런칭 동반 - 성향별 마케팅 전략 + 인맥 연결(Q5) 포함] / 250만 원 이상
+
+
+
+*******************
+③ 아이디어에 대해 어떻게 느끼시나요? 바로 해보고 싶으신가요?
+*******************
+
+평소에 제가 생각했던 부분이 해소된 느낌입니다. 
+바로 도전해 보고 싶어요</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">*고객에게 제공할 때의 기술적인 어려움
+
+아직 버크만 진단에 대해 배웠고 적용하고 있지만, 실전 상담으로는 현재 한달에 1~5건정도 간간히 하고 있어서 감각이 많이 떨어져 있는 상태라 감각을 계속 유지하려면 대면 상담을 많이 해야 기술적인 실력이 늘어날 것으로 생각합니다. 
+
+・첫걸음을 내딛을 때 마인드 측면에서 느끼는 어려움
+
+처음 내딛는 것은 사실 도전을 좋아하는 편이라 망설이이 길지만 긴 고민 끝에 항상 도전을 하기 때문에 긴 고민을 많이 하지 않는 연습을 하는 중 입니다.
+
+
+ ・구체적으로 어떻게 고객을 유치해 나갈 것인가
+
+현재 가까운 지인들과 직장 동료들에게 상담하고 안내해 주고 있지만, 
+앞으로 어떻게 해야 확장해 나갈 수 있을지 고민중입니다.  SNS를 활용해야 하지만, 어려움을 느껴
+고민중입니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">손실에 해당 된다고 생각합니다.</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">나는 할 수 있다는 자신감 외치기!</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이진주 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="81.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">이진주님의 과제 답변</h2>
+      <p class="meta">2일차 #81</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">서포트 비즈니스라는 개념을 처음 들어보는데 가격 경쟁 시대에 확실한 차별화 포인트가 될 것 같다고 느꼈습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">인간관계에 고민인 사람들을 위한 책과 실천 솔루션</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">부업에 대한 고민</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">아이템이 없는 사람들도 질문을 통해 구체화하면 찾을 수 있다는 게 좋았다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">Q1. 당신의 “주요 경력”을 알려주세요.
+업계, 직종, 경력 연수, 구체적인 업무 내용을 포함해 적어주세요.
+-&gt; 서비스 기획 7년차, 독서모임 운영
+
+Q2. 일이나 인생에서 위기에 빠졌을 때,
+“이렇게 하면 대체로 잘 풀렸다”라고 말할 수 있는 당신만의 필승 패턴이 있나요?
+-&gt; 빠르게 시도하고 개선하기
+
+Q3. 친구나 동료들이 당신에게 자주 상담하거나 조언을 구하는 일이 있나요?
+그들은 주로 어떤 분야의 고민을 이야기하나요?
+그리고 당신은 평소 그들에게 어떻게 조언해주나요?
+-&gt; 인간관계에 대한 고민, 책 내용을 통해 도움될만한 내용을 조언해줌
+
+Q4. 술자리나 잡담 중에, 누가 묻지 않았는데도 나도 모르게 열변을 토하게 되는 주제가 있나요?
+또는 시간이 가는 줄 모르고 몰입해서 이야기하게 되는 화제가 있나요?
+-&gt; 운동과 책에 대한 주제
+
+Q5. 일이나 취미에서, 다른 사람들은 별로 신경 쓰지 않는 세세한 부분인데도
+당신만은 유난히 집착하거나 깊이 파고드는 것, 즉 ‘편애’하는 영역이 있나요?
+-&gt; 잘 모르겠습니다.
+
+Q6. 동종업계 사람이나 다른 사람을 보며
+“부럽다”, “분하다”, “나도 저렇게 되고 싶다”는 질투심이 드는 사람은 누구인가요?
+또는 어떤 상태를 보면 그런 감정이 올라오나요?
+-&gt; 브랜딩을 잘하는 사람, 콘텐츠가 끊임 없이 나오는 사람
+
+Q7. 최근 세상이나 당신의 업계에 대해
+“이건 이상하다”, “이건 더 이렇게 되어야 한다”고 느끼며
+분노나 의로운 문제의식을 느끼는 일이 있나요?
+-&gt; 없습니다
+
+Q8. 돈 걱정이 전혀 없고, 완전히 자원봉사라 하더라도
+“이 사람을 위해서라면 꼭 힘이 되어주고 싶다”고 생각되는 사람은 구체적으로 어떤 사람인가요?
+-&gt;  독서를 하고 싶은데 어떻게 시작할지 몰라 못하는 사람, 운동을 하고 싶은데 어떻게 시작할지 몰라 못하는 사람
+
+Q9. 당신의 인생이 끝났을 때, 묘비에 한 문장이 
+새겨진다면 어떤 말이 새겨지기를 바라나요?
+또는 어떤 사람으로 기억되고 싶나요?
+-&gt; 따뜻하고 다정했던 사람</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">고객을 어떻게 만날 것인가</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2.0</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">커뮤니티 살펴보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

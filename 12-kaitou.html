@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K_EUN — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="12.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">K_EUN님의 과제 답변</h2>
+      <p class="meta">2일차 #12</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">지식전달이나 정보공유에서 벗어나 나의 스토리가 녹아있는 경험을 공유해야 한다는 점. 그리고 챌린지처럼 고객과 함께 동행하며 가는 비지니스가 좀 더 확실한 구매가 이루어지겠다고 느낌</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">아동 독서습관 루틴, 아동 영어 원서읽기 로드맵 판매, 문해력 높이는 독서록쓰기 등</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">비지니스 파이프구축하기. 나를 대신해 일할 수 있는 온라인 시스템을 이용한 사업을 고민했는데 서포트비지니스는 결국 내가 고객을 상대하며 이끌어야한다면 한계가 있지않을까 하는 고민이 생김</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">한정적으로 생각했던 내 비즈니스를 조금 더 다양한 조합으로 상품을 만들 수 있겠다는 생각을 함. 지식전달에 한정되었던 생각을 동반자 입장으로 함께 서포트하는 상품으로 간다면 고액 상품도 가능하겠다는 생각이 들었음. 특히, 서포트 비즈니스가 결국 내가 혼자 하는 비즈니스라 한계가 있다고 고민했는데 나와 같은 강사를 양성함으로서 더 커질 수 있다는 생각이 들어서 해결됨</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1.[11가지 질문에 대한 당신의 답변]
+
+Q1. 주요 경력: [아동 독서 습관 관련 종이책 출간작가/ 국공립유치원 초등학교 독서 습관&amp; 글쓰기 강의/ 초등교육 관련 유튜브 채널운영/ 하브루타 강사자격증보유/ 아동 놀이치료상담자격증/ 미술심리상담사자격증/ 아동심리상담자격증/ 타로 상담자격증/ 다음 브런치스토리에서 작가로 활동/ 육아와 아동교육 블로그 운영]
+
+Q2. 가장 큰 고민과 극복 경험: [육아, 책을 좋아하는 아이로 양육하려고 고민하고 공부해서 아이를 사교육없이 책을 좋아하는 아이로 양육/ 예민한 아이 교육을 고민했고 예민한 아이들의 특성을 공부후 맞춤 교육함/ 강의를 위한 스피치 교육을 받고 강의 전달 능력 향상시킴]
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: [육아를 위해 강의를 듣거나 자격증을 취득하거나 책을 읽어서 공부함/ 타로 상담을 위해 교육받고 자격증 취득/ 강의 스킬과 스피치 교육/ 책쓰기 과정 교육받고 여러 도서와 강의로 배우고 책 출간/ 일본어]
+
+Q4. 자기 돈을 들여 해결하거나 배운 것: [유튜브채널 운영을 위한 교육/ 강의를 위한 스피치 교육/ 책쓰기 과정]
+
+Q5. 상담받는 것: [인간관계에 관한 고민/ 연애고민/ 육아고민, ]
+
+Q6. 자기도 모르게 열변을 토하는 것: [교육관련 일/ 인간관계나 자기계발에 관련한 일/ 잠재의식과 무의식의 세계에 관련한 일]
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: [남의 이야기를 듣고 상담해주는 일/ 내 일처럼 해결해 주려고 함/ 아동 교육관련 일/ 잠재의식이나 인간의 본질에 관련한 일 ]
+
+Q8. 질투의 대상: [아동 교육관련 일을 하는 사람들이 강의나 유튜브로 브랜드를 잘 만들어 가는사람/ 베스트셀러 작가/ 유능한 강사]
+
+Q9. 분노나 의분: [교육관련 강사나 유튜버들이 사교육이나 대학입시를 위한 교육에만 치중되고 있을 때/ 나보다 못한 강의로 유명해지고 부를 가지고 있을 때 ]
+
+Q10. 무료로라도 돕고 싶은 사람: [인간관계나 아이와의 관계 때문에 고민하는 사람]
+
+Q11. 인생의 목표: [올바른 교육으로 아이를 키우는 엄마들을 잘 교육해서 엄마들이 도움을 받는 것/ 디지털 노마드로 교육 관련일을 성공해서 일정한 수입을 기대함]
+
+2. [AI에 입력하여 나온 비즈니스 아이디어]
+
+【아이디어 1: &quot;사교육 없이 책 좋아하는 아이로 키우는 엄마 코칭&quot;】
+1. 콘셉트 개요 &amp; 왜 팔리는가
+본인이 직접 사교육 없이 아이를 독서 습관이 있는 아이로 키워낸 실증 경험(Q2) + 하브루타·놀이치료·아동심리상담 자격증까지 자기 돈을 투자해 쌓은 전문성(Q3) + 출판작가·강의 경력(Q1)이 결합되면, &quot;이론만 아는 전문가&quot;가 아니라 &quot;직접 해봤고 가르쳐본 엄마 전문가&quot;라는 강력한 신뢰 포지션이 만들어집니다. 이건 유튜브에서 쉽게 찾을 수 없는 조합입니다.
+2. 제공 스타일: 동반 지원형
+독서 습관은 단기 강의로 안 됩니다. 아이의 연령·성향·가정 환경에 따라 접근이 달라야 하므로, 엄마별 맞춤 코칭이 핵심 가치입니다. 특히 예민한 아이에 대한 이해(Q2)는 희소한 전문성이라 동반 지원형이 USP가 됩니다.
+3. 타깃 &amp; 깊은 고민
+
+7세~초등 저학년 자녀를 둔 엄마
+&quot;책을 읽히고 싶은데 아이가 안 읽어요&quot;, &quot;학원 보내기엔 이르고, 그렇다고 그냥 두기엔 불안해요&quot;
+사교육에 돈 쓰기 싫지만 뒤처질까 봐 불안한 엄마 (Q9의 분노와 정확히 연결됨)
+
+4. Before → After
+
+Before: &quot;아이에게 책 읽어줘도 집중 못 하고, 학원은 보내기 싫고, 어떻게 해야 할지 모르겠어요&quot;
+After: &quot;우리 아이 성향에 맞는 독서 루틴이 생겼고, 아이가 스스로 책 꺼내요. 학원 없이도 자신감 생겼어요&quot;
+
+5. 벤치마크
+
+검색 키워드: 독서육아 코치, 책 읽는 아이 만들기, 하브루타 육아, 사교육 없이 공부 잘하는 아이
+참고 채널 방향: 정서적 육아 + 독서습관 특화 유튜버 (예: &quot;책 읽어주는 엄마&quot; 류 채널)
+브런치스토리에 이미 작가로 활동 중이므로 → 브런치 글을 깔때기(funnel)로 활용 가능
+
+6. 상품 설계 로드맵
+
+Step 1 단발 세션: &quot;우리 아이 독서 성향 진단 &amp; 맞춤 루틴 설계 90분 세션&quot; / 5만~8만 원
+Step 2 고가 패키지: &quot;3개월 독서 습관 완성 코칭 — 주 1회 세션 + 카카오톡 무제한 질문 + 월령별 도서 큐레이션 포함&quot; / 150만~220만 원
+
+
+【아이디어 2: &quot;예민한 아이를 둔 엄마를 위한 관계 회복 코칭&quot;】
+1. 콘셉트 개요 &amp; 왜 팔리는가
+예민한 아이를 직접 키운 경험(Q2) + 놀이치료·아동심리상담·미술심리치료 자격증(Q1, Q3) + 남의 이야기를 내 일처럼 들어주는 상담 능력(Q7)의 조합은, 아동심리 전문가이면서 동시에 &quot;같은 고통을 겪어본 엄마&quot;라는 이중 포지션입니다. 이 조합은 시장에서 매우 드뭅니다. 전문가는 많지만 &quot;직접 예민한 아이를 키워본 자격증 있는 전문가&quot;는 거의 없습니다.
+2. 제공 스타일: 동반 지원형 (+ 소규모 그룹 코칭 병행 가능)
+예민한 아이 문제는 하루아침에 해결되지 않습니다. 엄마의 반응 패턴 변화까지 함께 다뤄야 하므로, 지속적 동반 지원이 필수입니다. 비슷한 고민을 가진 엄마들끼리의 소그룹 코칭도 공감대가 강해 효과적입니다.
+3. 타깃 &amp; 깊은 고민
+
+감정 기복이 심하거나 예민한 아이로 인해 지쳐가는 엄마
+&quot;왜 우리 아이만 이럴까&quot;, &quot;내가 잘못 키운 건가&quot; 하는 자책과 고립감
+심리 상담은 비싸고 거리감 있고, 육아서는 우리 아이랑 맞지 않는다는 느낌 (Q10과 직결)
+
+4. Before → After
+
+Before: &quot;아이가 조금만 힘들어도 폭발해서 저도 같이 무너져요. 매일 싸우고 지쳐요&quot;
+After: &quot;아이의 예민함이 문제가 아니라 특성이라는 걸 알았어요. 대응법이 생기니 관계가 달라졌어요&quot;
+
+5. 벤치마크
+
+검색 키워드: 예민한 아이 육아, 감정코칭 엄마, 아동심리 육아 코치, HSC 아이 키우기
+참고 방향: 아동심리 기반 육아 코치 — 이런 포지션의 전문 코치는 국내에 아직 많지 않아 선점 가능성 높음
+
+6. 상품 설계 로드맵
+
+Step 1: &quot;우리 아이 기질 진단 + 엄마 대응 패턴 점검 세션 (90분)&quot; / 6만~9만 원
+Step 2: &quot;예민한 아이와 평화로운 관계 만들기 — 3개월 1:1 코칭 (격주 세션 + 카카오톡 지원 + 감정코칭 워크북 제공)&quot; / 180만~250만 원
+
+
+【아이디어 3: &quot;엄마 브랜드 창업 코칭 — 육아 전문성을 수익으로 바꾸는 법&quot;】
+1. 콘셉트 개요 &amp; 왜 팔리는가
+본인이 직접 유튜브 채널 운영, 블로그 운영, 출판, 강의, 브런치 작가 활동을 병행하며 디지털 콘텐츠 수익화를 경험하고 있고(Q1, Q4), 유튜브 운영 교육에 자기 돈을 투자했으며(Q4), 강의 스피치 교육까지 받은 경험(Q2, Q4)이 있습니다. 즉 &quot;육아 전문성 → 콘텐츠 → 수익&quot;의 전 과정을 몸으로 겪고 있는 사람입니다. Q8에서 &quot;아동 교육 관련 브랜드를 잘 만들어가는 사람&quot;을 질투한다는 것은, 바로 그 방향으로 가고 싶다는 신호이기도 하고, 그 과정을 잘 알고 있다는 의미이기도 합니다.
+2. 제공 스타일: 동반 지원형 (강의형 병행 가능)
+초반 커리큘럼(채널 설계, 콘셉트 잡기, 콘텐츠 기획)은 강의형으로, 이후 실행 단계(첫 영상 제작, 첫 강의 판매)는 1:1 동반 지원형으로 설계하면 강의와 코칭의 장점을 모두 취할 수 있습니다.
+3. 타깃 &amp; 깊은 고민
+
+육아·교육 관련 전문성이 있지만 수익화를 못 하고 있는 30~40대 엄마
+&quot;나도 강의나 유튜브 해보고 싶은데 어디서부터 시작해야 할지 모르겠어요&quot;
+&quot;육아에서 배운 것들을 돈 버는 일로 연결하고 싶어요&quot; — Q11의 목표와 정확히 일치하는 타깃
+
+4. Before → After
+
+Before: &quot;자격증도 있고 경험도 있는데, 그냥 블로그 글만 쓰고 있어요. 어떻게 수익화해야 할지 막막해요&quot;
+After: &quot;첫 온라인 강의를 론칭했고, 첫 수강생이 생겼어요. 집에서 아이 보면서 수익이 생기기 시작했어요&quot;
+
+5. 벤치마크
+
+검색 키워드: 엄마 유튜브 시작, 육아 전문가 브랜딩, 온라인 강의 만들기 코치, 디지털 노마드 엄마
+참고 방향: &quot;엄마 창업&quot;, &quot;재능 수익화&quot; 코칭 분야 — 일본에서는 이미 활성화된 시장이며 국내에서도 성장 중
+
+6. 상품 설계 로드맵
+
+Step 1: &quot;나의 전문성 발굴 &amp; 첫 콘텐츠 설계 워크숍 (120분)&quot; / 7만~10만 원
+Step 2: &quot;육아 전문성으로 첫 강의 론칭하기 — 3개월 완전 동반 지원 (콘셉트 → 콘텐츠 → 판매까지)&quot; / 200만~280만 원
+
+
+총평 및 우선순위 제안
+세 아이디어 모두 현실적으로 실행 가능하지만, 시작 난이도와 시장 수요를 고려하면:
+
+아이디어 1 (독서 습관 코칭) — 출판 작가 경력이 가장 강력한 신뢰 자산. 당장 시작하기 좋음
+아이디어 2 (예민한 아이 코칭) — 경쟁이 적고 고객의 고통이 깊어 고가화에 유리
+아이디어 3 (엄마 브랜드 창업 코칭) — 본인의 장기 목표(디지털 노마드)와 가장 일치하나, 본인이 먼저 성공 사례를 더 쌓은 후 진입하면 더 설득력이 높아짐
+
+3.  [아이디어에 대해 어떻게 느끼시나요? 바로 해보고 싶으신가요?]
+각각의 관심분야와 경력이 조합을 통한 비즈니스로 상품화 하면 좀 더 경쟁력이 생길 것 같은 생각이 들었다. 예전에는 한가지 뿌리에서 가지를 뻗어 나가려고 생각했다면 지금은 새로운 조합으로 기본과 연결은 되면서 새로운 상품이 될것 같아 도움이 되었다</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">기술적 어려움- 내가 지금까지 해오고 잘하는 일에는 어려움없는데 AI가 제시한 상품중에는 내가 관심이 많고 조금 배운정도인 부분을 포함한 비즈니스라 좀 더 전문적일 필요도 있겠다 생각이 든다. 하지만 전문성을 키우다가 시작을 못하는 것 보다 하면서 조금씩 업그레이드 해 나갈 생각이다.
+
+첫걸음 마인드측면의 어려움- 이건 별로 어려움이 없다. 어디서든 뭐든 시작할 수 있다.
+
+구체적으로 고객유치 고민- 사실 이게 내 가장 큰 고민인데 지금하고 있는 유튜브 채널과 블로그, 인스타그램을 통한 유치밖에 떠오르지 않음. 가장 중요한 판매 느낌이 나지 않으면서 자연스럽게 마케팅하는게 가장 큰 고민임</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">아이디어 1 — 독서 습관 코칭→ 손실 주도
+아이디어 2 — 예민한 아이 코칭→ 은닉 + 긴급 강함
+아이디어 3 — 엄마 브랜드 창업 코칭→ 손실 주도
+단, 셋다 손실, 은닉,긴급이 아주 큰 상태는 아님. 그게 비즈니스 고민이기도 함</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">유튜브 채널이나 블로그에 컨텐츠로 올려볼것- 조회수나 댓글확인</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김도형 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="52.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">김도형님의 과제 답변</h2>
+      <p class="meta">2일차 #52</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">나의 작은 경험들이 돈을 버는 기회가 될 수 있다. 나의 경험을 잘 정리해보자</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">공부를 하면서 학습법을 정리해 판매하고 조언해줄 수 있을거 같다</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">내 경험이 돈이 될 수 있을까? 제대로 못하면 어떡하지? 라는 막연한 불안감</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">비즈니스 아이템을 찾는 프롬프트가 구체적이여서 좋았고, 강의에서도 힘이 되는 내용을 많이 얘기해줘서 좋았습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1. 주요 경력
+    당신의 “주요 경력”을 알려주세요.
+    업계, 직종, 연수, 구체적인 업무 내용을 포함해 주세요.
+
+서울대학교 경영학과 우등 졸업, 수능 상위 1%, 대기업 5곳 동시 합격, 대한항공 1년 근무, 영상편집 프리랜서 경험 3년, 뇌과학 기반의 내면소통명상 연구소 프리랜서 직원으로 근무 중, 
+
+2. 가장 큰 고민과 극복 경험
+    당신이 일이나 인생에서 깊이 고민했던 것은 무엇인가요?
+    그리고 그것을 어떻게 극복했나요?
+
+너무 예민하고 불안감이 많은 성격임 -&gt; 책을 읽고 강의를 보면서 노력하지만 극복 못함
+시험을 못봐서 대학을 재수를 했음 -&gt; 재수 학원에서 수업을 열심히 들으면서 점수를 올려 서울대 입학
+잠재력을 발휘하고 원하는 것을 얻고 싶음 -&gt; 불안감에 휩싸여서 제대로 하지 못함
+
+3. 시간과 돈을 투자하거나 몰입한 것
+    지금까지의 인생에서 가장 많은 “시간”이나 “돈”을 쏟아온 것은 무엇인가요?
+    혹은 시간 가는 줄 모르고 몰입하거나 연구하거나 열중하게 되는 것은 무엇인가요?
+
+자기계발 -&gt; 어떻게 하면 돈을 잘벌고, 불안감에서 벗어나고, 관계를 잘맺고 등등 나를 괜찮은 인간으로 만드는데 집중. 특히 잠재력을 발휘하거나 불안감에서 벗어나는 걸 공부할 때는 시간 가는 줄 모르고 재밌음
+
+4. 자기 돈을 들여 해결하거나 배운 것
+    과거에 당신이 “자기 돈을 들여”, 즉 돈을 지불해서 누군가에게 해결받은 고민이나 배운 것은 무엇인가요?
+
+돈 버는 방법, 불안감에서 나아지는 방법
+-&gt; 이론상 배우기는 했는데 잘 해결되지는 않았다.
+
+5. 사람들이 나에게 자주 물어보는 고민
+  사람들이 당신에게 자주 상담하거나 조언을 구하는 주제는 무엇인가요?
+ 친구, 동료, 지인들이 어떤 고민이 있을 때 당신을 찾아오나요?
+ 그리고 당신은 그들에게 보통 어떤 식으로 조언해 주나요?
+
+공부 어떻게 하면 되는지? -&gt; 내 재수때 경험으로 최대한 열심히 알려줌
+
+
+6. 자기도 모르게 열변을 토하는 것
+    술자리나 잡담 중에, 누가 묻지도 않았는데 “자기도 모르게 열변을 토하게 되는 것”이나, 시간이 가는 줄 모르고 이야기하게 되는 “주제”가 있나요?
+
+심리적인 고민들 -&gt; 이런 상황인거 같아 등등으로 공감해주고 괜찮으면 조언줌
+돈버는 방법 -&gt; 돈버는데 막혀있으면 이렇게 하면 되지 않아? 라고 얘기
+
+7. 비정상적일 정도의 집착과 잘하는 것
+    일이나 취미에서, 다른 사람은 신경 쓰지 않을 법한 세세한 부분에 유독 “집착하게 되는 것”이 있나요?
+    또한 다른 사람에게 평가받았거나 스스로 잘한다고 생각하는 것은 무엇인가요?
+
+시키는 일은 잘 처리함
+워크북 교재 만든 거 잘 만들었다고 칭찬받음
+온라인으로 작은 게임 행사를 개최했었는데 참가자들이 즐겁게 즐기고 만족함 -&gt; 이런 일이 발생하면 어떡하지? 생각해서 미리 보완점을 마련해둠
+
+8. 질투의 대상
+    동종업계 사람이나 타인을 보면서 “좋겠다”, “분하다”라고 질투하게 되는 사람은 누구인가요?
+    또는 어떤 상태를 보면 그런 감정이 드나요?
+
+자신감 있게 자기 의견이나 얘기를 하는 사람 -&gt; 나는 제대로 말할 수 있을지 걱정되서 그렇게 못함. 부러움, 질투
+
+젊은 나이에 돈을 잘 버는 사람 -&gt; 나는 왜 저렇게 못할까? 생각 많이듦
+
+9. 분노나 의로운 분노
+    최근 세상이나 당신의 업계에 대해 “이건 이상하다”, “좀 더 이렇게 되어야 한다”라고 분노나 의로운 분노를 느끼는 것이 있나요?
+
+자기계발 -&gt; 내가 추구하는 자기계발은 잠재성을 발휘하고, 스스로 원하는 방향으로 나아가게 도와주는 것임. 하지만 우리나라는 어떻게 하면 돈을 쉽고 빠르게 잘벌까? 에 초점이 너무 많이 맞춰져 있음. 돈버는 자기계발이 나쁜건 아니지만 너무 단기간에 꼼수로 버는 법을 가르침. 돈버는 법도 본질적으로 자기 스스로 벌어나갈 수 있는 방법을 알려줘야 한다고 생각함.
+
+10. 무료로라도 돕고 싶은 사람
+    돈 걱정이 전혀 없고 완전히 자원봉사라고 하더라도, “이 사람을 위해서라면 힘이 되어주고 싶다”고 생각하는 사람은 구체적으로 어떤 사람인가요?
+
+인생을 어떻게 하면 잘 살까 고민하는 사람
+예민함과 불안감 때문에 행동을 하지 못하는 사람
+
+11. 인생의 목표
+    당신의 인생이 끝났을 때, 묘비에 한마디가 새겨진다면 어떤 말이 새겨지기를 바라나요?
+    또는 어떤 인물이었다고 기록되기를 바라나요?
+
+전문 코치로 정말 많은 사람들이 숨은 잠재력을 발휘하게 도와줘 개개인의 삶을 180도 바꿔줬다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">기술적 어려움: 광고, 상세페이지 만들기 등의 어려움
+마인드: 성인 상대로 판매를 하면 누가 살까? 하는 생각
+고객 유지: 기수제랑 1:1로 진행해보면 좋을 것 같다</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">손실</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">커뮤니티 살펴보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

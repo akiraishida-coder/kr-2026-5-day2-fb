@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juhyang — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="10.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">Juhyang님의 과제 답변</h2>
+      <p class="meta">2일차 #10</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">내가 행동력이 막혔을 때 난 아직 부족하다라는 프레임에    빠졌었는데  이 강의를 듣고 누군가에게 완벽하지않아도 과정을 함께하는 서포트 역할이라도 괜찮다에서 힘이됐다 
+더 나만이 할수있는 부분이 뭔지 누군가에게 뭘 줄 수있는지 더 나에대해 생각하게됐다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">하루플로우라는 브랜드 이름으로 
+나에게 몰입하여 안정된 하루와 삶으로 안내해주고 싶다 , 나를 탐구하는 과정, 나를 찾아과정을 도와주고 싶다. 그 부분을 12주과정 커리큘럼으로 하려고 생각하고있다</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">나에 대해 알아가는 것 , 나에 대해 자심감을 갖는 것 , 
+내일을 온라인으로 확장하려는데 시작이두려운것
+센터운영, 다이어트,</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">내 비지니스에 대해 복잡해서 행동력이 막혔는데 좀더 단순한 사고와 용기를 얻었다</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">Q1. 주요 경력
+
+- 물리치료사 병원 근무
+- 필라테스 강사 8년차
+- 운동강사 총 10년차
+- 필라테스 대회 출전 3회
+- 필라테스 지도자 과정 운영 경험
+- 필라테스 센터 운영 3년차
+- 폐업 직전 센터 인수 후 적자 없이 운영 경험
+- 바디프로필 3회 경험
+- 다이어트 및 체형 관리 경험ㅓ
+
+Q2. 가장 큰 고민과 극복 경험
+
+- 다이어트 강박과 완벽주의 극복 경험
+- 불안과 감정 문제를 몸과 호흡을 통해 조절하려고 노력해온 경험
+- “나는 뭘 좋아하는 사람인가?”, “나다운 삶은 무엇인가?”를 깊게 고민해온 경험
+- 회원 통증 케어와 수업 퀄리티에 대한 집착
+- 체력 관리와 멘탈 관리를 동시에 해온 경험
+- 폐업 일주일 남은 센터를 인수해 운영 안정화 경험
+
+Q3. 시간과 돈을 투자하거나 몰입한 것
+
+- 센터 운영 교육
+- 필라테스 및 움직임 교육
+- 호흡 강의
+- 요가, 헬스, 운동
+- 자기 탐구와 인생 통찰
+- 무의식 및 감정 정화
+- 긍정 마인드셋과 자기 관리
+- “왜 이런 현상이 나타나는가?”를 탐구하는 사고
+- 의식 성장 관련 독서와 공부
+- 내가 잘할 수 있는 것과 존재 이유 탐구
+
+Q4. 자기 돈을 들여 해결하거나 배운 것
+
+- 센터 운영 및 브랜딩 교육
+- 자기다움 관련 교육
+- 호흡 및 웰니스 강의
+- 요가 및 헬스
+- 웰니스/에너지 명상 관련 교육
+
+Q5. 자주 상담받는 것
+
+- “내가 잘하고 있는 걸까?”
+- “왜 나는 이렇게 생각할까?”
+- 삶의 방향과 자기 확신
+- 척추 움직임 및 운동 티칭
+- 감정과 사고의 원인 탐색
+- 인생 통찰과 관점 변화
+
+저는 상대에게 단순 답을 주기보다,
+“왜 그렇게 느끼는가?”를 스스로 생각하게 만드는 편입니다.
+
+Q6. 자기도 모르게 열변을 토하는 것
+
+- 인생 관점 변화
+- 다이어트와 몸의 상태
+- 편안하고 안정된 삶
+- 자기 자신을 잘 아는 것
+- 성장을 멈추는 삶에 대한 이야기
+- 무의식과 감정 패턴
+- 몸과 마음의 연결
+
+Q7. 비정상적일 정도의 집착과 잘하는 것
+
+- 현상의 근본 원인을 찾는 것
+- “왜 이런 일이 일어나는가?”를 깊게 분석하는 것
+- 불안을 편안한 상태로 만드는 것
+- 힘을 빼는 감각
+- 사람의 상태를 읽는 것
+- 수업 몰입도와 만족도 설계
+- 운동 티칭과 공감 능력
+
+칭찬받은 것:
+
+- 운동 지도
+- 티칭
+- 공감 능력
+- 치유받는 느낌을 준다는 피드백
+
+Q8. 질투의 대상
+
+- 자기 일을 재밌게 몰입하며 하는 사람
+- 편안하고 여유로운 사람
+- 남 눈치 보지 않는 사람
+- 자기 개성이 강한 사람
+- 자기 스타일대로 살아가는 사람
+- 에너지 넘치고 자기 확신 있는 사람
+
+Q9. 분노나 의로운 분노
+
+- 무조건 열심히 하는 것만 강요하는 문화
+- 열심히 하는데 돈을 못 버는 구조
+- 자기다움을 잃고 살아가는 삶
+- 사고의 전환을 막는 환경
+- 남 눈치 보느라 잠재력을 쓰지 못하는 사람들
+
+Q10. 무료로라도 돕고 싶은 사람
+
+- 자기다움을 찾고 싶은 사람
+- 다이어트로 힘들어하는 사람
+- 몸의 안정감을 잃은 사람
+- 불안과 긴장 속에서 살아가는 사람
+
+Q11. 인생의 목표
+
+- 나를 세상에 드러내고 알리는 것
+- 나답게 잠재력을 발휘하며 사는 것
+- 몸을 통해 인생과 마음과 삶을 바꾸는 사람으로 기억되는 것
+- 사람들의 관점을 바꾸는 사람
+- 웰니스 센터를 만들고 사랑과 개성을 존중하는 문화를 만드는 것
+- “주향답게 살다 간 사람”으로 기억되는 것
+
+제가 만들고 싶은 삶의 방향은:
+
+“억지로 버티는 삶이 아니라,
+편안하게 자기답게 살아가는 삶”
+
+입니다.
+
+운동을 가르치는 것을 넘어,
+몸의 긴장을 풀고,
+불안을 안정시키며,
+사람이 자기 감각을 회복해
+결국 자기답게 살아갈 수 있도록 돕고 싶습니다.
+
+제안하는 3개의 아이디어 각각에 대해 아래 항목을 출력해 주세요.
+
+【아이디어: [매력적인 서비스명]】
+
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+Q2의 극복 경험, Q3·Q4에서의 자기투자 사실, Q5·Q7의 요소가 어떻게 타깃의 강한 공감과 “돈을 지불할 이유, 즉 신뢰”로 이어지는지 논리적으로 설명해 주세요.
+
+2. 제공 스타일 — 동반 지원형 or 강의형 — 과 그 이유
+
+노하우의 희소성이나 경험을 바탕으로 어떤 방식이 가장 적합한지 설명해 주세요.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+Q4의 구매 경험과 Q6, Q8, Q9, Q10에 근거하여 어떤 절실한 고민을 가진 사람이 돈을 지불하게 되는지 설명해 주세요.
+
+4. 제공하는 가치 — Before → After
+
+그 사람이 어떻게 변화하는지 구체적으로 설명해 주세요.
+
+5. 벤치마크 리서치
+
+유사 사례, 참고할 SNS/유튜브/블로그 URL 또는 검색 키워드를 제시해 주세요.
+
+6. 상품 설계 로드맵
+
+- 스텝 1:
+  “단발 세션” 체험 상품
+  (예: 90분 진단, 상담, 움직임 분석 등)
+  예상 가격 포함
+
+- 스텝 2:
+  “고가 동반 지원 패키지”
+  (예: 3개월 동반 코칭, 채팅 지원, 루틴 설계, 상태 관리 등)
+  예상 가격 포함
+
+그리고 마지막으로 반드시 아래 질문에 답변해 주세요.
+
+
+
+
+2번 
+아이디어 1 : 하루플로우 리셋】
+
+“불안한 몸을 안정된 상태로 회복시키는 12주 웰니스 코칭”
+
+⸻
+
+1. 콘셉트 개요와 왜 당신이 하면 팔리는가
+
+이 시장의 핵심 문제는:
+사람들이 운동 방법을 몰라서 실패하는 게 아니라,
+“불안한 상태”로 살아가기 때문이다.
+
+* 스트레스 받으면 폭식
+* 열심히 운동하다 번아웃
+* 쉬어도 회복 안 됨
+* 몸 긴장을 못 느낌
+* 늘 자기 몸을 몰아붙임
+
+당신은:
+
+* 물리치료 기반
+* 필라테스 10년
+* 다이어트 강박 경험
+* 불안 조절 경험
+* 회원 통증 케어 경험
+* 호흡/움직임 교육 경험
+
+이 모두 연결되어 있다.
+
+즉 당신 USP는:
+
+“몸의 상태를 통해 사람 삶의 패턴을 읽는 능력”
+
+이다.
+
+특히:
+“왜 이렇게 되었는가?”
+를 집요하게 분석하는 성향이
+고객 입장에서는:
+“나를 깊게 이해해주는 사람”
+으로 느껴진다.
+
+이건 강력한 신뢰 요소다.
+
+⸻
+
+2. 제공 스타일 — 동반 지원형
+
+이건 강의형보다:
+“동반 지원형”
+이 훨씬 맞다.
+
+왜냐면:
+불안·폭식·긴장·완벽주의는
+정보 부족이 아니라:
+
+* 반복 패턴
+* 상태
+* 감정 반응
+    문제이기 때문이다.
+
+즉 고객은:
+“아는 것”
+보다
+“지속 가능한 상태 유지”
+가 필요하다.
+
+⸻
+
+3. 타깃 고객과 깊은 고민
+
+타깃
+
+30~40대 여성
+
+특징:
+
+* 다이어트 반복 실패
+* 운동 강박
+* 자기혐오
+* 불안
+* 긴장성 통증
+* 늘 피곤함
+* 쉬어도 회복 안 됨
+* 남 눈치 많이 봄
+
+겉 문제는:
+“살”
+인데
+
+진짜 문제는:
+
+“불안한 몸 상태”
+
+다.
+
+⸻
+
+4. Before → After
+
+Before
+
+* 몸 긴장 심함
+* 폭식 반복
+* 자기검열
+* 운동 강박
+* 쉬는 것도 불안
+
+After
+
+* 몸 안정감 회복
+* 식욕 안정
+* 긴장 인식 가능
+* 자기 몸 감각 회복
+* 지속 가능한 루틴 형성
+* 자기 삶 몰입 가능
+
+⸻
+
+5. 벤치마크 리서치
+
+검색 키워드
+
+* nervous system regulation
+* somatic healing
+* breathwork coaching
+* trauma informed fitness
+
+참고 사례
+
+* The Workout Witch￼
+* Huberman Lab￼
+* Somatic Experiencing International￼
+
+⸻
+
+6. 상품 설계 로드맵
+
+스텝 1 — 단발 세션
+
+“몸 상태 리셋 진단”
+
+내용:
+
+* 호흡 분석
+* 긴장 패턴 분석
+* 식욕/감정 패턴 분석
+* 움직임 평가
+* 라이프 루틴 분석
+
+가격:
+15만~30만 원
+
+⸻
+
+스텝 2 — 고가 패키지
+
+“12주 하루플로우 리셋”
+
+내용:
+
+* 주 1회 오프라인
+* 신경계 안정 루틴
+* 채팅 피드백
+* 식욕/불안 관리
+* 움직임 루틴
+* 상태 기록
+
+가격:
+300만~700만 원
+
+⸻
+
+【아이디어 2 : 필라테스 브랜드 빌드업】
+
+“실력은 있는데 돈이 안 되는 강사를 위한 성장 시스템”
+
+⸻
+
+1. 왜 당신이 하면 팔리는가
+
+당신은 단순 티칭보다:
+“회원이 왜 계속 오는가”
+를 본다.
+
+이건 강사 시장에서 굉장히 희귀하다.
+
+대부분은:
+
+* 동작
+* 해부학
+* 운동법
+
+만 가르친다.
+
+근데 실제 재등록은:
+
+* 감정
+* 몰입
+* 변화 체감
+* 상담
+* 분위기
+    에서 결정된다.
+
+당신은:
+
+* 센터 운영
+* 재등록 경험
+* 수업 몰입 설계
+* 회원 심리 이해
+
+가 실제 경험 기반이다.
+
+즉:
+“현장형 브랜딩”
+이 가능하다.
+
+⸻
+
+2. 제공 스타일
+
+이건:
+동반형 + 스쿨형
+혼합이 좋다.
+
+왜냐면:
+강사들은:
+
+* 기술 부족
+    보다
+* 자신감 부족
+* 자기 스타일 부재
+* 브랜딩 부재
+    문제가 더 크기 때문이다.
+
+⸻
+
+3. 타깃 고객
+
+초중급 필라테스 강사
+
+고민:
+
+* 열심히 하는데 돈 안 됨
+* 재등록 낮음
+* 콘텐츠 어려움
+* 자기 철학 없음
+* 가격 못 올림
+* 번아웃
+
+⸻
+
+4. Before → After
+
+Before
+
+* 기술만 설명
+* 단가 낮음
+* 회원 이탈
+* SNS 막막
+
+After
+
+* 자기 언어 형성
+* 재등록 증가
+* 브랜드화
+* 단가 상승
+* 팬 고객 형성
+
+⸻
+
+5. 벤치마크
+
+검색 키워드
+
+* Pilates educator
+* boutique fitness branding
+* fitness business mentor
+
+참고
+
+* Pilates Anytime￼
+* Active Management￼
+
+⸻
+
+6. 상품 구조
+
+단발
+
+“재등록 분석 세션”
+10만~30만 원
+
+⸻
+
+장기
+
+“12주 브랜드 빌드업”
+200만~500만 원
+
+포함:
+
+* 상담 스크립트
+* SNS 방향
+* 회원 심리
+* 브랜딩
+* 재등록 구조
+* 단가 설계
+
+⸻
+
+【아이디어 3 : 자기다움 회복 프로젝트】
+
+“남 눈치 속 삶에서 자기 감각으로 살아가는 사람 만들기”
+
+⸻
+
+1. 왜 당신이 하면 팔리는가
+
+당신은:
+“나는 왜 나답게 못 살았을까?”
+를 오래 탐구했다.
+
+그래서 단순 자기계발이 아니라:
+
+* 불안
+* 완벽주의
+* 자기검열
+* 자기상실
+
+을 겪어본 사람의 언어가 있다.
+
+이건 강력한 공감 자산이다.
+
+⸻
+
+2. 제공 스타일
+
+100% 동반형.
+
+왜냐면:
+정체성 문제는
+정보로 해결되지 않는다.
+
+사람은:
+“안다고”
+변하지 않는다.
+
+⸻
+
+3. 타깃 고객
+
+* 늘 남 눈치 봄
+* 방향 없음
+* 자존감 낮음
+* 자기 표현 어려움
+* 항상 불안
+* 열심히 사는데 공허함
+
+특히:
+“사회적으로는 괜찮아 보이는데,
+내 안은 무너진 사람”
+시장이 크다.
+
+⸻
+
+4. Before → After
+
+Before
+
+* 자기검열
+* 비교
+* 불안
+* 방향 상실
+
+After
+
+* 자기 기준 형성
+* 자기 표현 가능
+* 자기 감각 회복
+* 자기 삶 몰입
+* 자기다움 형성
+
+⸻
+
+5. 벤치마크
+
+검색 키워드
+
+* authentic living coach
+* somatic self discovery
+* identity coaching
+
+참고
+
+* The Holistic Psychologist￼
+* School of Life￼
+
+⸻
+
+6. 상품 구조
+
+단발
+
+“자기다움 진단 세션”
+10만~20만 원
+
+⸻
+
+장기
+
+“자기감각 회복 12주”
+200만~500만 원
+
+⸻
+
+마지막 질문
+
+“나는 이 비즈니스로 한 사람을 어떤 인생으로 인도할 것인가?”
+
+당신 답변 전체를 기반으로 하면,
+가장 정확한 문장은 이거다.
+
+“억지로 버티는 삶에서,
+편안하게 자기답게 살아가는 삶으로.”
+
+당신은:
+사람을 더 열심히 살게 만드는 사람이 아니다.
+
+오히려:
+
+* 몸의 긴장을 풀고
+* 불안을 안정시키고
+* 자기 감각을 회복하게 하며
+* 자기 기준으로 살아가게 만드는 사람
+
+이다.
+
+즉 당신 비즈니스의 최종 목적은:
+
+“몸을 바꾸는 것”이 아니라,
+“삶의 상태를 바꾸는 것”
+
+3번 바로시도</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">내가 이룬 기술을 잘 전달할수있는 자료와 방법 
+
+내가 잘 할수있을 까,
+그 사람을 잘 바뀌게 할수있을 까
+
+구체적으로는 몸을 통해 자기다움을 찾고싶은 사람</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2.0</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">쓰레드 하기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

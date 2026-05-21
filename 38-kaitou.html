@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김현진 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="38.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">김현진님의 과제 답변</h2>
+      <p class="meta">2일차 #38</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">누구나 자신만이 잘하거나 갖고있는 강점으로 돈을 벌수 있다는 내용이 흥미로웠습니다. AI 시대에 기술에만 치우치지 않고 서포트 비즈니스 창업이라는 남을 돕는 관점이 즐기며 할수 있따는 생각이 드네요. 대가들과 함께 강의 열어 주셔서 진심으로 감사드립니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">홈페이지 기획. 디자인 자동화. 강의커리큘럼 자동화 / 1인기업으로 독립하고 싶은 사람을 강의. 지식으로 도와주고 강의.코칭하고 싶음</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">AI 격변의 시대 어떻게 대체해야 할지 고민이 됨.
+기술이 중요한건 아니지만 그렇다고 아예 안할수 도 없는 시대라 머리가 아픔. 
+기존 기술과 AI를 결합한 기술로 초보들이 쉽게 배우고 1인시대에 스스로 독릭하게 해주고픔
+그외 내가 뭘 해줄수 있을지 고민. 디자이너를 오래 했고 지식창업도 해주고 있음
+리브랜딩에 대해 고민하고 있음. 지금 해주시는 강의처럼 흔한 기술 강의가 아닌 내 무기로 1인기업가로서 성장할수 있게 도와주고 싶고 브랜딩에 강력한 한줄 메세지와 정체성을 갖고 싶다.
+어떤 방향과 목표를 재정비하면 좋을지 고민</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">이렇게 상세피 뽑아주는 프롬프트가 좋네요.
+비개발자 AI 비즈니스 빌더
+“개발 몰라도 AI로 사업 만들기”
+“툴 강의” 가 아닌 이시대에 비개발자로 AI 비즈니스 빌더
+관점에서 좀더 아이디어 뽑아보고 싶습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1. 11가지 질문
+
+Q1. 주요 경력
+UI/UX 디자이너 경력 약 15년
+웹사이트 브랜딩, 랜딩페이지, 퍼널 설계, 정보 구조 설계 경험
+지식창업가 대상 홈페이지·브랜딩 컨설팅 진행
+노코드 기반 웹사이트 제작 경험 보유 (아임웹, 식스샵, Canva 등)
+AI 활용 콘텐츠 제작 및 생성형 AI 프롬프트 설계 경험
+플랫폼공식 코치 및 강사 활동
+교육·코칭·강의 플랫폼 구축 경험
+블로그 SEO, 콘텐츠 마케팅, 웨비나 퍼널, 전환형 상세페이지 기획 경험
+AI 기반 디자인 자동화 및 바이브코딩(MCP/GPTs/AI Agent) 관심 및 연구
+사진작가 및 감성 브랜딩 기반 포트폴리오 기획 경험
+
+Q2. 가장 큰 고민과 극복 경험
+
+가장 큰 고민은 “좋은 실력과 경험이 있어도, 사람들은 그것을 알아주지 않는다”는 문제였습니다.
+
+디자인 실력만으로는 수익화가 되지 않았고, 특히 많은 전문가들이 기술은 있지만 브랜딩·포지셔닝·판매 구조가 없어 묻히는 현실을 깊이 경험했습니다.
+
+또한 웹사이트 제작 시장은 경쟁이 심하고 단가 하락이 심했기 때문에 단순 제작자로 남으면 지속가능성이 떨어진다는 고민이 컸습니다.
+
+이를 극복하기 위해:
+
+단순 제작자가 아니라 “성과 중심 브랜딩 설계자” 포지션으로 이동
+홈페이지 자체보다 “전환 구조·퍼널·브랜드 메시지”에 집중
+AI와 노코드 툴을 빠르게 흡수하여 생산성을 극단적으로 끌어올림
+지식창업·강의·코칭 시장과 결합
+감성 브랜딩 + 빠른 실행 + AI 자동화를 조합한 독자 영역 구축
+
+결국 “디자인”이 아니라 “고객의 비즈니스 성과를 만드는 구조 설계”로 관점을 바꾸며 차별화했습니다.
+
+Q3. 시간과 돈을 투자하거나 몰입한 것
+홈페이지 제작 및 UX 설계
+브랜딩 전략
+AI 생성형 콘텐츠 및 프롬프트 엔지니어링
+노코드 툴 연구
+랜딩페이지 전환 구조
+웨비나 판매 구조
+지식창업 시장 분석
+퍼널 설계
+콘텐츠 마케팅 및 블로그 SEO
+감성 디자인 및 비주얼 연출
+MCP·AI Agent·자동화 시스템
+빠르게 MVP를 제작하는 방식 연구
+
+특히 “어떻게 하면 비전문가도 빠르게 자신의 브랜드를 수익화할 수 있는가”에 강하게 몰입해왔습니다.
+
+Q4. 자기 돈을 들여 해결하거나 배운 것
+브랜딩 강의
+마케팅 및 퍼널 강의
+AI 툴 및 자동화 교육
+디자인 툴 학습
+노코드 플랫폼 사용
+지식창업 및 코칭 관련 교육
+블로그 SEO 및 콘텐츠 전략
+세일즈·카피라이팅
+웨비나 운영 구조
+웹사이트 구축 관련 SaaS 구독
+
+단순 지식 수집이 아니라 “실제로 적용해 수익화 가능한가”를 기준으로 반복 검증해왔습니다.
+
+Q5. 상담받는 것
+
+주변 사람들에게 가장 많이 받는 상담은:
+
+“홈페이지 어떻게 만들어요?”
+“브랜딩 어떻게 해야 해요?”
+“강의 팔리게 하려면?”
+“AI 어디까지 활용 가능해요?”
+“노코드로 어디까지 가능해요?”
+“콘텐츠 방향이 안 잡혀요”
+“내 강점을 어떻게 돈으로 연결하죠?”
+
+보통 단순 기능 설명보다:
+
+고객 시선에서 문제를 재해석하고
+메시지를 정리하고
+팔리는 구조를 잡고
+실행 우선순위를 단순화해주는 방식으로 조언합니다.
+Q6. 자기도 모르게 열변을 토하는 것
+“좋은 실력인데 브랜딩 못해서 망하는 구조”
+“완벽주의 때문에 실행 못하는 문제”
+“홈페이지는 예쁜 게 아니라 전환돼야 한다”
+“AI 시대엔 제작보다 기획력이 더 중요하다”
+“지식창업은 결국 신뢰 설계 게임이다”
+“전문가들이 기술은 있는데 시장 언어를 못 쓴다”
+“노코드는 초보자의 무기가 될 수 있다”
+“대부분은 어려운 게 아니라 구조를 몰라서 못한다”
+
+특히 “실행 가능한 수준으로 단순화”하는 것에 강한 집착이 있습니다.
+
+Q7. 비정상적일 정도의 집착과 잘하는 것
+
+집착하는 부분:
+
+CTA 위치
+랜딩페이지 흐름
+고객 심리 동선
+전환률
+첫 화면 후킹
+감성 + 신뢰 균형
+브랜드 톤앤매너
+복잡한 걸 초보자도 이해하게 만드는 구조
+AI 프롬프트 설계
+빠른 MVP 제작 속도
+
+잘한다고 평가받는 부분:
+
+복잡한 개념을 쉽게 설명
+브랜드 감성 정리
+웹사이트 구조화
+AI를 실무형으로 적용
+빠른 실행력
+“안 팔리던 걸 팔리게 보이게 만드는 능력”
+초보자의 막막함 해소
+Q8. 질투의 대상
+실력보다 브랜딩과 마케팅으로 크게 성장한 사람
+빠르게 시장 선점을 해버린 사람
+단순 정보가 아니라 “구조”를 팔아 큰 수익을 내는 사람
+강의가 아니라 “생태계”를 만든 사람
+AI를 활용해 압도적인 생산성과 영향력을 가진 사람
+
+특히:
+“실력은 평범해도 포지셔닝과 시스템으로 시장을 장악한 사람”을 보며 강한 자극을 받습니다.
+
+Q9. 분노나 의로운 분노
+초보자를 불안 마케팅으로 현혹하는 업계
+과장된 AI 수익 광고
+실질 성과 없이 비싼 강의만 판매하는 구조
+실무와 동떨어진 이론 교육
+지나치게 복잡하게 설명하는 전문가 문화
+“코딩 못하면 못한다”는 진입장벽 문화
+
+“진짜 필요한 건 실행 가능한 구조인데 대부분은 환상만 판다”는 문제의식이 강합니다.
+
+Q10. 무료로라도 돕고 싶은 사람
+실력은 있지만 표현과 브랜딩이 약한 사람
+실행력은 있는데 방향이 없는 사람
+기술은 있지만 판매 경험이 없는 전문가
+혼자 오래 고민하며 자존감이 깎인 창작자
+강의·코칭·콘텐츠를 시작하고 싶은 초보자
+비개발자인데 AI와 노코드로 인생을 바꾸고 싶은 사람
+
+특히:
+“좋은 사람인데 시장에서 묻혀버린 사람”에게 강한 감정 이입을 합니다.
+
+Q11. 인생의 목표
+“복잡한 세상을 누구나 실행 가능하게 만든 사람”
+“기술과 감성을 연결한 사람”
+“평범한 사람도 자신의 지식으로 먹고살 수 있게 도운 사람”
+“실행하지 못하던 사람들의 첫 성공 경험을 만든 사람”
+
+묘비명으로 남기고 싶은 말:
+
+“사람들의 가능성을 현실로 연결한 사람”</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">어떤 컨셉이 고객에게 먹힐까, 이게 팔릴까, 어떻게 뾰죡하게 접근해야할까가 고민</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2.0</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">챗지피티와 대화하면 실제 그부분 벤치마킹 및 분석을 주말에 끝내보려 합니다.</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

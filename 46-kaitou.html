@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>. — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="46.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">.님의 과제 답변</h2>
+      <p class="meta">2일차 #46</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">나를 믿고 나를 알고 내 경험을 바탕으로 상대의 성공을 돕는 모델이다 내성향과 잘 맞을거같아서 기대가 됨
+리더보단 서포터의 역활로 세상을 살아왔던거같다</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">아직 까진 없음</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">직 장없이 어떻게 꾸준히 최소 직장만큼의 수익을 만들어낼수 있을까</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">내가? 라는 생각에서 내가! 라는 마음 가짐으로 바뀌었음</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">Q1. 주요 경력:
+
+외식프랜차이즈 회사에서 근무함 15년 이상가맹점을 관리하며 qsc 및 영업관리 
+
+매장관리는 사실 매출을 올리기 위한 마케팅 및 lsm 등 진행하였고 
+10년전 배달이 지금처럼 흥행하지 않았을때 배달사업을 도입하여 
+사내에서 1등 상을 받은 경험이 있음 
+
+Q2. 가장 큰 고민과 극복 경험: [여기에 답변 입력]
+
+트레이딩을 통해서 지금까지 사실 누적수익은 없고 계속적인 손실만 기록중인데 
+
+언젠가는 꼭 누적수익을 쌓고싶은 마음에 아직도 사실 포기 하지않고 어렵지만 
+
+진행중 
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: [여기에 답변 입력]
+
+트레이딩,투자를 잘하기 위해 했던것
+
+Q4. 자기 돈을 들여 해결하거나 배운 것: [여기에 답변 입력]
+
+트레이딩 기술 및 교육
+
+Q5. 상담받는 것: [여기에 답변 입력]
+사소한 일들을 나에게 잘 털어준다 나는 그것을 한귀로 듣고 흘리지 않고 , 작은 도움이라도있을까 생각하는 마음을 가진다
+
+Q6. 자기도 모르게 열변을 토하는 것: [여기에 답변 입력]
+
+사실 무언가를 열변을 토하는거보단 듣는거에 집중을 하고 같이 해결하고 싶어한다
+
+철학과 사람들의 마음에 관심이 많음
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: [여기에 답변 입력]
+
+사람들의 시선에 대해 굉장히 배려를 많이 하는점 과 인터넷에 올라와있는 구매할수있는 것중 최저가를 찾는일을 좋아하고 잘한다
+
+Q8. 질투의 대상: [여기에 답변 입력]
+
+트레이딩으로 돈을 꾸준히 버는 사람들 
+
+Q9. 분노나 의분: [여기에 답변 입력]
+
+직장의 급여는 10년전이나 지금이나 똑같은데 , 세상의 물가는 전혀 그렇지 않다  그렇기에 스스로 돈을 벌수있는 능력이 필요하라는 생각이 최근에 들었음
+
+Q10. 무료로라도 돕고 싶은 사람: [여기에 답변 입력]
+
+트레이딩으로 긴 시간 아픔을 겪은 분들에게 내가 그것을 어떻게 극복했는지에 대한 것
+나를 소개받았던 사람들  
+
+Q11. 인생의 목표: [여기에 답변 입력]
+
+ 나를 통해서 많은 트레이더 들이 많이 잃지 않고 꾸준히 이겨서 경제적 자유까지는 아니더라도 자유롭게 직장없이 이 세상을 즐기며 살아가고싶은 마음 
+
+트레이더 전문 마인드 카운슬링 — &quot;철학이 있는 투자 독립 학교
+트레이더 생존 페이스메이커 — &quot;손실 정지(Loss-Stop) 1:1 밀착 가드
+트레이딩 오퍼레이션 최적화 컨설팅 — &quot;최저가 기회비용 매니지먼트</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">누적수익이 없는 상태로 상대방에게 결국 수익을 만들어 낼수 있도록 도와주는일 나에게 신뢰가 있을까 ?</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">1,2</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">나를 보여줄수있는 블로그,홈페이지 등 개설</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

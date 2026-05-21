@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김소희 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="75.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">김소희님의 과제 답변</h2>
+      <p class="meta">2일차 #75</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">강의에서 얘기해주셨던 것 처럼 지식창업등은 정말 잘 알고 누군가를 가르치는것만 의미가 있고 돈을 벌수있다고 생각했는데 서포트 비즈니스는 누군가를 옆에서 독려하고 나아갈수있게 이끌어주는 것만으로도 비즈니스가 가능하다는 부분에서 새로운 비즈니스 창구를 열어준것같습니다</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">원래 생각했던건 홈페이지 제작, 로고 디자인이였습니다</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">현재 일하고있는건 안경사로 근무를 하고있는데 이 일이 맞지않는고 생각되어 현재 디자인을 배우고있는 상황입니다 한편으로는 이렇게 전혀 다른 직군으로 바꾸는게 옳은 선택인가 고민이 되기도합니다</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">사실 제 경험이 비즈니스 아이디어가 될것이라고는 생각을 못했었는데 이렇게 상세한 프롬포트를 만들어주셔서 너무 감사하고 대단하시단 생각이 먼저 들수밖에 없었다
+정말 나에게도 비지니스를 시작할수있다는 희망을 느끼게 되었다 그리고 와닿았던 이야기 중 하나가 이 사업이 과거의 자신을 구해줄수있는 일인가라는 이야기도 머리를 울리는 이야기였습니다</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1. 주요 경력
+ 안경사 일을 7년째 하고있고 가공, 검안, 재고관리, 피팅, 고객응대 등 전체적으로 다 일하고있어요
+
+2. 가장 큰 고민과 극복 경험
+고객응대가 가장 어려웠습니다 
+무례한 사람들, 말이 통하지않는 사람들을 응대하는게 너무 힘들어서 다른일을 해보려고 웹 페이지 제작, 로고 디자인 등을 배웠었는데 현재 일하는것과 병행하려니 너무 벅차서 사람들의 태도에 휘둘리지않고 하루를 망치지 않게 하기위해 책을 읽고있습니다 사실 아직 극복하진 못했습니다. 다만 전보단 나아지고있습니다
+
+3. 시간과 돈을 투자하거나 몰입한 것
+ 가장 시간을 많이 쓴건 안경일과 드라마, 노래 듣는것
+시간 가는 줄 모르고 몰입하는건 드라마보는 일이였던것같습니다, 이외에는 책읽을때 열중하게되었습니다
+
+4. 자기 돈을 들여 해결하거나 배운 것
+주식을 막 시작하려고 할때 강의를 결제해서 배운적이 있습니다
+주식 용어도 어렵고 어떤걸 사야할지 모르겠어서 강의를 결제하고 분석하는 법, 용어 정리, 장기투자의 계획 등을 배웠습니다
+
+5. 사람들이 나에게 자주 물어보는 고민
+인간관계를 주로 물어봅니다 어떤 사람이 이런 말을 했는데 어떻게 생각해 등 
+솔직하게 느낀 그대로를 이야기하며 혹시 모를 가능성도 같이 이야기해줍니다 
+사람은 각자 살아온 환경이 다르다보니 의도가 그게 아니였더라도 오해받을때가 많습니다
+그러다보니 혹시 이래서 그런행동을 했을수도있다 너무 부정적으로 생각하지 말라고 이야기 해주는 편입니다
+
+6. 자기도 모르게 열변을 토하는 것
+매장진상이야기, 안경업계이야기, 드라마 이야기
+
+7. 비정상적일 정도의 집착과 잘하는 것
+일에서 특히 예민한부분이 사람 말투를 신경을 많이 씁니다 , 
+가공에서 정말 조금의 안경테의 틈을 잘 안두려고합니다 그 덕분에 시간이 조금 더 오래걸릴때도있고요
+다른사람보다 걱정이 많아서 고객에게 주의사항을 많이 이야기하는 편입니다
+그로인해 응대시간이 길어져서 바쁠때는 주변 동료들에게 눈초리를 받을때도있습니다 
+그 주의사항들 덕에 고객 클레임이 적은 편입니다 
+
+8. 질투의 대상
+가공, 피팅을 다 잘하는 사람을 보면 그런생각이 듭니다 
+대단하다라는 생각과 나도 저 사람에게 배워보고싶다 라는 생각을 한적이 있습니다 
+이가안경, 외국 안경사들 가공잘하는 분들 
+
+9. 분노나 의로운 분노
+검안을 전체 다 할줄아는 안경사가 제대로없다
+사실 나도 그렇고… 그리고 정말 안경사 면허증이 있지만 어떻게 면허증을 땄는지 의문이 드는 사람들도 안경을 맞춰주는게 좀 어이가 없다 
+안과처방전을 가지고 오는데 안과에 돋보기 도수의 개념도 제대로 모르는 사람이 써준 처방전대로 안경을 만들어주면 그에대한 컴플레인은 오롯이 안경사의 몫이다 
+
+10. 무료로라도 돕고 싶은 사람
+정말 안경을 자주 바꿔야하는 어린 친구들이 부모의 무지와 금전적 문제로 안경을 바꿀 시기를 놓치는 경우가 있다 이런 친구들을 도와주고싶다
+
+11. 인생의 목표
+세상 따뜻한 사람, 부드러우면서 강단있게 이끌어주던 사람
+다재다능하고 일의 퀄리티가 항상 좋았던 사람 
+못하는게 없는 사람 
+
+AI에게서 나온 비즈니스 아이디어
+
+【아이디어: “안경사 생존 연구소 — 클레임 없는 현장 자신감 코칭”】
+
+### 1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 서비스의 본질은 “안경 기술을 가르치는 것”이 아니라, **신입 안경사가 현장에서 무너지지 않도록 동행하는 것**입니다.
+
+당신의 답변을 연결해보면 신뢰가 생기는 구조가 명확합니다.
+
+Q2에서는 고객응대가 너무 힘들어서 다른 일을 고민할 정도였습니다. 그런데 도망만 간 게 아니라 책을 읽고 스스로 대응 방식을 바꾸려 했습니다. 완전한 성공담이 아니라 **진행형 극복 경험**입니다. 이게 중요합니다.
+
+Q5에서는 사람들이 인간관계 해석을 자주 묻습니다. 상대를 단정하지 않고 “다른 가능성”을 보는 습관이 있습니다.
+
+Q7에서는 작은 틈도 그냥 넘기지 않고, 주의사항을 많이 설명합니다. 동료는 느리다고 보지만 결과는 **클레임 감소**입니다.
+
+즉 USP는:
+
+&gt; “빨리 일하는 안경사가 아니라, 나중에 생길 문제를 미리 없애는 안경사”
+
+입니다.
+
+신입 안경사의 가장 큰 공포는 기술 부족이 아니라:
+
+&gt; “실수할까 봐 무서움”
+&gt; “고객이 무서움”
+&gt; “내가 이 일을 해도 되는 사람인지 모르겠음”
+
+입니다.
+
+당신은 이미 그 감정을 겪어본 사람입니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">1번의 아이 눈 성장 파트너 사업을 시작한다고하면 사실상 안경원에서 주기적으로 시력 체크를 하고 도수변경을 진행하는 과정이라 내 안경원을 열어서 시작을 해야한다고 생각한다 사실 내 안경원만 있다면 검안, 가공이 가능하다보니 기술적 어려움은 없다 마인드 측면에서는 방문하는 아이들의 시력을 내가 책임지겠다라는 의지만 있다면 마인드 측에서도 어려움은 없다 
+고객유치가 가장 어려울것이다 다른 안경원과 다른 차별점을 가지고있어야하고 근시억제렌즈등 근시관리 렌즈를 소개하고 눈이 나빠지게 되는 이유등을 자세히 안내드려야할것같다</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">아이의 눈 상태에 따라 다르겠지만 손실정도일것같다 미래의 아이의 눈을 위해 지금 투자를 먼저한다고 안내를 드리면 손실정도까지는 가능할것같다.</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">커뮤니티 살펴보기, 인터넷 상의 사람들의들 고민을 살펴볼것같다 특히 맘카페 같은곳</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sojeong — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="34.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">Sojeong님의 과제 답변</h2>
+      <p class="meta">2일차 #34</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">그동안 제가 해온 일이 서포트 비즈니스였구나 - 새삼 깨달았네요. 해외 출국 준비하는/해외 살고 있는 분들께 영어를 가르쳤는데, 저도 초보에서 부딪치며 해외 생활을 시작한지라 이런 부분을 나누는 것이 많은 분들께 도움이 되었던 것 같아요. 반면 지금은 출산 후 전업맘이라 영어 강의나 ebook을 파니 잘 안되더라고요. 역시 사람의 터치가 필요하겠구나 생각하게 됩니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">제가 사는 나라는 작아서 정보가 잘 없다는 얘기가 많아 정보를 공유하고 정착을 돕거나 하고 싶은데.. 거기다 청소년/진로 상담 경험을 살려 2~30대에게 힘이 되는? 뭐 그런 것도 하고 싶고, 국제 연애/결혼 경험으로 상담도 가능할 거 같고, 타지 육아 경험.. 이런것도 나눌 수 있지 않을까 싶습니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">고민/불안이라기보다 집에서 풀타임으로 만2세 아기를 돌보고 있는데, 곧 둘째도 태어나서 시간적/체력적 여유가 없다는 게 한계네요. 자투리 시간을 이용해서 제 일을 꾸준히 하고 싶어요. (강의 시간이 한참 육아하는 시간이라 실시간 참여는 못 하고 녹화본으로 시청합니다)</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">그동안 제가 편리함, 아스피린을 제공하려했구나 싶으면서도 고액을 지불할 긴급한 서비스는 지금 첫째 육아와 둘째 출산 앞 둔 상황에서 제공할 수 있을지, 실시간 강의를 직접 참여할 수 있다면 좋았을텐데 생각이 드네요.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">[내 정보]
+Q1. 주요 경력:
+청소년상담사3급, 사회복지사 1급, 직업상담사 2급, 범죄심리피해자상담 등 자격증 보유, 대학 졸업 후 1-2년 청소년상담 경험, 지역아동센터 복지사, 청소년지도 파트타임/봉사, 대안학교 방과 후 영어 교사, 진로 상담.
+영국에서 발달장애학생 수업/생활 보조 2년
+영국/아일랜드에서 척추마비환자와 노인 care assistant 2년+
+필리핀 어학원 C/S 근무 경험
+태권도 해외봉사 아프리카로 통역 경험 (4단 보유)
+유튜브로 해외생활에 대한 영상을 올리다가 온라인으로 영어 회화 가르치면서 워홀 및 해외생활 컨설팅, tried small business. 2023년 육아로 중단 후 가끔 스터디그룹 운영. 건강 관련 인스타그램 운영(1.3k followers 중단), 유튜브(6.5k 중단), 네이버 블로그 운영(2.3k) 경험
+
+Q2. 가장 큰 고민과 극복 경험: 20대 중반, 가정 형편이 넉넉하지 않은 상태에서 영어권 국가에 살아보고 싶어서 자원봉사비자, 워홀 비자로 영국 살이를 시작한 것. 나이 30이 되어서는 비자와 싸워야 하는 해외 생활 도전을 해야 할지, 그리고 국제 연애 및 결혼. 이를 위해서 영어 실력이 필요했고 그냥 현지에서 부딪친 케이스. 아이엘츠 overall 7.5 달성 및 현지 생활 어려움 없음
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: 대학교육과 관련 자격증 취득, 영어 공부, 소셜미디어 운영 방법 및 퍼스널브랜딩 컨설팅, 비즈니스 강의에 시간과 돈을 투자한 경험 있고 여행과 경험에 아낌 없이 투자. 아이 갖고는 자연주의출산에 대해 공부하고 육아에 대해서 공부 중.
+
+Q4. 자기 돈을 들여 해결하거나 배운 것: 영어, 요가, 브랜딩/비즈니스 강의
+
+Q5. 상담받는 것: 영어공부법, 아일랜드 영국 생활이나 여행지에 대한 조언, 진로 고민, 자연주의출산, 모유수유, 육아법
+
+Q6. 자기도 모르게 열변을 토하는 것: 한국 출산 문화, 양육 문화, 아이들 교육 현실 문제와 정서적 지지 및 서포트 관련, 해외생활 이야기
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: 아이 발달 관련 - 천기저귀, 모유수유, 애착 형성을 위해 가정보육 등, 보통 일처리가 꼼꼼하다는 칭찬을 듣고, 글쓰기를 잘 하는지는 모르겠지만 블로그 글 쓰는건 어렵지 않다. 사람들이 쉽게 텋어놓는 편한 상대. 경청, 잘 들어준다는 얘기 많이 듣는다. 다양한 음식 먹어보는걸 좋아하고 외국인 친구들에게 요리도 많이 해 주고 칭찬도 많이 들었다.
+
+Q8. 질투의 대상: 질투까지는 아니지만 김현지 작가님처럼 아일랜드 관련 책을 써서 아일랜드 하면 떠오르는 사람으로 알려지고 싶다. 아니면 미국 생활 이야기를 유튜브로 편하게 풀어 내어 구독자를 많이 보유하고 책도 쓰고 한 진저님? 진로고민 상담 많이 할 때는 유튜브 채널 Lavendarie? 같은 커뮤니티도 좋다 생각.
+
+Q9. 분노나 의분: 돈을 위해서라면 보이지 않지만 중요한 가치가 무시되는 현실 혹은 포기 해야하는 현실. 특히 육아에 있어서 신생아가 태어나자마자 부모로부터 바로 분리되고 기관에 의해 길러지는 현실. 보여지는 게 중요한 세상. 정확한 정보보다 자극적이고 돈이 되는 방향으로 정보가 흐르는 현실, 소셜미디어가 정보를 얻기 위함보다 자기 과시를 위한 곳이라 피곤하게 느껴지고 별로 하고 싶지 않은 느낌.
+
+Q10. 무료로라도 돕고 싶은 사람: 방황하는 2-30대, 특히 사회/어른, 부모님 영향을 크게 받아서 자기 내면의 소리를 듣지 못 한 사람들 / 가족에 희생하며 사는 K 장녀들 / 가정보육하면서 자존감이 낮아지는 엄마들 / 아일랜드에 정착하는 한국인들
+
+Q11. 인생의 목표: 따뜻한 사람으로 기억되길? 내가 살다가 갔다는 뭔가가 남아 있음 좋을 것 같고, 선한 영향력을 충분히 전달하고 갔음 좋겠다.
+
+【아이디어 1: “해외정착 감정코치” — 아일랜드·영국 삶 전환 동반 프로그램】
+【아이디어 2: “가정보육 엄마 회복 살롱” — 자존감 회복 + 애착육아 코칭】
+【아이디어 3: “조용한 사람의 퍼스널 브랜딩” — 과시 없이 신뢰 쌓는 콘텐츠 코칭】
+
+아이디어는 지금 생각하고 있는 방향과 대충 비슷한것같아요.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">아이디어 1은 시도해보았는데 접근 방법이 잘 못되었는지 모르겠지만 고가 컨설팅 받기는 어려웠어요. 유학원 같은데서 어학원 연계해주며 무료 상담을 해주니 굳이 비싸게 낼 필요가 있을지. 아이디어 2는 집에서 아이 돌보는 엄마가 아이를 위해서라면 모를까 자기 자신(결국 아이와 가족을 위한 것이긴 하지만) 많은 돈을 쓸 수 있을지 의문이에요.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">정도에 따라 모두 해당될 것 같아요</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">고민을 가진 사람이 있다는건 이미 알고 있어서 다음 단계를 고민해야 할 것 같습니다.</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

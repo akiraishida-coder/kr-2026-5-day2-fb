@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김문엽 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="19.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">김문엽님의 과제 답변</h2>
+      <p class="meta">2일차 #19</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">서포트 비즈니스의 핵심은 나의 스토리텔링이라는 것을 깨닫게 되었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">제가 지금까지 살면서 익힌 경험이나 지식을 고민해보고 어떻게 적용해서 판매할 수 있을지 고민 중입니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">돈을 벌어 생계를 유지해야 하는데 돈을 버는 것은 결코 쉽지 않다는 사실입니다. 돈을 벌기 위해서는 결국 치열한 고민과 이를 실현하는 꾸준함이 답인 것 같습니다. 서포트 비즈니스를 잘 구축해서 저 스스로 돈을 벌고 싶습니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">비즈니스 방법에 대해 보다 분명해져서 좋았습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">① 11가지 질문에 대한 답변 (비식별 전문성 강화 버전)
+1. 주요 경력: 대규모 데이터 인프라 및 전사적 자원 효율화 솔루션을 설계하는 시스템 아키텍트. 지능형 워크플로우를 통한 비즈니스 자동화 전문가.
+2. 고민과 극복: 인적 자원의 물리적 투입에 의존하는 수익 구조의 한계를 절감하고, 이를 &#x27;무인화된 디지털 자산&#x27;으로 전환하기 위한 아키텍처 연구 및 실현.
+3. 몰입한 것: 복잡한 비즈니스 로직의 알고리즘화 및 데이터 기반의 자산 운용 체계 최적화. 고효율 오퍼레이션을 위한 신체 및 정신의 회복 루틴.
+4. 비용 투자: 고도의 분석적 사고를 위한 전문 학술 과정, 차세대 디지털 인터페이스 구현 기술, 그리고 시공간적 독립을 가능케 하는 생활 인프라 및 이동 수단 고도화.
+5. 상담 내용: 고부가가치 전문가 및 경영자 대상의 비즈니스 오퍼레이팅 시스템 설계 및 수익 구조의 자동화 로드맵 컨설팅.
+6. 열변 포인트: &quot;디지털 전환을 통한 업무 패러다임의 혁신&quot;과 &quot;기술적 우위를 통한 인간의 주도적 삶과 자유 시간 확보&quot;.
+7. 집착과 강점: 시스템의 무결성과 프로세스 최적화에 대한 엔지니어적 완벽주의. 파편화된 전문 지식을 누구나 즉시 실행 가능한 형태의 시스템으로 재구조화하는 능력.
+8. 질투의 대상: 독자적인 시스템 자산을 구축하여 완전한 시공간적 자유를 누리며, 본질적인 가치에 집중하는 &#x27;시스템 기업가&#x27;.
+9. 분노의 지점: 실용성 없는 이론 중심의 매뉴얼과 데이터에 근거하지 않은 비합리적 의사결정 관행.
+10. 돕고 싶은 사람: 탁월한 전문 지식을 보유했으나 시스템화 역량 부족으로 성장이 정체된 전문가 및 책임감 있는 리더들.
+11. 묘비명: &quot;지식을 시스템으로 변환하여 세상의 효율을 높이고, 전 세계를 누비며 자유를 증명한 시스템 전략가.&quot;
+
+② AI에 입력하여 나온 비즈니스 아이디어
+1. [비즈니스 아키텍팅] 지능형 프로세스 자동화 및 가치 자산화 솔루션
+    * 전문가의 핵심 로직을 디지털 알고리즘으로 이식하여 &#x27;개입 최소화형 수익 시스템&#x27; 엔지니어링.
+2. [스케일업 시스템] 고효율 지식 전수 인프라 및 성과 보장형 아키텍처
+    * 자동 피드백 엔진을 탑재하여 대규모 인원의 성과를 상향 평준화하는 차세대 지식 운용 인프라 설계.
+3. [오퍼레이셔널 프리덤] 리스크 관리형 글로벌 비즈니스 운영 체계
+    * 물리적 위치와 관계없이 비즈니스를 통합 제어하고 리스크를 선제적으로 관리하는 원격 오퍼레이팅 시스템 구축.
+
+③ 아이디어에 대해 어떻게 느끼시나요? 바로 해보고 싶으신가요?
+&quot;기존의 인적 서비스 모델에서 벗어나, 나의 기술적 정체성인 &#x27;아키텍트&#x27;로서 고객의 비즈니스 엔진을 재설계한다는 관점이 매우 강력하게 다가옵니다. 특히 1번(프로세스 자동화)은 현재 보유한 기술 인프라로 즉시 시장 진입이 가능하며, 3번(운영 체계 설계)은 제가 꿈꾸는 완전한 자유의 삶을 고객에게도 그대로 전수할 수 있다는 점에서 강력한 내적 동기를 부여합니다.&quot;</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">단순 자동화 시장과의 차별성을 강조하기 위한 &#x27;고단가 하이엔드 컨설팅&#x27;으로서의 권위와 신뢰를 구축하는 과정에서 겪는 완벽주의적 검열.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">3(긴급)</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">&quot;고소득 전문가 및 비즈니스 리더들이 주로 활동하는 전문 네트워크에서 &#x27;운영 효율화&#x27;, &#x27;번아웃 방지&#x27;, &#x27;시스템 기반 성장&#x27;에 대한 실제 고충 섞인 사례들을 리서치하여, 그들이 갈망하는 &#x27;가장 절실한 시스템적 니즈&#x27; 5가지를 정의하겠습니다.&quot;</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

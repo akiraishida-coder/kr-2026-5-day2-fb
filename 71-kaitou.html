@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>☆ — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="71.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">☆님의 과제 답변</h2>
+      <p class="meta">2일차 #71</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">저에게 딱 필요한 강의였습니다. 저야말로 진짜 아무것도 없는 사람이거든요. 당장에 구체적으로 어떤 것을 해야 할지는 아직 모르겠지만 비즈니스에 대한 생각이 유연해졌어요. 생각만 하기보다 좀 더 용기를 가지고 실행해봐야겠다는 생각도 들었습니다. 좋은 강의 감사합니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">없음</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">인생 전반에 미래에 대한 불안이 있습니다. 그 중에서도 돈에 대한 불안이 커요. 충분한 돈을 벌고 싶은데, 어떻게 해야 할지 막막합니다. 이번 기회를 통해 방향을 잘 잡고 시작하고 싶어요.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">막연하게 이런 서비스는 어떨까 하고 생각해보기만 했던 부분을 구체적으로 그려볼 수 있어서 유익했습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">① Q1. 주요 경력: [무기력을 벗어나기 위해 마음공부를 했고, 타로를 배웠다.]
+
+Q2. 가장 큰 고민과 극복 경험: [여러 번의 실패를 통해 오랜 시간 동안 무기력했다. 고통에서 벗어날 방법을 찾기 위해 마음공부를 했다. 외부상황과 관계없이 행복할 수 있다는 것을 알게 되었다. 그전보다는 나를 있는그대로 받아들이고 사랑하게 됐다.]
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: [마음의 고통에서 벗어나 행복해지기 위한 방법]
+
+Q4. 자기 돈을 들여 해결하거나 배운 것: [무의식을 다루는 방법]
+
+Q5. 상담받는 것: [연애상담. 타로상담]
+
+Q6. 자기도 모르게 열변을 토하는 것: [나와의 관계, 타인과의 관계에서 나의 감정을 다루는 방법과 평소에 생각, 태도를 어떻게 가져야 행복할 수 있는지에 대한 것]
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: [부정적인 생각과 감정을 다루는 일]
+
+Q8. 질투의 대상: [자신의 삶을 누구와도 비교하지 않고 자신의 존재 자체를 사랑하고 당당한 사람을 보면 부럽다는 생각이 든다]
+
+Q9. 분노나 의분: [한국은 타인의 삶을 너무 쉽게 평가하고 판단하는 것 같다]
+
+Q10. 무료로라도 돕고 싶은 사람: [스스로를 사랑하지 못하고 불안, 무기력한 사람들을 돕고 싶다]
+
+Q11. 인생의 목표: [자신과 타인을 진정으로 사랑할 줄 알고 그 사랑을 전한 사람]
+
+② 【아이디어 1: [무의식 Re-Born] 무기력 탈출 &amp; 자존감 재건 1:1 동반 케어】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+단순히 &quot;힘내세요&quot;라는 위로가 아닙니다. 귀하는 Q2에서 언급한 &#x27;실패와 장기 무기력&#x27;이라는 실전 데이터를 보유하고 있습니다. Q4에서 투자한 &#x27;무의식 다루는 법&#x27;은 이론이 아니라 본인이 살기 위해 체득한 &#x27;생존 도구&#x27;입니다. 타깃은 똑똑한 이론가보다, &quot;나도 당신처럼 죽을 것 같았지만, 무의식을 바꿔서 지금은 행복하다&quot;라고 말하는 &#x27;극복 증명자&#x27;에게 기꺼이 고액을 지불합니다.
+
+2. 제공 스타일 — 동반 지원형
+
+이유: 무기력은 지식의 부재가 아니라 &#x27;에너지의 고갈&#x27;과 &#x27;습관적 무의식&#x27;의 문제입니다. 강의만으로는 행동이 바뀌지 않습니다. 타깃이 다시 늪으로 빠질 때마다 손을 잡아주는 밀착 케어가 필수적입니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 겉으로는 멀쩡해 보이지만 속은 무기력으로 곪아 터진 2030 직장인 및 취준생.
+
+고민: &quot;열심히 살아야 한다는 걸 알면서도 손가락 하나 까딱하기 싫다&quot;, &quot;남들과 비교하며 스스로를 쓰레기라고 생각한다(Q8, Q9)&quot;. 타인의 시선에 함몰되어 자아를 잃어버린 고통.
+
+4. 제공하는 가치 — Before → After
+
+Before: 무기력과 자기혐오의 굴레에서 매일 자책하며 시간을 낭비함.
+
+After: 외부 상황에 휘둘리지 않고 스스로를 온전히 사랑하며, 작은 성취부터 시작해 자기 삶의 주도권을 회복함.
+
+5. 벤치마크 리서치
+
+사례: 라이프 코칭, 무의식 정화 테라피스트.
+
+키워드: &#x27;무의식 정화 코칭&#x27;, &#x27;무기력증 극복 멘토링&#x27;, &#x27;자존감 컨설팅&#x27;.
+
+참고: 유튜브 &#x27;마인드풀니스&#x27; 기반 코칭 채널 및 크몽 내 &#x27;자존감 상담&#x27; 카테고리 고단가 판매자.
+
+6. 상품 설계 로드맵
+
+스텝 1 (단발): [무의식 블로킹 진단 세션] 현재 무기력의 근본 원인을 무의식 차원에서 분석 (90분 / 15만 원)
+
+스텝 2 (장기): [12주 자아 재건 프로젝트] 주 1회 상담 + 매일 감정 로그 피드백 + 무의식 확언 가이드 (3개월 / 250만 원)
+
+【아이디어 2: [타로 힐링 미러] 관계 중독 탈출을 위한 &#x27;심리 자립&#x27; 컨설팅】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+Q5, Q6에서 나타난 귀하의 강점인 &#x27;연애/타로 상담&#x27;과 &#x27;생각/태도의 교정&#x27;을 결합합니다. 흔한 점술 상담은 &quot;상대방 마음이 어때요?&quot;에 집중하지만, 귀하의 서비스는 &quot;상대방을 보는 당신의 마음을 어떻게 다스려야 행복한가?&quot;라는 본질적 질문을 던집니다. Q7(부정적 감정 다루기) 능력이 타깃에게 강력한 USP가 됩니다.
+
+2. 제공 스타일 — 강의 + 코칭 융합형
+
+이유: 연애와 관계의 패턴은 반복됩니다. 타로라는 도구로 현재를 진단(희소성)하고, 다시는 같은 고통을 반복하지 않도록 &#x27;마음 공부&#x27; 원리를 교육하는 스쿨 형식이 적합합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 이별 후유증, 가스라이팅, 혹은 늘 퍼주는 연애만 하다 상처받은 여성들.
+
+고민: &quot;상대방의 연락 한 통에 내 인생이 천국과 지옥을 오간다&quot;, &quot;혼자 있는 시간을 견디지 못하고 불안하다(Q10)&quot;.
+
+4. 제공하는 가치 — Before → After
+
+Before: 타인의 평가와 사랑에 목매며 정서적으로 종속된 삶.
+
+After: 타로를 통해 내면을 객관화하고, 타인 없이도 스스로 행복할 수 있는 &#x27;정서적 독립군&#x27;으로 성장.
+
+5. 벤치마크 리서치
+
+사례: &#x27;연애 심리 상담소&#x27;, &#x27;타로 기반 심리 코칭&#x27;.
+
+키워드: &#x27;연애 자존감 코칭&#x27;, &#x27;타로 심리학&#x27;, &#x27;관계 독립 컨설팅&#x27;.
+
+참고: 인스타그램에서 힐링 타로로 팬덤을 구축한 &#x27;타로 멘토&#x27; 계정들.
+
+6. 상품 설계 로드맵
+
+스텝 1 (단발): [내면 아이 타로 리딩] 현재 관계의 고통이 투영된 내면의 상처 발견 (60분 / 8만 원)
+
+스텝 2 (장기): [심리 자립 8주 완성 코스] 타로 리딩법 + 감정 조절 테크닉 + 관계 설정 원칙 전수 (2개월 / 180만 원)
+
+【아이디어 3: [온리원(Only One) 마인드] 타인 의식 Off, 나다움 On 마스터 클래스】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+Q9에서 귀하가 느낀 &#x27;타인을 쉽게 판단하는 사회&#x27;에 대한 의분은 강력한 마케팅 메시지가 됩니다. &quot;비교하지 않고 존재 자체로 당당한 사람(Q8)&quot;이 되고 싶었던 귀하의 열망이 곧 상품의 목적지입니다. 무의식(Q4)과 마음 공부(Q1)를 결합하여 한국 특유의 &#x27;눈치 문화&#x27;에서 고객을 해방시킵니다.
+
+2. 제공 스타일 — 동반 지원형 (그룹/개인)
+
+이유: 사회적 압박은 혼자 이겨내기 힘듭니다. 컨설턴트와의 1:1 깊은 교감과 같은 고민을 가진 이들의 커뮤니티적 지지가 동반될 때 가장 큰 성과가 납니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 남들의 시선 때문에 하고 싶은 일을 못 하거나, SNS 속 타인의 삶과 비교하며 끊임없이 박탈감을 느끼는 사람.
+
+고민: &quot;남들보다 뒤처지는 것 같아 불안하다&quot;, &quot;나답게 살고 싶지만 그게 뭔지 모르겠다&quot;.
+
+4. 제공하는 가치 — Before → After
+
+Before: 타인의 잣대에 맞추느라 에너지를 소진하고 가면을 쓴 채 살아감.
+
+After: 나만의 기준이 생기고, 타인의 평가에 의연해지며, 진정한 자기 사랑을 실천함(Q11).
+
+5. 벤치마크 리서치
+
+사례: &#x27;자기다움 찾기 워크숍&#x27;, &#x27;아티스트 웨이 그룹 코칭&#x27;.
+
+키워드: &#x27;나다움 브랜딩&#x27;, &#x27;사회적 시선 극복 코칭&#x27;, &#x27;자기 사랑 실천법&#x27;.
+
+참고: &#x27;드로우앤드류&#x27;와 같은 퍼스널 브랜딩 채널 중 마인드셋을 강조하는 영상들.
+
+6. 상품 설계 로드맵
+
+스텝 1 (단발): [가짜 자아 해체 상담] 내가 믿고 있는 &#x27;남의 기준&#x27; 걷어내기 워크시트 제공 (100분 / 12만 원)
+
+스텝 2 (장기): [나다움 실현 100일 밀착 동행] 무의식 개조 챌린지 + 1:1 심층 상담 5회 + 커뮤니티 활동 (100일 / 220만 원)
+
+③ 아이디어를 좀 더 구체화 시켜서 실행해보고 싶다는 생각이 듭니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">내가 정말 할 수 있을지 의심이 들고, 이런 서비스를 제공할 만큼의 자격과 실력이 있는지도 의심스럽습니다. 심리적 장벽이 시작하기 어렵게 하는 것 같아요. 그리고 막상 어떻게 시작해야 할지 막막하게 느껴집니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">레벨 1</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">키워드 검색</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>유창열 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="23.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">유창열님의 과제 답변</h2>
+      <p class="meta">2일차 #23</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">작게는 후기와 리뷰, 유튜버·인스타 팔로워 수, 스펙이나 말솜씨 같은 기본 조건들이 갖춰져야만 비즈니스를 할 수 있다고 생각했습니다.
+
+하지만 이번 강의 보면서, 아무것도 없는 상태에서도 충분히 비즈니스가 가능할 수 있다는 가능성을 느끼게 되었습니다.
+
+또 단순히 제품을 판매하는 것이 아니라, 사람들의 고민을 함께 이해하고 해결해 나가는 과정 자체도 하나의 비즈니스가 될 수 있다는 점을 알게 되었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">중국에서 생활잡화 소량다품종으로 수입해서 B2B 플랫폼에 공급하고 있는 공급사 공동운영을 하고 있고, 추가로 새로운 비지니스를 확장 하려고 하고 있습니다. 최근에 눈 관리에 필요한 제품을 판매 하고 있습니다. 판매 기간 약 2개월</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">현재 판매하고 있는 제품을 어떻게 하면 더 많은 사람들이 자연스럽게 찾고 구매할 수 있을지 계속 고민하고 있습니다.
+
+단순히 광고만으로 판매하는 방식보다는, 사람들의 고민과 불편함을 함께 이해하고 공감하면서 제품을 연결할 수 있는 방법을 찾아보고 싶습니다. 안정적인 수익 모델을 계속 늘리고 싶습니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">관점을 바꾸자에 대한 생각이 더 많이 다가왔습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1.
+Q1. 주요 경력
+
+해외구매대행, 소량다품종 수입 B2B 공급사 운영
+
+Q2. 가장 큰 고민과 극복 경험
+
+기존 사업 확장과 개인적인 비즈니스 발굴 및 추가 수익화 방향을 고민하고 있으며, 어떤 모델을 확장해야 할지 지속적으로 학습과 실천을 통해 해결하려 노력 중이다.
+
+Q3. 시간과 돈을 투자하거나 몰입한 것
+해외구매대행 2년 경험
+중국에서 생활잡화 소량다품종 수입 공급사 4년 운영
+공급사 운영 경험 기반 전자책 약 135페이지 제작 및 크몽 판매
+Q4. 자기 돈을 들여 해결하거나 배운 것
+해외구매대행
+쇼피파이 운영
+당근 비즈니스 광고
+구글 애즈 광고 시도
+챗GPT 활용지도사 1급
+클로드 활용 랜딩페이지 제작
+공급사 재무 플랜 제작
+공급사 시뮬레이션 제작
+제품 랜딩페이지 제작
+상세페이지 고도화 제작
+Q5. 사람들이 자주 물어보는 고민
+친구, 동료, 지인과 깊은 사업적 상담은 없음
+나이가 들수록 주변 관계에서 사업 고민을 나눌 사람 부족
+실질적으로 사업 고민을 물어보는 관계 구조는 거의 없음
+Q6. 자기도 모르게 열변을 토하는 것
+
+현재 자신이 하고 있는 사업 (해외구매대행 + 소량다품종 공급 구조 + 수입 비즈니스 구조)
+
+Q7. 비정상적일 정도의 집착과 잘하는 것
+데이터 분석 기반 판단
+클로드 기반 코딩으로 랜딩페이지 제작
+실제 판매 가능한 수준의 웹페이지 제작 경험 보유
+Q8. 질투의 대상
+조리 있게 말 잘하는 사람
+생각이 자연스럽게 언어로 정리되는 사람
+언변이 좋은 사람
+Q9. 분노나 의분
+실질 가치 없는 정보를 고가 강의로 판매하는 사람들에 대한 문제의식
+Q10. 무료로라도 돕고 싶은 사람
+자신의 경험을 진정성 있게 받아들이는 사람
+관심 있고 배우려는 의지가 있는 사람
+Q11. 인생의 목표
+안정적인 수익 구조를 여러 채널로 만드는 것
+단일 수익이 아닌 다중 수익 구조 확보
+
+
+2. 
+1. 콘셉트 개요와 왜 당신이 팔리는가
+
+이 모델은 “셀러를 가르치는 사람”이 아니라
+👉 셀러를 ‘공급사 구조’로 전환시키는 실전 설계 서비스다.
+
+대부분 사람들은 여기서 막힌다.
+
+구매대행은 했지만 지속성이 없음
+위탁판매는 매출이 들쭉날쭉
+상품은 많은데 구조가 없음
+
+여기서 당신의 경험이 그대로 신뢰로 작동한다.
+
+Q3: 중국 소량 수입 + 4년 공급사 운영 → “구조 실전 경험”
+Q4: 광고 + 랜딩 + AI 활용 → “판매 시스템 자동화 경험”
+Q2: 확장 방향 고민 → “같은 고민을 통과한 설계자”
+Q7: 데이터 기반 분석 → “감이 아닌 구조 설계”
+
+즉 이 상품의 본질은 이것이다.
+👉 “셀러를 공급자로 바꾸는 구조 설계 서비스”
+
+2. 제공 스타일
+
+👉 완전 동반 지원형
+
+이 모델은 절대 강의로 해결되지 않는다.
+
+상품 선택
+중국 소싱 구조
+공급사 등록 방식
+셀러 반응 테스트
+매출 구조 설계
+
+전부 “실행 중 판단”이 필요하다.
+
+3. 타깃 고객과 깊은 고민
+구매대행 했지만 수익 불안정
+위탁판매로는 미래가 없음
+매출이 단발성
+“사업 구조 자체가 불안정”
+
+이들은 정보 문제가 아니라
+👉 “지속 가능한 구조 부재” 문제를 가진 사람들이다.
+
+4. Before → After
+
+Before:
+
+단기 매출 반복
+플랫폼 의존
+상품만 쌓임
+
+After:
+
+공급사 구조 확보
+셀러 기반 매출 구조
+반복 주문 시스템
+“지속형 사업” 전환
+5. 벤치마크 리서치
+https://www.alibaba.com
+ (공급망 구조 기본)
+https://www.shopify.com/blog/wholesale-model
+YouTube:
+https://www.youtube.com/@WholesaleTed
+https://www.youtube.com/@Shopify
+
+검색 키워드:
+
+“dropshipping to wholesale supplier transition”
+“small MOQ sourcing business model case study”
+6. 상품 설계 로드맵
+스텝 1
+90분 “사업 구조 전환 진단”
+현재 셀러 상태 → 공급사 가능성 분석
+가격: 5~10만원
+스텝 2
+3개월 공급사 전환 프로그램
+중국 소싱 + 상품 구조 + 셀러 연결
+가격: 300~500만원
+【아이디어 2: “AI 기반 판매 자동화 &amp; 랜딩 수익화 설계 프로그램”】
+1. 콘셉트 개요와 왜 당신이 팔리는가
+
+이 모델은 단순 마케팅이 아니라
+👉 “상품이 자동으로 팔리는 구조를 설계하는 시스템 구축 서비스”다.
+
+당신은 이미 매우 희귀한 조합을 가지고 있다.
+
+GPT + Claude 활용 랜딩 제작
+당근 / 구글 광고 테스트
+공급사 상품 구조 + 상세페이지 제작
+데이터 기반 랜딩 개선
+
+즉 이건 단순 광고 교육이 아니다.
+👉 “AI 기반 판매 구조 엔지니어링”이다.
+
+특히 Q7 데이터 분석 + 랜딩 제작 경험은 강력하다.
+시장에 “만들 줄 아는 사람”은 많지만
+👉 “팔리게 만드는 구조까지 연결하는 사람”은 매우 적다.
+
+2. 제공 스타일
+
+👉 하이브리드형 (강의 + 실행 코칭)
+
+구조 이해 → 강의
+실제 매출 발생 → 동반 실행
+3. 타깃 고객과 깊은 고민
+광고는 돌리는데 전환 없음
+상세페이지가 약함
+랜딩이 설득력 없음
+외주 맡겨도 결과 없음
+
+핵심 문제:
+👉 “트래픽이 아니라 설득 구조 실패”
+
+4. Before → After
+
+Before:
+
+광고비만 소모
+클릭만 존재
+구매 없음
+
+After:
+
+전환 구조 확보
+랜딩페이지 자산화
+광고 효율 개선
+테스트 가능한 시스템
+5. 벤치마크 리서치
+https://www.garyvaynerchuk.com
+https://www.youtube.com/@GaryVee
+https://www.youtube.com/@AlexHormozi
+
+검색 키워드:
+
+“conversion funnel breakdown real case study”
+“ecommerce landing page optimization system”
+6. 상품 설계 로드맵
+스텝 1
+랜딩 + 광고 구조 진단
+가격: 5~15만원
+스텝 2
+30일 판매 구조 구축
+랜딩 + 광고 + 메시지 + 상품 구조 통합
+가격: 250~400만원
+【아이디어 3: “지속형 수입 유통 시스템 구축 컨설팅 (Stable Import System)”】
+1. 콘셉트 개요와 왜 당신이 팔리는가
+
+이 모델은 단순 판매자가 아니라
+👉 “지속 성장하는 유통 시스템을 만드는 설계 서비스”다.
+
+당신의 핵심 자산은 이것이다:
+
+중국 소량 수입 구조 이해
+공급사 운영 4년 경험
+여러 플랫폼 운영 경험
+135페이지 전자책 구조화 경험
+
+즉 이건 “노하우”가 아니라
+👉 유통 구조 설계 능력 자체다.
+
+Q2에서 말한 “확장 고민”은
+이 모델의 핵심 타깃 심리다.
+
+2. 제공 스타일
+
+👉 완전 동반 실행형
+
+이건 구조 사업이다.
+
+상품 소싱
+공급망 구축
+셀러 구조 연결
+반복 주문 시스템
+
+혼자 불가능한 영역이다.
+
+3. 타깃 고객과 깊은 고민
+매출은 있지만 불안정
+성장 정체
+플랫폼 의존
+“사업을 안정화하고 싶다”
+
+이들은 돈 문제가 아니라
+👉 “안정성 문제”를 해결하려 한다.
+
+4. Before → After
+
+Before:
+
+단발성 매출
+플랫폼 의존
+구조 없음
+
+After:
+
+안정적인 공급 구조
+반복 주문 시스템
+월 고정 매출
+사업 구조 안정화
+5. 벤치마크 리서치
+https://www.alibaba.com
+https://www.shopify.com/blog/sourcing-products
+https://www.youtube.com/@Shopify
+
+검색 키워드:
+
+“stable wholesale supply system small business”
+“import sourcing to distribution business model”
+6. 상품 설계 로드맵
+스텝 1
+구조 진단 1:1
+공급 구조 + 상품군 분석
+가격: 10~20만원
+스텝 2
+3~6개월 시스템 구축 프로그램
+공급 + 셀러 + 반복 매출 구조 설계
+가격: 300~700만원
+
+3.
+스스로 준비 중에 있습니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">기술적인 어려움 없음(체계적인 시스템 설계 부족합니다. 스포터 필요함), 마인드 측면 어려움  없음, 구체적으로 어떻게 고객을 유치해 나갈 것인가 (접근 방법 필요함)</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">레벨1</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">커뮤니티 살펴보기, 셀러 활동 지켜 보기, 유튜브 댓글  찾아보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

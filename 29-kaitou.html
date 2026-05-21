@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김혜정 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="29.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">김혜정님의 과제 답변</h2>
+      <p class="meta">2일차 #29</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">나에게는 지속성이 어려운 부분이었다는 것을 깨달았습니다. 강의를 들으면서, 한국의 챌린지 모임을 개인별로 운영하는 것이 서포트 비즈니스의 한 축이라는 느낌이 들었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">AI 공부해서 내 사업에 써 먹기</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">변화하는 시대에 1인 사업으로 지속적인 수입을 만들어 내는 것이 고민입니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">AI를 통해 구체화시키는 방법을 알려주셔서 유용했습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">[1. 나의 답변] 
+ 1. 주요 경력
+    당신의 “주요 경력”을 알려주세요.
+	국제회의 기획을 10여년 했음. 협회, 대사관, 대행사 등에서 근무했고, 호텔, 컨벤션 센터 등이 주 업무 터전이었음. 
+    한국, 말레이시아, 가나에서 근무했었음. 국제관계학 석사를 전공할 때만 해도, 내가 국제적인 일을 하는데, 컨벤션 기획을 할 줄은 몰랐음.
+	이후 코로나가 터졌고, 잠시 쉬고 있던 중에 조카들 둘의 식사와 일정을 챙기기 시작하게 된 것이 5년간 키워주게 됨. 당시 작은 아이가 아토피 피부염으로 잠을 설칠 정도로 고생하고 있었는데, 식단관리로 낫게 해 줌.
+	아이들이 자라서 이제는 내가 낮에 픽업과 라이드, 간식 챙기기를 하지 않아도 되어서, 
+	&#x27;감정빨래방&#x27;이라는 온라인 강의를 1년간 운영함. 
+	주1회 온라인 2시간으로 감정에 대해 알아보고, 감정을 해소하는 방법에 대한 노하우를 전달하고, 수업에서 함께 해보거나, 과제로 실행해보고, 다음주에 만나는 강의였음.
+	다양한 감정 해소 기법과 명상을 활용하여 해소에 중점을 두고 강의를 운영함.
+	
+	현재, 취미로 배웠던 타로 가게 운영 중임.
+	가게를 하다보니, 타로 강의도 하고 있고, 대기업에서 단체 상담을 의뢰해서 기업 상담을 한 적도 있음. 영어로 상담이 가능함.
+
+2. 가장 큰 고민과 극복 경험
+    첫 번째 경험은 고3 수험생활. 체력안배를 어떻게 하는 지 몰랐고, 나는 아주 예민하고 극대로 스트레스에 취약한 사람이라는 것을 몰라서, 공부하기보다 불안해 하며 시간을 보냈음. 
+	대입 결과가 아주 좋지는 않았지만, 재수는 절대 할 수 없어, 그냥 대학 다님.
+	집에서 학벌에 대한 기대가 커서 대학원을 갔고, 거기에서 내가 공부가 적성에 맞지 않는다는 걸 처음 깨달아서 박사로 진학하는 것은 접음. 
+	공부에 대한 결과만 보면 성공은 아니었을지 모르겠지만, 나에 대해 알게 되는 첫 계기였던 것 같음.
+    
+	둘째, 첫 직장은 공기업 계약직이었는데, 정규직과 차별이 너무 심했음. 정말 그만두고 싶었지만, 1년을 꾹 참고 다님. 
+	중간에 그만두면, 다시는 회사에 못 다닐 것 같아서 계약기간은 채움. 나 관두고 3명 뽑았음. (얼마나 일이 많았는지 알겠지?)
+	
+	셋째, 국제회의 일은 정해진 기간 내에, 고객이 원하는 것들을 실현해서 무대에서 펼쳐줘야 함. 
+	누군가에게는 그 발표장이 본인 커리어의 중요 변곡점이 될 수도 있음. 무엇보다, 주최자인 협회장이 취임하거나, 재임기간 중 가장 빛나는 행사 중 하나이므로 실수가 없어야 함.
+	내 고객들은 업계에서도 까다롭다는 사람들이 많았음. 여자 그룹의 장이었거나, 의전에 까다로운 외교관들 등. 늘 좋은 평가를 받아, 행사 이후에도 다른 고객들을 소개받는 경우가 많았음.
+	
+	넷째, 개인적으로는 사람으로 산다는 것에 대해서 고민이 많았음. 그래서 공부나 프로젝트 도중에 스트레스에 눌려 그만두는 사람들 사이에서도 이를 악물고 끝까지 버텼던 것 같음.
+	끝을 보겠다는 의지는 좋았으나, 그 끝은 늘 스트레스성 질환으로 소화불량이나 허리통증 등으로 고생했음.
+	
+	지금도 지구에서 인간은 어떤 존재인지, 나는 인간으로써 어떤 도덕적인 선택을 하면서 살아야 하는지, 도덕적이라고 하는 것, 합리적이라고 하는 것이, 진짜 도덕적이고 합리적인 것인지, 혼란스러웠음. 왜 살아야 하는 지가 가장 큰 고민이었음.
+	이 고민이 끝나고 나니, 부자로 살고 싶은데, 꾸준한 돈을 버는 방법, 월수입이 꾸준히 있게 만드는 것이 고민임.
+	
+	왜 살아야 하는 지에 대한 답은 찾았음. 인생이라는 것 자체가 내가 사람으로써 끊임없이 고민하고, 선택하며, 인간의 삶을 사는 것 자체이며, 산다는 것 자체가 기회이자, 결과라는 결론임.
+	돈 문제는 지금도 방법을 찾는 중임.
+	쭉 쓰고 보니 나의 가장 큰 고민은 &quot;지속해야 하는 가?&quot;였고, 그걸 참고 버틴 결과, 끝은 보았으나, 건강 악화라는 다른 문제를 갖고 왔다는 걸 깨달음.
+	지금은 스트레스를 적절히 풀면서 하고 싶은 일을 할 수 있도록, 나 스스로 마음을 계속 관리하고 있음. 
+	감정 빨래방을 운영하면서 많은 것들을 해소했던 것 같음.
+
+3. 시간과 돈을 투자하거나 몰입한 것
+    가장 많은 시간을 쏟은 것은 영어공부, 그 다음 영혼의 성장을 위한 공부, 춤, 이중에서 가장 몰입했던 것은 끌어당김의 비롯한 영혼의 성장 공부, 그리고 춤.
+
+4. 자기 돈을 들여 해결하거나 배운 것
+    영혼의 성장을 위해 명상과 기수련을 위해 많은 돈을 쓴 적이 있고, 그 결과, 산다는 것에 대해 &#x27;힘든 짐&#x27;이라는 관점을 바꿔 &#x27;사람으로 선택하는 공부를 하는 기회&#x27;라는 넓은 시야를 갖게 됨.
+    
+
+5. 상담받는 것
+    타로 가게에서 가족 관계에 대해 자주 상담받는 편임. 
+	부모- 자식 관계에 대한 상담이 꽤 많음. 
+	엄마들이 상담을 오는데, 엄마들에게 자식의 인생은 자식의 인생이라고 분리해서 생각하도록 코치하려고 하는 편임.
+	
+6. 자기도 모르게 열변을 토하는 것
+    내 일은 안 하고 남의 탓만 하는 사람들에게 화남
+	영혼의 성장은 뒷전으로 하고,욕심껏 살면서, 좋은 기운만 가져가려는 이기적인 사람들에게 화남
+
+7. 비정상적일 정도의 집착과 잘하는 것
+    내 공간에서 내가 둔 대로 있지 않은 경우 매우 싫어함.
+	내 공간, 내 것에 대해 평가하고, 참견받는 것이 매우 싫음.
+	한 마디로, 너나 잘 하세요.
+	
+
+    또한 다른 사람에게 평가받았거나 스스로 잘한다고 생각하는 것은 무엇인가요?
+	해야 하는 일이 있으면 집중력이 높아짐.
+
+8. 질투의 대상
+    부모님 유산 많이 받아서 유유자적하는 사람, 자기 일도 남에게 주고 편하게 노는 사람. 책임지지 않는 사람
+    
+    
+9. 분노나 의로운 분노
+    일방적으로 강요하는 상황, 
+	약자들의 권익, 그러나 내가 나서서 변호하거나 하지는 않음.
+	상식적이지 않은 사람, 자기 영역 밖까지 자기 것처럼 쓰는 사람들에게 화남
+
+10. 무료로라도 돕고 싶은 사람
+    보호자가 없는 어린아이
+	경단녀, 은퇴자들도 돕고 싶지만, 성인은 무료로 돕고 싶지 않음. 
+	내가 무료로 서비스를 제공하면, 값어치가 없다고 생각하기 때문임. 귀한 게 귀한 줄 모르기 때문임.
+
+11. 인생의 목표
+    사람들이 본연의 모습을 찾을 수 있도록 도와준 사람, 공생하고, 미래를 고민하며 인간의 역할을 재정립하여 평화의 물결을 시작한 사람
+
+
+
+[AI답변]
+# 제로이치 창업 전략 컨설팅: 3가지 비즈니스 콘셉트 제안
+
+&gt; 작성일: 2026-05-14
+&gt; 분석 기반: 11개 질문 답변</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">고가 시장이라고 하니, 내가 할 수 있을까?라는 고민, 두번째로 어떻게 유치할 것인가, 프로그램은 어떻게 운영해야 할까 등</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">1과 2의 조합이 될 듯함. 이 과정에서 내가 고객의 감정 쓰레기통이 되지 않도록 프로그램을 잘 짜야겠다는 생각을 하게 됨.</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">내 인스타부터 살리기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

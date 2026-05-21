@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>안혜경 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="82.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">안혜경님의 과제 답변</h2>
+      <p class="meta">2일차 #82</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">오늘 강의는 나의 경험을 바탕으로 평범한 사람으로써 실패경험 스토리를 강점으로 지속적인 서포트를 하는 비즈니스 모델을 생각해보는 내용으로 생각됩니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">없음</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">나의 경험 스토리
+결혼하고 남편의 사업실패, 경제적인 어려움, 두 남자 아이들 양육의 경험.
+풍선 이벤트 돌잔치 행사진행, 상가오픈 이벤트 사업,
+현재 드론교육사업중5년전 구강암 수술함.
+고정비가 지출되는 사업의 어려움
+감정의 기복을 제어하기 위한 대화의 기술을 익히고 싶어요</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">나도 나의 경험을 바탕으로 누군가를 도와서 가치를 창출할 수 있다는 생각
+
+（前回提出分の追記）
+AI를 적절히 활용해서 부족해도 실행하는게 먼저다. 완벽하게 하려하지 말자</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">.Q1. 주요 경력: 드론교육서비스업. 성인 및 청소년, 일반인 드론조종교육, 10년정도 현재까지 하고 있음.풍선아트, 풍선이벤트 사업 5년 정도 했었음.Q2. 가장 큰 고민과 극복 경험: 결혼상대의 기준, 결혼 여부, 취미생활에 몰입, 승마동호회에서 힐링하는 시간을 갖다가 배우자를 만나게 됨Q3. 시간과 돈을 투자하거나 몰입한 것: 드론교육을 위한 역량강화, 목공작업, 식물재배(고구마, 땅콩, 상추 등), 그림그리기, 레져스포츠 즐기기Q4. 자기 돈을 들여 해결하거나 배운 것: 승마, 스키Q5. 상담받는 것: 사업을 키우기 위해 직원을 잘 뽑는 방법과 관리방법Q6. 자기도 모르게 열변을 토하는 것: 레져스포츠를 즐겨했던 20대 시절Q7. 비정상적일 정도의 집착과 잘하는 것: 일을 수행할 때 작은 부분까지 점검하는 것Q8. 질투의 대상: 사업을 잘 키워서 직원을 여러명 활용하는 사업가Q9. 분노나 의분: 서로에게 경쟁심을 가지고 이용하려고만 하는 이기적인 행동을 합니다.Q10. 무료로라도 돕고 싶은 사람: 자신의 강점을 모르고 경제적으로도 어려움에 있는 사람Q11. 인생의 목표: 경제적인 독립을 이루고 기술교육과 금융교육을 베푼 사업가
+【아이디어 1: 레저·취미 기반의 ‘인생 2막 라이프 턴어라운드’ 밀착 코칭】【아이디어 2: 드론·기술 서비스업을 위한 ‘인재 채용 및 디테일 시스템’ 구축 컨설팅】【아이디어 3: 이타적 상생을 위한 ‘강점 기반 소자본 기술창업 육성 스쿨’】다 해보고싶은데 먼저 1번아이디어</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">고객에게 제공할때의 기술적인 어려움... 접근방식
+
+（前回提出分の追記）
+은퇴자들의 다양한 니즈를 단순화 또는 가이드 경험 부족, 서비스를 위한 처음 마음가짐, 마케팅 방법을 모르겠음</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2. 손실
+
+（前回提出分の追記）
+2번?</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">커뮤니티활동?</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

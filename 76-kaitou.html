@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BK — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="76.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">BK님의 과제 답변</h2>
+      <p class="meta">2일차 #76</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">서포트 비즈니스에 대한 개념과 다양한 비즈니스 아이템 도출 방법에 대해 파악할 수 있었습니다 :)</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">없음&#x27;</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">직장인이지만 언젠가는 개인 사업을 해야된다는 생각이 있어 비즈니스 아이템을 도출해야 한다는 고민</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">비즈니스 아이템을 구체화하는데 유의미한 시간이었습니다. 감사합니다!</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">①사전 준비: AI에게 전달할 정보 — 히어링 시트
+
+프롬프트에 붙여넣기 위해, 아래 11개의 질문에 미리 답변해 주세요.
+
+1. 주요 경력
+    당신의 “주요 경력”을 알려주세요.
+    업계, 직종, 연수, 구체적인 업무 내용을 포함해 주세요.
+강의 콘텐츠 기획 및 상품화 10년 이상 경력
+2. 가장 큰 고민과 극복 경험
+    당신이 일이나 인생에서 깊이 고민했던 것은 무엇인가요?
+    그리고 그것을 어떻게 극복했나요?
+근로자로 직장생활만 하는 것에 대한 불안감을 소소한 부업을 시도해 성과를 낸 경험으로 극복.
+3. 시간과 돈을 투자하거나 몰입한 것
+    지금까지의 인생에서 가장 많은 “시간”이나 “돈”을 쏟아온 것은 무엇인가요?
+    혹은 시간 가는 줄 모르고 몰입하거나 연구하거나 열중하게 되는 것은 무엇인가요?
+재테크 강의를 수강해 실제 배운 내용을 실행한 것
+4. 자기 돈을 들여 해결하거나 배운 것
+    과거에 당신이 “자기 돈을 들여”, 즉 돈을 지불해서 누군가에게 해결받은 고민이나 배운 것은 무엇인가요?
+부업 창업, 재테크(저축, 주식, 부동산)
+5. 사람들이 나에게 자주 물어보는 고민
+  사람들이 당신에게 자주 상담하거나 조언을 구하는 주제는 무엇인가요?
+ 친구, 동료, 지인들이 어떤 고민이 있을 때 당신을 찾아오나요?
+ 그리고 당신은 그들에게 보통 어떤 식으로 조언해 주나요?
+시간관리, 자기관리, 인간관계(연애, 결혼, 직장생활 등), 재테크 왕초보 수준 고민. 
+보통은 경청하며 스스로 답을 찾게 유도함.
+
+6. 자기도 모르게 열변을 토하는 것
+    술자리나 잡담 중에, 누가 묻지도 않았는데 “자기도 모르게 열변을 토하게 되는 것”이나, 시간이 가는 줄 모르고 이야기하게 되는 “주제”가 있나요?
+자기관리, 인간관계, 재테크
+7. 비정상적일 정도의 집착과 잘하는 것
+    일이나 취미에서, 다른 사람은 신경 쓰지 않을 법한 세세한 부분에 유독 “집착하게 되는 것”이 있나요?
+    또한 다른 사람에게 평가받았거나 스스로 잘한다고 생각하는 것은 무엇인가요?
+계획한 일 완수하기, 오류 잡아내기, 디테일 챙기기
+8. 질투의 대상
+    동종업계 사람이나 타인을 보면서 “좋겠다”, “분하다”라고 질투하게 되는 사람은 누구인가요?
+    또는 어떤 상태를 보면 그런 감정이 드나요?
+재테크로 자산을 불려 성과를 낸 사람. 자신의 이름으로 브랜딩에 성공한 사람.
+
+9. 분노나 의로운 분노
+    최근 세상이나 당신의 업계에 대해 “이건 이상하다”, “좀 더 이렇게 되어야 한다”라고 분노나 의로운 분노를 느끼는 것이 있나요?
+자산 양극화
+10. 무료로라도 돕고 싶은 사람
+    돈 걱정이 전혀 없고 완전히 자원봉사라고 하더라도, “이 사람을 위해서라면 힘이 되어주고 싶다”고 생각하는 사람은 구체적으로 어떤 사람인가요?
+의지나 열정은 있는데 도움 받을 사람이 없어 인생을 변화하지 못하는 사람
+11. 인생의 목표
+    당신의 인생이 끝났을 때, 묘비에 한마디가 새겨진다면 어떤 말이 새겨지기를 바라나요?
+    또는 어떤 인물이었다고 기록되기를 바라나요?
+다양한 도전을 하며 모험을 하고 성과를 내며 함께 즐겁고 기뻐했던 사람 
+
+②당신의 답변에서 가장 강하게 드러나는 축은 단순한 “재테크 관심”이 아닙니다.
+핵심은 아래 3가지입니다.
+
+“직장인으로만 살면 불안하다”는 실존적 위기감(Q2)
+배운 것을 실제 실행해 성과로 연결하는 실행력(Q3·Q7)
+혼자서는 못 움직이는 사람을 끝까지 끌어주는 조력자 성향(Q5·Q10)
+
+즉, 당신은 “정보 전달형 강사”보다 훨씬 강력한 포지션인
+**‘실행 동반형 변화 코치’**에 가깝습니다.
+
+특히 “계획 완수”, “오류 잡기”, “디테일 집착”은
+초보자 입장에서 엄청난 신뢰 요소입니다.
+
+많은 사람은 동기부여가 부족한 게 아니라,
+
+뭘 먼저 해야 하는지 모르고
+중간에 흐트러지고
+실행 오류를 수정받지 못해
+결국 포기합니다.
+
+당신은 바로 그 지점을 메워줄 수 있습니다.
+
+아래는 당신의 강점이 가장 살아나는 3개의 사업 콘셉트입니다.
+
+【아이디어 1: 직장인 탈출 실행실 — “월급 외 수익 시스템 구축 코치”】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 서비스의 핵심은 단순 부업 정보 제공이 아닙니다.
+
+“의지는 있는데 실행이 안 되는 직장인”을 대상으로,
+
+부업 방향 설정
+시간관리
+실행 루틴
+첫 수익 달성
+지속 가능한 자기관리
+
+까지 동반 지원하는 프로그램입니다.
+
+당신의 가장 강력한 USP는 이것입니다.
+
+“평범한 직장인의 불안을 실제 실행으로 돌파해본 사람”
+
+많은 재테크·부업 강사는 원래 사업가 기질이 강했던 사람입니다.
+하지만 당신은 “회사원 불안”을 현실적으로 경험했고,
+직접 시행착오를 겪으며 실행해본 사람입니다.
+
+이건 초보자에게 엄청난 공감 요소입니다.
+
+또한 당신의:
+
+계획 완수 능력
+디테일 관리
+오류 수정 능력
+경청형 상담 스타일
+
+은 “혼자 하면 무너지는 사람”에게 매우 큰 가치가 됩니다.
+
+당신은 “동기부여 강사”가 아니라,
+
+“끝까지 실행하게 만드는 현실형 동반자”
+
+포지션입니다.
+
+2. 제공 스타일 — 동반 지원형 — 과 그 이유
+
+이 분야는 정보가 부족한 시장이 아닙니다.
+
+YouTube에도 부업 정보는 넘칩니다.
+
+문제는:
+
+방향 과부하
+실행 지속 실패
+자기관리 붕괴
+피드백 부재
+
+입니다.
+
+따라서 당신의 핵심 상품은 반드시:
+
+주간 점검
+실행 인증
+일정 설계
+피드백
+루틴 관리
+
+가 포함된 동반형이어야 합니다.
+
+당신의 가치 핵심은 “정보”가 아니라:
+
+“실행 유지 장치”
+
+입니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃
+28~40세 직장인
+월급만으로 미래 불안한 사람
+부업 시작만 반복하는 사람
+실행력이 약해 자기혐오가 쌓인 사람
+깊은 고민
+“이대로 늙으면 답 없을 것 같다”
+“주변은 자산 늘리는데 나는 제자리다”
+“뭘 해야 할지 모르겠다”
+“혼자 하면 작심삼일이다”
+“시간 관리가 무너진다”
+
+이건 단순 돈 문제가 아니라:
+
+“삶의 통제권 상실에 대한 공포”
+
+입니다.
+
+4. 제공하는 가치 — Before → After
+Before
+부업 영상만 저장
+실행 못함
+자기관리 실패
+월급 의존
+미래 불안
+After
+현실적 부업 루트 확보
+실행 루틴 정착
+첫 수익 경험
+자기 효능감 회복
+“나는 바뀔 수 있다”는 감각 획득
+5. 벤치마크 리서치
+참고할 만한 사례
+Ali Abdaal
+생산성 + 수익화 + 자기관리 결합형
+“실행 가능한 시스템” 강조
+Thomas Frank
+생산성/시스템 설계형 콘텐츠
+James Clear
+습관 설계 기반 자기관리
+검색 키워드
+“직장인 부업 코칭”
+“실행력 코칭”
+“생산성 코치”
+“accountability coaching”
+“habit coaching business”
+6. 상품 설계 로드맵
+스텝 1: 단발 세션
+
+내용:
+
+90분 “월급 외 수익 진단”
+현재 상태 분석
+시간 사용 분석
+부업 방향 제안
+실행 장애 요인 분석
+
+예상 가격:
+
+5만~15만 원
+스텝 2: 고가 동반 지원 패키지
+
+내용:
+
+12주 실행 동반
+주간 점검
+데일리 인증
+루틴 관리
+실행 피드백
+목표 관리
+
+예상 가격:
+
+150만~400만 원
+【아이디어 2: 인생 리셋 시스템 — “자기관리·인간관계·돈 관리 통합 코칭”】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+당신은 단순 재테크형보다,
+“삶 전체의 균형”을 보는 능력이 강합니다.
+
+특히 Q5에서:
+
+연애
+결혼
+직장생활
+인간관계
+시간관리
+
+상담을 많이 받는다는 건,
+사람들이 당신에게 느끼는 신뢰가:
+
+“현실적으로 삶을 정리해주는 사람”
+
+이라는 뜻입니다.
+
+이건 굉장히 강한 포지션입니다.
+
+대부분 사람은:
+
+돈 문제
+인간관계 문제
+자기관리 문제
+가 연결되어 있습니다.
+
+당신은 이걸 통합적으로 다룰 수 있습니다.
+
+2. 제공 스타일 — 동반 지원형 — 과 그 이유
+
+이 서비스는 감정·습관·생활 패턴 변화가 핵심이라,
+일회성 강의로는 효과가 약합니다.
+
+핵심은:
+
+생활 구조 교정
+습관 피드백
+감정 정리
+관계 패턴 수정
+
+이므로,
+장기 코칭형이 가장 적합합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃
+삶이 정리되지 않는 2030
+자기관리 실패 반복형
+인간관계 스트레스 큰 사람
+돈 관리도 엉망인 사람
+깊은 고민
+“나는 왜 계속 무너질까”
+“삶이 통제되지 않는다”
+“혼자선 못 바뀐다”
+“의지는 있는데 유지가 안 된다”
+
+이 시장은 굉장히 큽니다.
+
+특히 한국에서는:
+
+“삶 관리 코치”
+포지션이 아직 강하게 자리 잡지 않았습니다.
+
+4. 제공하는 가치 — Before → After
+Before
+수면/시간관리 붕괴
+감정 소모
+인간관계 스트레스
+돈 관리 실패
+자기혐오
+After
+생활 시스템 안정
+감정 에너지 회복
+관계 스트레스 감소
+돈 흐름 관리
+자기 신뢰 회복
+5. 벤치마크 리서치
+The School of Life
+감정/인간관계/삶 관리 콘텐츠
+Mark Manson
+현실 조언형 자기계발
+Marie Forleo
+라이프·비즈니스 통합 코칭
+검색 키워드
+“life systems coaching”
+“adulting coach”
+“self management coach”
+“life operating system”
+6. 상품 설계 로드맵
+스텝 1: 단발 세션
+
+내용:
+
+“인생 시스템 진단”
+시간/돈/관계 상태 분석
+우선순위 재설계
+
+예상 가격:
+
+7만~20만 원
+스텝 2: 고가 동반 지원 패키지
+
+내용:
+
+3개월 생활 재설계
+루틴 동반
+관계 피드백
+자기관리 점검
+소비·재테크 습관 교정
+
+예상 가격:
+
+200만~500만 원
+【아이디어 3: 실행형 재테크 입문 스쿨 — “돈 관리 체질 개선 프로그램”】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+당신은 “전문 투자자” 포지션보다,
+
+“왕초보의 실행 장벽을 제거하는 사람”
+
+포지션이 훨씬 강합니다.
+
+특히:
+
+재테크를 직접 배워 실행했고
+초보 상담 경험이 많고
+디테일 점검 능력이 강하고
+계획 완수형
+
+이라는 점은:
+“재테크 입문자의 행동 교정”에 매우 강합니다.
+
+핵심 USP:
+
+“재테크 정보를 알려주는 게 아니라, 실제 행동하게 만든다”
+
+2. 제공 스타일 — 혼합형 (강의 + 동반 지원)
+
+기초 지식은 강의화 가능합니다.
+
+하지만:
+
+소비 습관
+계좌 구조
+실행 유지
+투자 공포
+
+는 개별 피드백이 필요합니다.
+
+따라서:
+
+기초 교육
+실천 미션
+피드백
+실행 점검
+
+혼합형이 가장 적합합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃
+재테크 왕초보
+사회초년생
+소비 통제 안 되는 사람
+돈 스트레스 심한 직장인
+깊은 고민
+“돈이 모이지 않는다”
+“투자가 무섭다”
+“뭘 해야 할지 모르겠다”
+“계속 뒤처지는 느낌이다”
+
+특히 Q9의:
+
+“자산 양극화에 대한 분노”
+
+는 매우 강한 브랜드 메시지가 됩니다.
+
+4. 제공하는 가치 — Before → After
+Before
+통장 방치
+소비 통제 실패
+투자 공포
+재테크 유튜브만 시청
+After
+자산 흐름 이해
+소비 통제
+자동 저축 구조
+현실적 투자 시작
+경제적 자기효능감 회복
+5. 벤치마크 리서치
+Ramit Sethi
+돈 습관/라이프스타일 재설계
+Dave Ramsey
+재무 습관 교정형 코칭
+YNAB
+돈 관리 시스템 중심
+검색 키워드
+“financial coaching”
+“money habit coach”
+“beginner investing coaching”
+“behavioral finance coaching”
+6. 상품 설계 로드맵
+스텝 1: 단발 세션
+
+내용:
+
+소비 패턴 분석
+계좌 구조 진단
+재테크 시작 로드맵
+
+예상 가격:
+
+5만~10만 원
+스텝 2: 고가 동반 지원 패키지
+
+내용:
+
+12주 돈 관리 습관 교정
+소비 점검
+저축 시스템 구축
+투자 실행 피드백
+주간 체크인
+
+예상 가격:
+
+100만~300만 원
+최종적으로 가장 추천하는 방향
+
+당신에게 가장 유리한 건 사실:
+
+“재테크 전문가”
+보다
+“실행 동반형 인생 시스템 코치”
+
+입니다.
+
+왜냐하면 당신의 진짜 강점은:
+
+사람을 편하게 만드는 경청
+실행 유지
+디테일 피드백
+계획 완수
+현실 공감
+
+에 있기 때문입니다.
+
+즉 당신은:
+“천재형 성공가”가 아니라,
+
+“평범한 사람을 실제 변화시키는 현실형 조력자”
+
+포지션에서 가장 강해집니다.
+
+그리고 이 포지션은 AI 시대에도 강합니다.
+
+왜냐하면 정보는 AI가 대체해도,
+
+실행 유지
+감정 지지
+맞춤 피드백
+책임감 부여
+는 인간 코치의 영역이기 때문입니다.
+
+③ 바로 해보고 싶고 재미있는 아이디어가 많이 나왔다고 생각이 듦.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">위에서 선택한 비즈니스 모두 재밌어 보이고 하고 싶지만, 각각의 아이디어에서 전문성이나 권위를 어필할 수 있는 영역이 있을지 고민됨. 특히, 해당 비즈니스에 대한 나만의 채널을 아직 없어서, 채널을 먼저 구축하는 것에 대한 조바심이 듦.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2(손실) 또는 3(긴급)</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">비지니스 아이템을 가지고 주변 사람들과 실제 대화하며 니즈가 있을지 확인해 보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

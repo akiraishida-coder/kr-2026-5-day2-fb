@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>박석(제주옳음) — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="24.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">박석(제주옳음)님의 과제 답변</h2>
+      <p class="meta">2일차 #24</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">이제는 지식의 시대가 아니라 나만의 스토리를 퍼스널 브랜딩해야 한다는 사실을 서포트비즈니스라는 개념으로 좀 더 명확하게 느낄 수 있었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">일종의 바른 먹거리를 고도비만인 저의 사례를 TTP 방식으로 설계</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">아이와 부모님이 건강이 좋지않고 이로 인하여 고정된 시간의 일을 할 수 없고 경제적인 어려움이 고민입니다.  그리고 이와 같은 상황이 앞으로도 호전되지 않을거라는 느낌으로 불안합니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">나의 생각과 정보를 AI가 프레임있게 정리해주는게 신기했음</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1.방송국피디 및 브랜드전략기획 업무 20년 경력
+2.당원병이란 병을 갖고 태어난 딸을 캐어해야하는 것
+  - 딸과 해당 병을 오히려 나만의 독특한 개성과 역량을 발휘할 수 있는 기회로 생각하게 하려고 노력
+3. 내가 가장많은 돈을 쏟아부은건 책과 영화를 구매
+   난 현대사회철학이나 영화도 아트시네마에 열중했음
+4. 유튜브 채널 운영
+5. 인간관계, 돈을 버는 방법, 이런 질문을 받을 때 나를 아는게 먼저라 얘기해줌
+6. 영화이야기, 책이야기
+7. 영화나 드라마 등 스토리와 관련된 것
+8. 능력도 부족한데 포장을 잘해서 성공하는 사람
+9. 없어요
+10. 당원병환우들을 위해 무어가를 하고 싶어요
+11. 쓸모없었지만 쓸모없음을 증명해보인 사람
+
+
+【아이디어 1: 희귀질환 가족 스토리 동반학교】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 서비스는 당원병·희귀질환 환아 가족이 자신의 경험을 콘텐츠, 커뮤니티, 후원, 교육자료, 사회적 메시지로 전환하도록 돕는 동반 지원형 프로그램입니다.
+
+【아이디어 2: 쓸모없음 증명소 — 자기서사 비즈니스 코칭】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 서비스는 자기 경험은 많은데 그것을 비즈니스 콘셉트로 만들지 못하는 1인 창업자, 강사, 코치, 크리에이터를 위한 자기서사 기반 창업 코칭입니다.
+
+【아이디어 3: 사장님 스토리 매출화 컨설팅 — 좋은 가게가 묻히지 않게】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 서비스는 외식업·로컬 브랜드·소상공인 대표가 자신의 브랜드 이야기를 콘텐츠와 매출 구조로 바꾸도록 돕는 동반형 컨설팅입니다.
+
+네네 3가지 아이디어 다 비즈니스화 하고 싶어요</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">돈은 필요없어보이는데 시간이 없어요ㅠㅠ</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">1이 아닐까 싶어요</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">아이디어 브레인스토밍하는 시간 갖기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

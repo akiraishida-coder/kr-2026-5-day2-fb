@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>조윤환 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="49.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">조윤환님의 과제 답변</h2>
+      <p class="meta">2일차 #49</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">결국 실행이 답이다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">내가 하고 있는 일을 교육 프로그램으로 발전</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">수입보다 지출이 많음</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">자신의 데이터 작성을 통해 나를 되돌아 보는 시간을 가질 수 있었으며 좀 더 객관화가 된 것 같음</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">Q1. 주요 경력: 단행본 출간, 직장생활하며 대학원 석사 논문 작성, 물류, 문제해결 관련 교육 이수, 자동차 광택, 코팅, 외형복원업 종사
+Q2. 가장 큰 고민과 극복 경험: 공고 졸업 후 중견기업 물류센터로 입사, 성장에 대한 고민으로 대학원 MBA 과정 이수 후 고객서비스, 전략기획, 경영기획 관리자까지 승급 후 퇴사. 현재는 자동차 외형복원 업종 종사
+Q3. 시간과 돈을 투자하거나 몰입한 것: 많은 것을 경험하고자 직장생활하며 대학원 생활을 시작, 현장 엔지니어 교육 담당자 역할 수행을 위해 사내강사, 교수법 등의 HRD 관련 공부. 퇴사 후 자동차 광택, 외형복원 교육 수료
+Q4. 자기 돈을 들여 해결하거나 배운 것: 자동차 광택, 코팅, 외형복원 창업을 위한 투자
+Q5. 상담받는 것: 학벌이 낮은 직장인들의 회사생활, 자기개발, 동기부여 등
+Q6. 자기도 모르게 열변을 토하는 것: 자기 객관화, 동기부여, 긍정 마인드 등
+Q7. 비정상적일 정도의 집착과 잘하는 것: 정리정돈, 시간약속 등
+Q8. 질투의 대상: 사업 시스템을 구축하여 경제적 자유를 이룬 사람들
+Q9. 분노나 의문: 열심히 하는데 성과가 생각만큼 나지 않는 것들
+Q10. 무료로라도 돕고 싶은 사람: 현재 방향을 잡지 못해 어려움을 겪고 있는 사람들, 직장생활 하며 창업을 고민하고 있는 사람들
+Q11. 인생의 목표: 경제적 자유와 많은 이들에게 선한 영향력을 행사할 수 있는 것
+
+
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+당신의 가장 강력한 신뢰 요소는 “평범한 출발 → 자기계발 → 관리자 승급 → 현실 창업”의 흐름입니다.
+
+많은 직장인들은 창업 자체보다 아래 문제를 더 두려워합니다.
+
+내가 진짜 뭘 해야 하는지 모르겠다
+퇴사 후 망할까 두렵다
+실행력이 오래가지 않는다
+유튜브는 많은데 내 상황엔 적용이 안 된다
+
+당신은 MBA, HRD, 현장 교육, 전략기획 경험을 통해 “생각을 구조화하는 능력”이 있고, 실제로 자동차 외형복원 업종에 뛰어들어 현실 창업까지 경험했습니다.
+
+즉, 당신은 “이론만 아는 사람”도 아니고 “기술만 하는 사람”도 아닙니다.
+
+이 조합은 매우 희소합니다.
+
+특히 “학벌이 낮은 직장인들의 자기계발 상담”을 자주 받아왔다는 점(Q5)은 이미 시장이 당신을 자연스럽게 코치로 인식하고 있다는 증거입니다.
+
+USP 언어화
+
+“평범한 직장인이 현실적으로 실행 가능한 창업 루트를 설계해주는 실행형 전환 코치”
+
+2. 제공 스타일 — 동반 지원형 — 과 그 이유
+
+이 서비스는 무조건 동반 지원형이 유리합니다.
+
+왜냐하면 타깃의 문제는 정보 부족이 아니라:
+
+방향 혼란
+실행 중 포기
+자기 의심
+루틴 붕괴
+
+이기 때문입니다.
+
+즉, 사람들은 “방법”보다 “끝까지 밀어주는 구조”에 돈을 냅니다.
+
+당신의 강점인:
+
+시간관리
+정리정돈
+계획 실행
+현실적 피드백
+
+이 여기서 매우 강력하게 작동합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃
+30~40대 직장인
+생산직·현장직·중소기업 직장인
+학벌 콤플렉스가 있는 사람
+퇴사를 고민하지만 확신 없는 사람
+깊은 고민
+“이렇게 살다 끝날까 두렵다”
+“열심히 사는데 왜 안 바뀌지?”
+“나도 사업하고 싶은데 뭘 해야 하지?”
+“유튜브는 봤는데 현실 적용이 안 된다”
+
+Q8·Q9의 감정이 그대로 시장 니즈와 연결됩니다.
+
+4. 제공하는 가치 — Before → After
+Before
+자기계발 콘텐츠만 소비
+실행 반복 실패
+창업 아이템 혼란
+시간 낭비
+After
+자신에게 맞는 현실형 창업 방향 설정
+퇴사 전 준비 시스템 구축
+실행 루틴 형성
+첫 수익 구조 확보
+5. 벤치마크 리서치
+참고할 만한 채널/브랜드
+MKYU 김미경
+신사임당 유튜브
+드로우앤드류
+자청 아트라상/라이프해킹 계열
+검색 키워드
+“퇴사 전 창업”
+“직장인 부업 코칭”
+“제로투원 창업”
+“실행력 코칭”
+“직장인 자기계발 루틴”
+6. 상품 설계 로드맵
+스텝 1: 단발 세션
+
+내용:
+
+90분 현실 진단
+현재 커리어 분석
+창업 가능성 분석
+실행 로드맵 작성
+
+예상 가격:
+
+5만~15만 원
+스텝 2: 고가 동반 지원 패키지
+
+내용:
+
+3개월 실행 동반
+주간 피드백
+목표 관리
+실행 체크
+루틴 설계
+창업 아이템 검증
+카톡 무제한 피드백
+
+예상 가격:
+
+250만~500만 원
+## 【아이디어: 자동차 외형복원 창업 동반 멘토링】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 시장의 핵심 문제는 기술이 아닙니다.
+
+실제 실패 원인은:
+
+고객 유입
+견적 응대
+블로그 마케팅
+재방문 구조
+운영 시스템
+
+입니다.
+
+당신은:
+
+현장 기술
+고객 응대
+전략기획
+자기계발
+블로그 SEO
+교육 경험
+
+을 동시에 갖고 있습니다.
+
+특히 “기술자 출신이지만 기획자 사고를 가진 사람”이라는 점이 매우 강력합니다.
+
+USP
+
+“기술만 알려주는 게 아니라, 먹고사는 구조까지 설계해주는 현실형 외형복원 창업 멘토”
+
+2. 제공 스타일 — 동반 지원형 + 일부 강의형
+
+기술 교육은 강의형 가능.
+
+하지만:
+
+고객 확보
+블로그 운영
+가격 책정
+상담 스크립트
+보험수리 응대
+
+는 반드시 동반형이어야 합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃
+자동차 광택·코팅 입문자
+기술 배웠지만 매출 안 나는 사람
+퇴사 후 기술창업 고민자
+깊은 고민
+“기술 배웠는데 손님이 없다”
+“창업했는데 월세가 무섭다”
+“가격 경쟁만 하게 된다”
+“블로그는 하는데 문의가 안 온다”
+4. 제공하는 가치 — Before → After
+Before
+기술만 배운 상태
+저가 경쟁
+불안정 매출
+광고 의존
+After
+고객 유입 구조 확보
+보험·사고수리 연계 전략 이해
+블로그 기반 문의 시스템 구축
+단가 상승
+5. 벤치마크 리서치
+참고 사례
+카케어킹 유튜브
+디테일링썸 유튜브
+AutoGeek
+검색 키워드
+“광택 창업”
+“디테일링 창업”
+“자동차 외형복원 마케팅”
+“보험수리 고객 유입”
+“판금도색 블로그 마케팅”
+6. 상품 설계 로드맵
+스텝 1: 단발 세션
+
+내용:
+
+현재 사업 진단
+블로그 진단
+고객 유입 분석
+가격 전략 피드백
+
+예상 가격:
+
+10만~30만 원
+스텝 2: 고가 동반 지원 패키지
+
+내용:
+
+3~6개월 운영 코칭
+블로그 콘텐츠 전략
+고객 응대 템플릿
+사고수리 연계 구조
+매출 관리
+재방문 시스템 구축
+
+예상 가격:
+
+300만~800만 원
+## 【아이디어: 실행력 리빌딩 코치 — ‘정리된 인생 프로젝트’】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 아이디어는 당신의 가장 본질적인 재능에서 나옵니다.
+
+Q6·Q7을 보면 당신은:
+
+자기 객관화
+실행 관리
+정리
+루틴화
+
+에 매우 강한 사람입니다.
+
+많은 사람들은 목표가 없어서 실패하는 게 아니라:
+
+머릿속이 복잡하고
+우선순위가 엉켜 있고
+루틴이 무너져 있고
+감정에 끌려가기 때문입니다.
+
+당신은 이 부분을 구조화할 수 있는 사람입니다.
+
+USP
+
+“의지만 강조하지 않고, 실행되는 생활 시스템 자체를 재설계해주는 현실형 실행 코치”
+
+2. 제공 스타일 — 완전 동반 지원형
+
+이건 정보 전달이 아니라 습관 개입입니다.
+
+즉:
+
+체크
+피드백
+루틴 관리
+환경 설계
+
+가 핵심입니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃
+실행력 부족 직장인
+자기계발 중독자
+계획만 세우는 사람
+루틴 유지 실패자
+깊은 고민
+“왜 나는 항상 작심삼일일까”
+“열심히 사는데 변화가 없다”
+“인생이 계속 제자리다”
+4. 제공하는 가치 — Before → After
+Before
+계획만 많음
+시간 낭비
+우울감·무기력
+실행 실패 반복
+After
+실행 루틴 정착
+시간관리 체계화
+자기 효능감 회복
+장기 목표 지속 가능
+5. 벤치마크 리서치
+참고 사례
+Atomic Habits 제임스 클리어
+Ali Abdaal
+Cal Newport
+검색 키워드
+“실행력 코칭”
+“루틴 코칭”
+“습관 설계”
+“생산성 코치”
+“자기관리 시스템”
+6. 상품 설계 로드맵
+스텝 1: 단발 세션
+
+내용:
+
+시간 사용 분석
+목표 구조화
+루틴 설계
+실행 장애물 분석
+
+예상 가격:
+
+5만~10만 원
+스텝 2: 고가 동반 지원 패키지
+
+내용:
+
+12주 실행 관리
+주간 체크인
+습관 추적
+일정 구조화
+환경 설계
+피드백
+
+예상 가격:
+
+200만~400만 원
+최종적으로 가장 가능성이 높은 방향
+
+당신에게 가장 유리한 방향은 사실 “기술 교육” 자체가 아닙니다.
+
+가장 강한 시장성은:
+
+“방향 없는 직장인을 현실 실행형 창업가로 바꾸는 사람”
+
+입니다.
+
+왜냐하면 당신은:
+
+이론만 아는 사람도 아니고
+동기부여만 하는 사람도 아니며
+기술만 하는 사람도 아니기 때문입니다.
+
+“현실 실행력 + 자기계발 + 현장 경험 + 시스템 사고”가 동시에 있는 사람이기 때문에, 매우 독자적인 포지션을 만들 수 있습니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">공급과 수요 예측, 마케팅 방안 등</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">레벨 1</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">주변 지인에게 연락하기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

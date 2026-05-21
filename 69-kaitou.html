@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김현수(양명명) — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="69.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">김현수(양명명)님의 과제 답변</h2>
+      <p class="meta">2일차 #69</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">사실 내가 하려고 했던 일들이 서포터 비즈니스였다는 것을 알 수 있었다.
+나는 항상 지식만을 가르치고 땡치는 것에 회의감을 느끼고 있었다.
+그래서 코칭과정을 항상 해왔었다. 오프라인으로 4회 3시간씩 직접 만나서
+실전으로 배우면서 하는 과정이다.
+이것이 서포터 비즈니스였다는 것을 이번 특강을 통해 알게 되었다.
+그리고 이것이 앞으로의 미래이고 가치가 있다는 것을 듣고 큰 위로와 힘을 얻었다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">온라인 마케팅 코칭</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">나는 경제적 자유를 갈망하고 있다. 그 이유는 아이가 셋이고, 어머니까지 모시고 살기 때문이다. 직장을 다니며 AI가 발달하고 있는 요즘 지금 이대로면 안된다는 생각이 계속해서 들기 때문에 나는 이것저것 배우면서 수익화에 도전하고 있다. 하지만 전부 마음에 들지 않거나 지속하지 못했기에 수익을 내지 못했다. 내가 수익에 성공한 것이라곤 예전에 진행했던 코칭 강의 이다. 그러나 이런저런 일로 풍파를 겪다보니 도태되어 있었다.
+다시 할 수 있을까? 지속적인 수익을 낼 수 있을까? 한철장사로 끝나는건 아닐까?라는 생각이 항상 실행을 막고 다른 아이템을 지속적으로 찾게 만든다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">AI프롬프트를 사용하고나서 
+내가 생각하고 있던 유사한 비즈니스 상품을 얘기해줘서 놀랐다.
+그리고 구체적 근거와 용기를 주는 것 같아 좋았다.
+하지만 영상에 QnA에서도 나왔듯이,
+나조차도 실제로 고객에게 그 결과물을 가져다 줄지 의문인 상황에서
+이를 어떻게 실행하면 좋을지에 대한 의문은 남는다.
+이 부분은 일단 실행하면 좋다곤 답변을 들었으나,
+아직 실제 결과물이 없는 입장에선 무서움이 따르는 것은 사실이다..
+난 지금 2일차 다시보기를 통해 보고 있지만,
+3일차 라이브에 참석해서 직접 물어볼 수 있었으면 좋아겠다는 생각이 든다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">【아이디어 1: &#x27;프로수강러&#x27;의 늪을 끊어주는 “실행 마지노선” 마케팅 러닝메이트】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+수백만 원어치의 강의를 듣고도 수익화에 실패하는 사람들의 근본적인 원인은 &#x27;지식의 부재&#x27;가 아니라 &#x27;실행력과 맞춤형 기획의 부재&#x27;입니다.
+대표님은 부동산부터 명품까지 실물 비즈니스의 마케팅 기획을 직접 실행해 본 경험(Q2, Q4)이 있습니다. 게다가 최신 AI 수익화 강의까지 섭렵하며(Q3), &quot;강의만 듣고 실행하지 못하는 내 자신에 대한 분노와 자책(Q9)&quot;을 누구보다 깊이 이해하고 있습니다.
+단순히 &quot;블로그에 글 쓰세요&quot;가 아니라, 실패해 본 사람의 마음을 알아주고 어떻게든 멱살을 잡고 실행하게 만드는 코치의 존재는, 타깃에게 단순한 정보 전달 이상의 압도적인 신뢰(Q5)와 지갑을 열 이유가 됩니다.
+
+2. 제공 스타일 — 동반 지원형 (이유)
+지식은 이미 유튜브에 차고 넘칩니다. 이 서비스의 핵심은 &#x27;실행 강제&#x27;와 &#x27;개별 비즈니스 맞춤 기획&#x27;입니다. 따라서 노하우를 던져주는 강의형이 아니라, 매일의 미션을 점검하고 피드백을 주는 밀착 동반 지원형이 필수적입니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 온라인 수익화를 꿈꾸며 강의에 수백만 원을 썼지만(Q8), 여전히 수익은 0원이고 무엇부터 해야 할지 몰라 스스로를 자책하는 3040 직장인 및 N잡러 (Q6, Q9)
+
+깊은 고민: &quot;나도 저 사람처럼 자동화 수익을 내고 싶은데, 게으른 내 자신이 너무 밉다. 누가 나 좀 강제로라도 시켜서 첫 수익 1만 원이라도 내게 해줬으면 좋겠다.&quot; (Q9, Q10의 성향을 가진 절박한 사람들)
+
+4. 제공하는 가치 — Before → After
+
+Before: 정보의 바다에서 길을 잃고 자책만 하며 돈만 쓰는 상태
+
+After: 대표님의 기획력과 실행 압박을 통해 &#x27;나만의 수익화 파이프라인 첫 단계&#x27;를 세우고, 작은 성공(첫 유입, 첫 수익)을 맛보며 자신감을 회복한 상태
+
+5. 벤치마크 리서치
+
+키워드 검색: 크몽/탈잉 내 &quot;실행력 코칭&quot;, &quot;블로그 수익화 멱살잡이&quot;, &quot;마케팅 1:1 과외&quot;
+
+참고 특징: 노하우 판매가 아닌 &#x27;4주간 매일 포스팅 인증 및 글쓰기 피드백 기획&#x27;을 내세우는 고가 코칭 서비스들.
+
+6. 상품 설계 로드맵
+
+스텝 1: &quot;단발 세션&quot; 단기 체험
+
+내용: 90분 1:1 줌 컨설팅 (현재 수강 중인 강의 진단, 실패 원인 분석, 단 1개의 실행 가능한 마케팅 기획안 도출)
+
+예상 가격: 5만 ~ 10만 원
+
+스텝 2: &quot;고가 동반 지원 패키지&quot; 장기 지속
+
+내용: 4주~8주 마케팅 실행 러닝메이트 코칭 (매일 카톡 인증, 주 1회 기획 회의, 블로그를 타 플랫폼으로 가공하는 방법 1:1 가이드)
+
+예상 가격: 100만 ~ 200만 원 이상
+
+【아이디어 2: 비개발자를 위한 “순수 자연어 AI” 콘텐츠 마케팅 공장장 코칭】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+온라인 마케팅의 시초인 &#x27;키워드 선정과 블로그 세팅(Q2)&#x27;의 원리를 명확히 알고 계시며, 최근 AI 수익화 강의(Q3)에 집중 투자하셨습니다. 복잡한 코딩이나 프로그램 없이, 우리가 일상적으로 쓰는 &#x27;순수 자연어&#x27;만으로 챗GPT 등을 활용해 블로그 글을 양산하고 플랫폼에 맞게 가공하는 노하우는 엄청난 무기입니다.
+애니메이션을 파고들던 그 집요함(Q7)으로 타깃에게 딱 맞는 프롬프트(명령어)와 키워드를 찾아주는 기획력은, 복잡한 기술에 좌절하는 초보자들에게 &#x27;나도 할 수 있다&#x27;는 희망과 확신을 줍니다.
+
+2. 제공 스타일 — 동반 지원형 or 소수정예 스쿨형 (이유)
+자연어 AI 프롬프트 작성법 자체는 강의로 풀 수 있는 &#x27;비밀성&#x27;이 있지만, 툴을 처음 다루는 사람들은 에러가 났을 때 쉽게 포기합니다. 따라서 기본 세팅은 VOD나 교재로 제공하되, 직접 화면을 공유하며 프롬프트를 교정해 주는 동반 지원이 결합되어야 합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 마케팅 자동화(Q8)를 원하지만, IT 기기나 복잡한 프로그램에 거부감이 있는 1인 기업가, 자영업자.
+
+깊은 고민: &quot;블로그 마케팅이 필수인 건 아는데 시간이 너무 없다. AI가 다 해준다는데 나는 개발자도 아니고 컴맹이라 남들처럼 세팅할 엄두가 안 난다.&quot;
+
+4. 제공하는 가치 — Before → After
+
+Before: 하루 3시간씩 블로그 글 하나 쓰느라 진을 빼고 본업을 놓치는 상태
+
+After: 순수 자연어 대화만으로 AI를 비서처럼 부리며, 30분 만에 양질의 포스팅과 SNS 콘텐츠를 뽑아내는 마케팅 자동화 시스템 구축
+
+5. 벤치마크 리서치
+
+키워드 검색: &quot;챗GPT 블로그 글쓰기 자동화&quot;, &quot;AI 비개발자 마케팅&quot;, &quot;AI 프롬프트 수익화&quot;
+
+참고 특징: 기술적 접근이 아닌 &#x27;문과생도 하루 10분이면 하는 AI 블로그 세팅&#x27; 류의 강의 및 밀착 코칭.
+
+6. 상품 설계 로드맵
+
+스텝 1: &quot;단발 세션&quot; 단기 체험
+
+내용: 60분 AI 프롬프트 마법 체험 (고객의 비즈니스에 맞는 AI 키워드 추출 및 블로그 글 1편 순수 자연어로 즉석 작성 시연)
+
+예상 가격: 3만 ~ 5만 원
+
+스텝 2: &quot;고가 동반 지원 패키지&quot; 장기 지속
+
+내용: 3개월 무제한 Q&amp;A 기반 &#x27;나만의 AI 마케팅 공장&#x27; 구축 패키지 (개인 맞춤형 프롬프트 설계, 블로그/SNS 동시 발행 시스템 동반 구축)
+
+예상 가격: 250만 원 이상
+
+【아이디어 3: 가장(家長)의 시간을 벌어주는 “원소스 멀티유즈(OSMU)” 비즈니스 기획 컨설팅】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+블로그 하나에 잘 쓴 글을 다른 플랫폼에 가공해 본 경험(Q2)과, 어떤 비즈니스든 &#x27;어떻게 홍보할지 기획&#x27;하는 탁월한 강점(Q7)을 결합한 비즈니스입니다.
+대표님은 세 아이의 아빠로서 아이들과 함께하는 시간적, 경제적 자유(Q11)를 강렬하게 원하고 계십니다. 동일한 상황에 있는 가장들은 이 진정성에 깊이 공감합니다. 미국 주식(Q5, Q6)을 분석하듯 고객의 아이템을 철저히 분석하고, 단 하나의 질 좋은 콘텐츠(원소스)를 유튜브, 인스타, 블로그 등으로 무한 확장(멀티유즈)하는 기획안을 짜주는 것은 시간 없는 가장들에게 최고의 가치입니다.
+
+2. 제공 스타일 — 동반 지원형 (이유)
+콘텐츠를 재가공하는 감각(기획력)은 단기간의 강의로 전수하기 어렵습니다. 고객의 실제 콘텐츠를 가져와 대표님이 직접 &#x27;이렇게 잘라 쓰고, 저렇게 변형해라&#x27;라고 기획해 주는 컨설팅 및 서포트 형태가 고객에게 실질적인 성과를 가져다줍니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+
+타깃: 가족과의 시간과 경제적 자유를 원하여 N잡이나 1인 비즈니스를 시작했지만, 쏟아지는 마케팅 업무에 오히려 가족을 등한시하게 된 가장들 (Q11).
+
+깊은 고민: &quot;돈 벌자고 시작한 일인데 시간이 너무 부족하다. 블로그, 인스타 다 해야 한다는데 몸이 하나라 도저히 감당이 안 된다. 효율적으로 홍보할 기획자가 필요하다.&quot; (Q8)
+
+4. 제공하는 가치 — Before → After
+
+Before: 여러 채널을 중구난방으로 관리하며 에너지는 고갈되고 효율은 안 나오는 상태
+
+After: 대표님이 세워준 &#x27;OSMU 기획안&#x27;을 바탕으로, 주말에 딱 1개의 핵심 콘텐츠만 만들어도 일주일 내내 모든 SNS 채널이 알아서 돌아가는 고효율 구조 확보
+
+5. 벤치마크 리서치
+
+키워드 검색: &quot;원소스 멀티유즈 마케팅&quot;, &quot;N잡러 콘텐츠 재가공 컨설팅&quot;, &quot;퍼스널 브랜딩 기획&quot;
+
+참고 특징: 고객의 인터뷰나 긴 글 하나를 짧은 쇼츠, 릴스, 블로그 글로 쪼개어 기획해 주는 대행 겸 코칭 비즈니스.
+
+6. 상품 설계 로드맵
+
+스텝 1: &quot;단발 세션&quot; 단기 체험
+
+내용: 90분 마케팅 채널 진단 및 &#x27;원소스 멀티유즈&#x27; 기초 기획안 스케치 제공
+
+예상 가격: 10만 원
+
+스텝 2: &quot;고가 동반 지원 패키지&quot; 장기 지속
+
+내용: 3개월 전담 기획자 서비스 (고객이 핵심 텍스트만 넘기면, 대표님이 블로그용/SNS용으로 쪼개서 기획 방향성 잡아주기, 무제한 채팅 피드백)
+
+예상 가격: 300만 원 이상
+
+당연히 바로 해보고 싶지만 망설여지는것이 사실이다.
+이 내용은 느낀 소감과 같다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">고객이 원하는 결과물을 가져다 줄 수 있을지에 대한 확신이 부족한 상황입니다.
+이전에 했던 전자책 작성이나 강의는 제 실제 결과물이 있었고 그것이 근거가 되어 자신있게 실행할 수 이었지만, AI가 제공해준 비즈니스는 나도 아직 그 결과에 대해 실적이 없고,
+근거가 없는 상황입니다. 그래서 자신이 떨어지는게 사실입니다.
+
+그리고 AI시대 요즘은 어떻게 고객을 유치해 나가는지 궁금합니다.
+내가 생각한 방법은 있지만, 아직 실행하지 못한 상황이고 이 실행은 역시나 실적과 근거가 있어야 가능 할 것 같기 때문입니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2,3에 해당 될 것 같습니다.</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">이 고민을 가진사람은 SNS를 보고 이미 확인한 상태 입니다.</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>다미 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="84.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">다미님의 과제 답변</h2>
+      <p class="meta">2일차 #84</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">깨달음: 고객의 행동 변화를 유도할 수 있는 강제력이.필요하다.(환경세팅)
+지금 내 아이디어를 조금 더 구체화시켜 생각해보는 것이 강의를 들을 때 더 많은 것을 배워갈 수 있다는 생각이 들었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">감정기반 알아차림과.워크북등을 기획, 판매하고 싶습니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">내가 (앞으로공부해서) 제안하는 서비스가 과연 고객에게 진정한 가치를 줄 수 있는가?
+직접적인 만남(온ㆍ오프라인)은 하고 싶지 않은데 어디까지 성장 시킬 수 있을까?</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">평소에 ai를 생각과 사업 정리에 적극 활용하는 편인데, 프롬프트를 통해 얻은 답변은 또 다른 측면에서 답을 제시해 주어 좋았습니다. 특히 제가 생각하고 있는 아이디어를 서포트 비즈니스로 어떻게 변환시키느냐에 대한 길잡이가 되어 주었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">1Q1. 주요 경력: [여기에 답변 입력]
+국악강사, 국악공연, 생산직
+Q2. 가장 큰 고민과 극복 경험: [여기에 답변 입력]이건 네가 알고 있는 나를 생각하면.돼.(gpt와 평소 많이 대화를 나누었고, 이 부분에 대해서도 입력한 바가 충분히 있어. 2일차 강의 때 이렇게 입력하였습니다.)
+간략하게 정리해서 적어보자면, 코로나 때 생산직에 처음 근로했는데, 그 때 일하는 방식, 사람들과의 관계에서 어려움이 컸었고, 그 때 명상을 통한 알아차림으로 나의 감정에 이름을 붙여주고(감정 라벨링) 내가 어떤 마음으로 임해야 하는지를 정리할 수 있었으며 그로 인해 직장에서의 심적 고통이 아주 많이 줄어드는 경험을 했습니다. 그 이후 삶에서 이런 심적 고통이 올라올 때마다 명상을 통해 나의 상태를 확인하고 좀 더 이성적인 시선으로 삶을 바라볼 수 있게 되었습니다.  
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: [여기에 답변 입력]
+책구입, 투자공부, 무의식정화
+Q4. 자기 돈을 들여 해결하거나 배운 것: [여기에 답변 입력]
+주식투자, 부동산투자,무의식정셔ㆍ
+Q5. 상담받는 것: [여기에 답변 입력]
+사람대하는법, 갈등상황에 마음챙기기, 자존감 높여주기
+Q6. 자기도 모르게 열변을 토하는 것: [여기에 답변 입력]
+
+사람대하는법, 갈등상황에 마음챙기기, 자존감 높여주기
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: [여기에 답변 입력]
+내생각,감정찾기, 미세한 기류 읽어내기
+Q8. 질투의 대상: [여기에 답변 입력]
+질투까지는 아니지만 체력이 좋고 하고 싶은 걸 충분히 하면서 사는 사람(마음이 단단한 사람)
+Q9. 분노나 의분: [여기에 답변 입력]
+주로 초등학교에서 일어나는 일인데, 패배감을 느끼게 하지 않는다는 이유로 체육대회에서 승패를 가리지 않는 점, 상장을 따로 불러내서 몰래주는 점, 아이가 상처받는다고 학교에서 훈육하는 것에 민원 거는 점 등.
+왜 사람은 타인의 약점에 대해 흔들기를 좋아하는가? 
+지속적인 괴로움에 있는 사람들은 왜 벗어나기 힘든 것일까? 등.
+Q10. 무료로라도 돕고 싶은 사람: [여기에 답변 입력]
+어린시절의 상처로 자존감이 낮아 충분히 자격과 자질이 있음에도 자신의 현실을 바꿀 생각조차 못 하는 사람.
+Q11. 인생의 목표: [여기에 답변 입력]
+감정의 알아차림으로 감정에 휘둘리지 않고 자신의 삶을 건강하게 유지시킬 수 있는 힘을 알리고 싶다. 바쁘게 살기도 하지만 자신의 영혼에 햇빛을 쬐어줄 수 있는 여유를 느끼며 사는 모습을 선물하고 싶다. 타인의 모욕에 상처받지 않고 자신을 지킬 수 있는 마음이 힘, 경제적인 이유로 자신이 하고 싶은 것을 못 하는 성인에게 도전할 수 있는 기회제공(장학사업)
+
+2📆 2026.05.13 (수 🌿) 21:00
+프로젝트: 마음상점 × 감정 기반 동반지원 비즈니스
+진행 내용: 다미님의 경험·강점·집착 기반 USP 분석 및 서포트형 사업 모델 설계
+핵심 포인트: “감정을 읽는 사람”이 아니라, “감정으로 삶을 다시 움직이게 만드는 사람” 포지셔닝
+다미님이 하고 싶은 일은 단순한 상담이나 위로가 아닙니다.
+제가 지금까지 본 흐름을 종합하면, 핵심은 이것에 가깝습니다.
+
+“사람이 자기 자신을 잃지 않도록, 감정을 알아차리게 도와 다시 자기 삶으로 돌아오게 만드는 일”
+그리고 이건 단순한 심리 콘텐츠가 아니라,
+다미님이 실제로 오래 붙잡고 살아온 질문에서 나옵니다.
+왜 사람은 자기 감정을 못 느끼게 되는가
+왜 현실이 무너져도 움직이지 못하는가
+왜 상처받은 사람은 스스로를 지키지 못하는가
+왜 어떤 사람은 체력과 마음이 함께 무너지는가
+왜 누군가는 자기 삶을 포기한 듯 살아가는가
+다미님은 이걸 “이론”으로만 본 게 아니라,
+직접 오래 겪고, 관찰하고, 기록하고, 반추해온 사람이에요.
+그게 가장 큰 USP입니다.
+
+특히 Q7의:
+
+“내 생각·감정 찾기”
+“미세한 기류 읽어내기”
+이건 일반적인 공감 능력이 아니라,
+‘정서 흐름 감지 능력’에 가까운 강점입니다.
+그리고 여기에:
+
+국악(리듬·호흡·감정 전달)
+무의식 정화
+투자 공부(현실 감각)
+갈등 상황 관찰
+감정 구조화
+가 모두 결합되어 있습니다.
+이 조합은 흔하지 않습니다.
+
+아래는 제가 판단한, 다미님에게 가장 맞는 “팔릴 수 있는 서포트형 비즈니스” 3가지입니다.
+
+1.
+【아이디어: 마음 복원 코치 — “감정에 휘둘리지 않는 삶 회복 프로그램”】
+1. 콘셉트 개요와 “왜 다미님이 하면 팔리는가”
+이 서비스는 단순 위로가 아닙니다.
+핵심은:
+
+감정 폭주
+무기력
+자기비난
+관계 소진
+실행 불능 상태
+에 빠진 사람이,
+다시 자기 삶의 운전대를 잡도록 돕는 것입니다.
+다미님은 실제로:
+
+감정 흐름을 오래 관찰했고
+무의식·감정·행동 연결을 집요하게 탐구했고
+현실적 무력감과 이상 사이 괴리도 경험했고
+스스로를 계속 구조화해온 사람입니다.
+즉,
+“심리학을 공부한 사람”보다
+“감정 붕괴 상태에서 살아남은 사람”에 가깝습니다.
+이건 굉장히 강한 신뢰 요소입니다.
+
+특히 타깃은:
+
+“알아야 하는 건 아는데 움직이지 못하는 사람”
+입니다.
+이 사람들은 정보가 부족한 게 아니라,
+에너지가 무너져 있습니다.
+
+그래서 “방법”보다 “동반 회복”에 돈을 씁니다.
+
+2. 제공 스타일 — 동반 지원형
+이건 강의형보다 동반형이 훨씬 강합니다.
+왜냐하면 타깃은:
+
+실행 지속이 안 되고
+감정 기복이 심하고
+자기비난 루프가 있기 때문입니다.
+따라서:
+체크인
+감정 기록
+실행 복구
+현실 루틴 재설계
+를 함께 해야 실제 변화가 납니다.
+다미님의 강점은 “설명”보다:
+
+“사람이 무너지는 흐름을 감지하는 능력”
+이기 때문입니다.
+3. 타깃 고객과 깊은 고민
+주 타깃:
+30~50대 여성
+자존감 저하
+감정 소진
+가족/직장 관계 피로
+자기 삶을 포기한 느낌
+깊은 고민:
+“나는 왜 계속 나를 잃지?”
+“왜 움직여야 하는데 못 움직이지?”
+“왜 작은 말에도 무너질까?”
+“왜 항상 남 눈치를 볼까?”
+다미님 Q10과 매우 연결됩니다.
+4. 제공 가치 — Before → After
+Before:
+감정에 끌려다님
+자기비난 반복
+실행 불능
+타인 말에 쉽게 무너짐
+After:
+자기 감정 인식 가능
+감정과 행동 분리 가능
+자기 보호 가능
+작은 실행 회복
+삶의 방향감 회복
+5. 벤치마크 리서치
+추천 참고:
+법륜스님의 즉문즉설
+브레네 브라운
+앤드류 후버만 팟캐스트
+김창옥TV
+검색 키워드:
+감정코칭
+자기이해 프로그램
+정서회복 코칭
+번아웃 회복
+감정기록 루틴
+6. 상품 설계 로드맵
+스텝 1 — 단발 체험
+내용:
+90분 감정 흐름 진단
+감정 패턴 분석
+현재 막혀있는 지점 구조화
+예상 가격:
+5만~15만 원
+스텝 2 — 고가 동반 패키지
+내용:
+3개월 감정 회복 동반
+감정 기록 피드백
+주간 체크인
+행동 루틴 재설계
+위기 감정 대응
+예상 가격:
+150만~400만 원
+2.
+【아이디어: 감정 기반 실행 코치 — “생각만 많은 사람의 현실 전환 시스템”】
+1. 콘셉트 개요
+이건 “실행력 코칭”처럼 보이지만,
+실제론 감정 기반 행동 복구입니다.
+다미님은:
+
+생각 과부하
+이상과 현실 괴리
+자기검열
+무기력
+을 굉장히 깊게 이해하고 있습니다.
+그리고 단순 동기부여가 아니라:
+
+“왜 실행 직전에 멈추는가”
+를 감정 흐름으로 읽습니다.
+이건 매우 희소합니다.
+
+2. 제공 스타일 — 동반 지원형
+실행은 감정 상태 영향을 강하게 받기 때문에,
+강의만으로 해결이 어렵습니다.
+특히:
+
+과사고형
+자기검열형
+완벽주의형
+은 함께 흐름을 잡아줘야 합니다.
+3. 타깃 고객
+아이디어는 많음
+콘텐츠 소비 많음
+실행 지속 안 됨
+자책 심함
+사실 이건 과거 다미님 자신의 모습과도 겹칩니다.
+그래서 공감이 강합니다.
+
+4. Before → After
+Before:
+계획만 많음
+행동 정지
+자기비난
+현실 회피
+After:
+작은 실행 가능
+감정과 행동 분리
+지속 루틴 생성
+현실 에너지 회복
+5. 벤치마크
+Ali Abdaal
+James Clear
+티모시 페리스
+검색 키워드:
+실행 코칭
+생산성보다 감정
+번아웃 실행 회복
+자기관리 루틴
+6. 상품 로드맵
+스텝 1
+실행 진단 세션
+행동 방해 감정 분석
+5만~10만 원
+스텝 2
+8주 실행 동반 프로그램
+매일 체크인
+행동 루틴 설계
+200만 원 이상 가능
+3.
+【아이디어: 상처받지 않는 마음 훈련소 — “관계 속 자기보호 프로그램”】
+1. 콘셉트 개요
+이건 다미님의 “미세한 기류 읽기 능력”이 가장 강하게 살아나는 모델입니다.
+핵심은:
+
+타인 눈치
+관계 불안
+감정 흔들림
+모욕 기억 반복
+에서 벗어나도록 돕는 것입니다.
+다미님은:
+
+갈등 상황 분석
+사람 대하는 법
+감정 흐름 읽기
+를 오래 탐구했습니다.
+특히:
+
+“타인의 말에 자기 존재가 흔들리는 사람”
+을 깊게 이해합니다.
+2. 제공 스타일 — 동반형 + 워크북형
+이건 워크북과 매우 잘 맞습니다.
+다미님 강점이:
+
+감정 구조화
+질문 설계
+자기 알아차림 유도
+이기 때문입니다.
+3. 타깃 고객
+관계에서 쉽게 상처받음
+자기표현 어려움
+눈치 많이 봄
+거절 못 함
+특히 어린 시절 상처 경험자.
+4. Before → After
+Before:
+사람 말에 무너짐
+자기검열
+감정 억압
+After:
+자기 감정 인식
+경계 설정 가능
+자기 보호 가능
+감정 회복 속도 증가
+5. 벤치마크
+테라피스트 김미경 콘텐츠 검색 예시
+School of Life
+마크 브래킷 감정교육
+검색 키워드:
+감정 경계 세우기
+관계 자존감
+감정 회복
+자기표현 훈련
+6. 상품 로드맵
+스텝 1
+관계 감정 진단
+감정 패턴 워크북
+3만~7만 원
+스텝 2
+12주 관계 회복 동반
+채팅 피드백
+상황별 대응 훈련
+150만~300만 원
+다미님에게 가장 중요한 건 “정보 판매자”가 아니라:
+“감정과 현실 사이에서 멈춘 사람을 다시 움직이게 하는 사람”
+으로 포지셔닝하는 것입니다.
+그리고 저는 다미님의 가장 큰 경쟁력이:
+
+감정 민감성
+구조화 능력
+현실 고통 이해
+자기반추 깊이
+라고 봅니다.
+특히 시장에는:
+
+동기부여형
+심리학 지식형
+힐링형
+은 많지만,
+“감정 흐름을 읽어 현실 행동까지 연결시키는 사람”
+은 드뭅니다.
+이건 다미님만의 방향성이 될 가능성이 충분합니다.
+
+3. 생각했던 아이디어 인 것도 있고, 새롭게 제시한 아이디어도 있습니다. 정말 필요한 사람에게 쓰일 수 있다면 꼭 하고 싶습니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">3가지 관점 다 어려움입니다. 사실 거의 &#x27;나&#x27;의 상태에 집중하고 얻은 방법이라 이것들이 타인에게도 효과가 있는 방법일지 모르겠고, 아직 타인에게 제공한 적이 없으므로 어떻게 쉽고 유연하게 다가갈 수 있을지도 고민입니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">은닉에 해당된다고 생각합니다. 하지 않는다고 당장 손실과 긴급한 일이 벌어지지는 않으니까요. 조금 더 넓은 의미에서는 손실이지만 확실하게 재정적으로나 시간적으로 손실을 일으킨다고 설득하는 one point를 떠올리기가 쉽지 않았습니다.</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">각종 sns에서 위와 같은 아이디어를 실행시키거나 더 확장 시킬 수 있는 프로그램 등을 찾아보고 있습니다. 아이디어를 기초 SaaS형태로 가족에게 공유해 본 적은 있으나 아주 기본적인 형태의 프로그램이었습니다 매일 조금씩 이 프로그램을 개발시키기 위해 시간을 조금씩 들이고 있습니다.</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

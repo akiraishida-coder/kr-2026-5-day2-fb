@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>최유신 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="03.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">최유신님의 과제 답변</h2>
+      <p class="meta">2일차 #3</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">사실 저는 그동안 비즈니스 관련 수업이나 세미나를 많이 들어왔고, 간다 마사노리 선생님의 책이나 기타 등 수많은 책을 읽으면서 인지하고 있던 내용들이지만 오늘의 세미나를 듣기 전에는 그 내용들이 여기저기 퍼져서 자유분방하게 떠도는 느낌이었다면 오늘 세미나 통해서 그 내용들이 좀 더 와닿고 정리되어서 깊이 박히게 되는 시간이 되었습니다. 앞으로의 세미나도 기대가 되고, 서승범 코치님과 이시다 코치님도 함께하시다 보니 분위기 자체가 새로운 느낌이었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">저는 라이프 스타일 코칭이라는 비즈니스 모델을 오랫동안 구상해 왔고, 많이 부족하지만 현재는 다양한 시도를 해보고 있습니다. 이번 세미나를 통해서 조금 더 구체화 할 수 있고 보충할 수 있는 아이디어나 새로운 방향성을 생각해볼 수 있는 계기가 될 수 있으면 좋겠습니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">저는 당당하게 내세울 수 있는 &#x27;권위&#x27;가 없습니다. 지금은 권위를 쌓아가는 과정에 있지만 그동안 저는 다양한 일을 해왔고 다양한 경험을 해왔다고 말할 수 있지만 다른 시선에서 바라보면 뭔가 한 가지 특별하게 뛰어난 게 없다고도 볼 수 있습니다. 이미 충분히 주변 사례를 통해서 내가 누군가의 인생에 긍정적인 영향을 끼치고 변화를 만들어 줄 수 있다고 생각하지만 &#x27;나&#x27;라는 사람을 처음 보는 사람들은 저의 주변 사람들과 다르게 기본적인 신뢰도가 아예 없기 때문에 내세울 수 있는 권위가 없는 부분이 신뢰를 만들어 줄 수 있을지 걱정입니다. 코칭을 받기 위해서는 받는 사람이 먼저 코치에게 신뢰를 가져야 하니까요. 그래서 이런 부분들이 조금 고민입니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">저는 방향이 어느 정도 정해져 있었지만 다른 시선으로 바라볼 수 있는 계기가 되었습니다. 이렇게도 가능하고 저렇게도 가능하겠구나 또는 어떻게 구체화 해야 할지 힌트를 얻을 수 있었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">①
+[자신의 데이터]
+Q1. 주요 경력: [병원 간호 보조 6개월, 대형마트 검품 6개월, 일반 주류 판매 영업직 1년, 와인 판매 영업직 5년]
+Q2. 가장 큰 고민과 극복 경험: [가장 큰 고민은 내가 살아가고 싶은 삶은 어떤 삶인지, 내가 제대로 나아가고 있는지, 내가 지금 하고 싶어 하는 일이 정말 내가 하고 싶은 일인지. 이런 것들이 고민이었고, 매년 새해 마다 다짐하던 더 나은 사람이 되고자 하는 성장을 되새기며 계속 찾아다녔고 마인드셋을 알게 되고 본격적으로 공부하면서 삶의 방향성을 명확하게 설정했음. ]
+Q3. 시간과 돈을 투자하거나 몰입한 것: [주식 투자, 수익화 블로그, 와인 자격증 공부, 실용 음악]
+Q4. 자기 돈을 들여 해결하거나 배운 것: [음악, 수익화 블로그 글쓰기, 스몰 비즈니스, 와인 전문 자격증, 주식 투자]
+Q5. 상담받는 것: [내가 무언가를 시도할 때 마다 이렇게 하려고 하는데 너는 어떻게 생각해? 라는 질문을 자주 했음.]
+Q6. 자기도 모르게 열변을 토하는 것: [마인드셋과 관련된 철학적인 내용이나 뇌과학적인 내용 및 인생과 관련된 이야기들과 내가 어떻게 살고 싶은지]
+Q7. 비정상적일 정도의 집착과 잘하는 것: [마인드셋이라는 분야는 서양에서는 이미 많이 대중화 되어있지만 대한민국에서는 이제 막 알려지고 있다고 생각함. 일반적으로 책을 많이 읽는 사람이라도 이 분야를 본격적으로 공부하거나 하는 경우는 흔치 않음.]
+Q8. 질투의 대상: [유튜버 중에 하와이 대저택 이라는 인물을 롤모델로 삼고 존경하고 있음.]
+Q9. 분노나 의분: [잘 살기 위한 재료를 &#x27;돈&#x27;으로만 특정하는 것이 옳지 않다고 생각함. 그저 돈이 많아야 행복하다고 말하고, 본인들도 많은 돈을 벌기 위해서 행동하다 보니 요즘 흔히 말하는 강의 팔이라는 워딩이 생겨나게 하고 사람들의 희망을 이용한다는 생각을 하게 만드는 것들이 진심으로 가치 있는 것을 코칭하는 사람들이 피해받게 만듬.]
+Q10. 무료로라도 돕고 싶은 사람: [삶의 목적이 없고, 왜 살아야 하는지 모르겠다라는 사람이나 혹은 너무나도 이루고 싶은 목적이 있는데 어떻게 해야 할지 모르는 사람들]
+Q11. 인생의 목표: [감사하다는 말을 많이 듣고 많이 하는 삶을 살고 싶고, 묘비에 후회 없는 삶을 살았다는 말이 새겨질 정도로 후회 없는 삶을 살고 싶음.]
+
+②
+【아이디어 1: &quot;방향성 설계자&quot; — 인생 GPS 코칭】
+1. 콘셉트 개요와 &quot;왜 당신이 제공하면 팔리는가&quot;
+&quot;열심히 사는데 어디로 가고 있는지 모르겠다&quot;는 사람을 위한, 마인드셋 기반 인생 방향성 설계 동반 지원 프로그램입니다.
+당신이 제공하면 팔리는 이유는 명확합니다. Q2에서 당신은 &quot;내가 살아가고 싶은 삶은 어떤 삶인지, 내가 제대로 나아가고 있는지&quot;라는 질문에 수년간 매달려, 마인드셋 공부를 통해 실제로 답을 찾아낸 경험이 있습니다. 이는 책 한 권 읽고 정리한 지식이 아니라, 본인이 길을 잃었다가 빠져나온 사람의 지도입니다. Q7에서 보듯 한국에서 마인드셋을 본격적으로 파고든 사람 자체가 드물기에, 이 분야에서 &quot;먼저 길을 걸어본 사람&quot;이라는 포지션이 강력한 신뢰 자본이 됩니다.
+거기에 Q5의 &quot;어떻게 생각해?&quot;라는 질문 습관 — 즉, 결정 전 검증을 구하는 태도는 코치로서 결정적인 자질입니다. 자기 결정을 끊임없이 점검해 본 사람만이 타인의 결정도 점검해 줄 수 있습니다.
+USP: &quot;한국에 흔치 않은, 마인드셋을 도구로 인생 좌표를 직접 설계해 본 동반자. 답을 주는 게 아니라, 당신의 답을 끌어내는 질문을 던지는 사람.&quot;
+2. 제공 스타일과 이유
+**동반 지원형(코칭)**입니다.
+이유: &quot;내가 진짜 원하는 삶&quot;이라는 질문의 답은 외부에서 주입될 수 없습니다. 강의로 전달 가능한 정보가 아니라, 질문과 대화를 통해 본인 안에서 끌어내야 하는 영역입니다. 또한 방향성은 한 번에 잡히지 않고 시행착오를 거치므로, 3~6개월 단위의 반복 점검이 필수입니다.
+3. 타깃 고객과 깊은 고민
+타깃: 30~40대, 직장 생활 5년 이상, 외형적으로는 안정적이나 &quot;이게 내 인생이 맞나&quot;라는 질문을 품고 사는 사람.
+깊은 고민(Q6, Q9, Q10 근거):
+
+&quot;돈을 더 벌면 행복할 줄 알았는데 공허하다&quot; (Q9의 분노와 정확히 대칭되는 고민)
+&quot;주변은 다 목표가 있어 보이는데 나만 표류하는 것 같다&quot; (Q10)
+강의 팔이에 한 번쯤 데어본 경험이 있어, 진짜 가치를 알아보고 싶어 함 (Q9)
+
+4. Before → After
+
+Before: 새해마다 다짐하지만 1월이면 흐려짐. 좋아 보이는 강의를 사놓고 완강하지 않음. 본인이 뭘 원하는지 모르겠음.
+After: 3개월 후, 자기만의 인생 좌표(가치관·목표·다음 1년 계획)를 글로 쓸 수 있음. 결정의 기준이 생겨 흔들림이 줄어듦. &quot;남이 좋다는 길&quot; 대신 &quot;내가 선택한 길&quot;을 걷는다는 감각.
+
+5. 벤치마크 리서치
+
+하와이 대저택(Q8 롤모델) — 콘텐츠 톤·세계관 설계 측면에서 직접 참고. 단, 그는 동기부여·자기계발 미디어형이므로, 당신은 1:1 동반 지원으로 차별화.
+김미경 MKYU — 중장년 여성 대상 인생 설계 커뮤니티 모델
+검색 키워드: &quot;라이프 코칭&quot;, &quot;life design coach&quot;, &quot;purpose coaching&quot;, &quot;Ikigai coach&quot;
+해외 벤치마크: Jay Shetty의 라이프 코칭 스쿨, Tony Robbins의 1:1 코칭 모델 (가격·구조 참고용)
+
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+
+내용: 90분 1:1 &quot;인생 좌표 진단 세션&quot; + 진단 워크북 + 7일 후 후속 점검 메시지
+예상 가격: 7만~12만 원
+
+스텝 2 — 고가 동반 지원 패키지
+
+내용: &quot;이네라 NOVA 동반 지원 3개월&quot; — 격주 1:1 세션 6회, 카톡/디스코드 무제한 질문, 월간 과제 피드백, 마인드셋 도서 큐레이션
+예상 가격: 250만~350만 원
+
+
+【아이디어 2: &quot;두 번째 인생 코치&quot; — 커리어 전환자를 위한 마인드셋 동반】
+1. 콘셉트 개요와 &quot;왜 당신이 제공하면 팔리는가&quot;
+&quot;지금 일이 내 길이 아닌 것 같아 바꾸고 싶지만 두렵다&quot;는 30대 직장인을 위한, 커리어 전환 결심부터 실행까지의 마인드셋 동반 지원입니다.
+당신이 제공하면 팔리는 이유: Q1을 보면 당신의 커리어 자체가 답입니다. 간호 보조 → 마트 검품 → 주류 영업 → 와인 영업 5년. 여러 번 옮기면서도 5년을 한 분야에 머무를 만큼의 끈기도 보여줬습니다. 즉, &quot;이 일이 맞는지 고민해 보고, 옮겨도 보고, 머물러도 본&quot; 실전 경험이 있습니다.
+여기에 Q3·Q4의 자기 투자 — 주식, 수익화 블로그, 와인 자격증, 실용 음악, 스몰 비즈니스 — 는 &quot;한 우물만 판 사람&quot;이 아니라 &quot;여러 가능성을 직접 시도해 본 사람&quot;이라는 증거입니다. 커리어 전환을 고민하는 사람에게는 &quot;잘난 한 명의 성공자&quot;보다 &quot;여러 길을 다녀본 안내자&quot;가 훨씬 신뢰됩니다.
+USP: &quot;한 직업으로 성공한 사람의 조언이 아닌, 여러 길을 직접 걸어보고 마인드셋으로 방향을 정리해 낸 사람의 동반.&quot;
+2. 제공 스타일과 이유
+동반 지원형, 단 일부 강의 콘텐츠 결합형입니다.
+이유: 커리어 전환은 정보(이력서, 시장 분석)만으로는 안 되고, 두려움·자기의심 같은 정서적 장벽이 더 큽니다. 후자는 마인드셋 코칭의 영역이므로 1:1 동반이 핵심입니다. 단, 공통 프레임(가치관 진단, 강점 발굴 등)은 모듈식 강의로 효율화 가능합니다.
+3. 타깃 고객과 깊은 고민
+타깃: 28~38세, 현 직장 3년 이상, &quot;이직 vs 전직 vs 창업&quot; 사이에서 1년 이상 표류 중인 사람.
+깊은 고민:
+
+&quot;내가 원하는 게 뭔지 모르는데 어떻게 바꾸나&quot; (Q10)
+&quot;주변은 다 자리잡는데 나만 헤매는 것 같다&quot;
+&quot;강의들은 다 &#x27;도전하라&#x27;고만 하지 진짜 어떻게 시작할지 안 알려준다&quot; (Q9)
+
+4. Before → After
+
+Before: 일요일 밤마다 우울. 퇴근 후 유튜브로 N잡·창업 영상만 봄. 1년째 같은 고민 반복.
+After: 6개월 후, 자기 가치관에 부합하는 다음 행보를 결정하고 첫 행동(자격증 등록, 사이드 프로젝트 시작, 이력서 발송 등)을 마침. &quot;고민하는 사람&quot;에서 &quot;움직이는 사람&quot;으로 정체성 전환.
+
+5. 벤치마크 리서치
+
+드로우앤드류 (유튜브) — 커리어·자기계발 영역, 친근한 톤 참고
+신수정 부사장 콘텐츠 — 커리어 멘토링 글쓰기 톤
+퍼블리(PUBLY) 커리어 콘텐츠 — 타깃·언어 참고
+검색 키워드: &quot;career transition coach&quot;, &quot;커리어 코칭&quot;, &quot;second act coach&quot;, &quot;ikigai career&quot;
+해외: Ramit Sethi의 &quot;Find Your Dream Job&quot; 프로그램 (구조·가격 모델 참고)
+
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+
+내용: 60분 &quot;커리어 전환 진단&quot; + 강점·가치관 워크시트
+예상 가격: 5만~9만 원
+
+스텝 2 — 고가 동반 지원 패키지
+
+내용: &quot;이네라 두 번째 인생 6개월 동반&quot; — 월 2회 1:1 세션, 주간 과제 점검, 마인드셋 워크북, 결정 단계별 의사결정 동반
+예상 가격: 300만~450만 원
+
+
+【아이디어 3: &quot;마인드셋 리터러시 스쿨&quot; — 한국형 마인드셋 입문 교실】(강의/스쿨형)
+1. 콘셉트 개요와 &quot;왜 당신이 제공하면 팔리는가&quot;
+마인드셋이라는 분야 자체를 한국 맥락에 맞게 체계적으로 가르치는 입문 스쿨입니다. 자기계발서 100권보다 마인드셋의 &quot;원리&quot;를 한 번 제대로 잡는 것을 목표로 합니다.
+당신이 제공하면 팔리는 이유: Q7이 핵심입니다. 당신 스스로 진단했듯, 한국에서 마인드셋을 본격적으로 공부한 사람은 드뭅니다. 영어권에는 Carol Dweck, Tony Robbins, Brendon Burchard 같은 인물이 학문·실무 양쪽에서 자리잡혀 있지만, 한국에서는 &quot;긍정 마인드&quot;, &quot;끌어당김의 법칙&quot; 정도로 단편화되어 있습니다.
+즉 이 영역은 희소성·전문성이 압도적인 분야이고, 제약사항 3번의 &quot;강의 형식 허용&quot; 조건에 해당합니다. Q3·Q4에서 보이는 당신의 자기투자 이력(스몰 비즈니스, 수익화 블로그, 와인 자격증 — 모두 &quot;체계적 학습 후 실전 적용&quot;의 패턴)은 &quot;공부한 것을 가르칠 줄 아는 사람&quot;이라는 신뢰를 만듭니다.
+USP: &quot;감성적 동기부여가 아닌, 뇌과학·심리학 기반의 마인드셋 원리를 한국어로 체계화한 첫 입문 커리큘럼.&quot;
+2. 제공 스타일과 이유
+**강의형(스쿨형)**이 적합합니다.
+이유: 마인드셋의 기본 원리(고정 vs 성장 마인드셋, 자기효능감, 신경가소성 기초 등)는 1:1 코칭으로 전달하기에는 비효율적인 &quot;공통 지식 영역&quot;입니다. 또한 Q9에서 당신이 분노했던 &quot;강의 팔이&quot;와의 차별점은, 가격이 아니라 콘텐츠의 깊이와 정확성입니다. 체계적인 커리큘럼이 그 증거가 됩니다.
+단, 스쿨 졸업생은 아이디어 1·2의 1:1 코칭 고객으로 자연스럽게 연결됩니다.
+3. 타깃 고객과 깊은 고민
+타깃: 자기계발서를 10권 이상 읽었지만 삶이 바뀌지 않은 사람. 영상·강의는 많이 봤지만 &quot;왜 내 삶에 적용이 안 되는지&quot; 답답한 사람.
+깊은 고민:
+
+&quot;이론은 아는데 왜 안 변하지&quot; (Q10의 변형)
+&quot;한국어로 된 자료는 죄다 두루뭉술하다&quot; (Q7)
+&quot;감성팔이 말고 근거 있는 걸 배우고 싶다&quot; (Q9)
+
+4. Before → After
+
+Before: 책마다 다른 말을 해서 혼란. 동기부여 영상 보고 며칠 만에 식음.
+After: 마인드셋이 작동하는 원리를 설명할 수 있음. 새 정보를 만나도 &quot;이건 어떤 원리에 해당하는구나&quot;로 분류 가능. 일상의 실패·정체기를 해석할 프레임이 생김.
+
+5. 벤치마크 리서치
+
+체인지그라운드 / 신영준 박사 — 학술적 자기계발 콘텐츠의 한국 대표주자, 톤·신뢰 구축 방식 참고
+하와이 대저택(Q8) — 마인드셋 콘텐츠 한국화 사례, 단 그는 미디어형이므로 당신은 교육 커리큘럼형으로 차별화
+MKYU, 클래스101, 인프런 — 강의형 비즈니스 구조 참고
+해외 벤치마크: Mindvalley (라이프스쿨 모델의 정점), Stanford d.school의 Designing Your Life
+검색 키워드: &quot;growth mindset course&quot;, &quot;mindset academy&quot;, &quot;마인드셋 강의&quot;, Carol Dweck 관련 콘텐츠
+
+6. 상품 설계 로드맵
+스텝 1 — 단발 체험
+
+내용: &quot;마인드셋 입문 2시간 라이브 특강&quot; — 마인드셋이란 무엇이고 왜 한국에서 오해되는가
+예상 가격: 2만~5만 원 (혹은 첫 시즌은 무료로 리스트 빌딩)
+
+스텝 2 — 고가 스쿨 패키지
+
+내용: &quot;이네라 마인드셋 스쿨 8주 과정&quot; — 주 1회 라이브 강의 + 워크북 + 커뮤니티 + 졸업 시 1:1 코칭 1회 무료
+예상 가격: 80만~150만 원 (스쿨형 단기) / 연간 멤버십 형태로 발전 시 200만 원대
+
+
+종합 추천
+세 아이디어는 단계적으로 결합될 때 가장 강력합니다.
+
+아이디어 3(스쿨)으로 권위와 모객 — 다수에게 마인드셋 리터러시 제공, 브랜드 인지도 확보
+아이디어 1(인생 GPS) 또는 2(커리어 전환)로 고가화 — 스쿨 졸업생 중 깊은 동반을 원하는 사람을 1:1 코칭으로 연결
+
+특히 아이디어 1이 당신의 Q11(감사·후회 없는 삶)과 가장 정렬되며, 아이디어 3이 Q7의 희소성·Q9의 분노(가짜 강의에 대한)를 가장 직접적으로 해결합니다. 둘 중 어느 쪽을 먼저 출시할지에 따라 브랜드의 첫인상이 결정될 것입니다.
+
+③
+네, 실제로 제가 원하는 삶과 이어지기 때문입니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">조금더 체계적이고 전문적인 커리큘럼이나 내용이 필요하다고 생각합니다. 고객 입장에서 이 사람이 제공하는 것은 무엇인가?를 직관적으로 알기 위해서는 잘 정리된 커리큘럼 같은 데이터가 필요하다고 생각하고, 일단 블로그에 글 발행은 꾸준히 하고 있고, 유튜브 영상을 통해 나의 권위를 만들어감과 동시에 잠재 고객과의 신뢰를 쌓으면서 고객을 유치할 계획을 갖고 있음.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2(손실)</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">지인에게 연락하기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>

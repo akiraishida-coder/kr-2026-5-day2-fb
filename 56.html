@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>곽경석 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="index.html">← 목록으로</a></nav>
+    
+    <article class="card">
+      <h2 class="person">곽경석님께</h2>
+      <p class="meta">2일차 #56</p>
+      <p class="kaitou-link-wrap">
+        과제 답변 내용：
+        <a class="kaitou-link" href="56-kaitou.html">56-kaitou.html</a>
+      </p>
+      <section class="feedback">
+        <h3>피드백</h3>
+        <p class="prewrap">**방향 정리（구술 반영）**</p>
+<p class="prewrap">지금까지 보험에 필요한 교육·컨설 역량에 가장 많이 투자해 오셨다는 점은 그대로 강점입니다. 다음 단계는 최종 고객에게만 상품을 파는 것이 아니라, **동업자(보험 업계)에게 당신이 배워 온 것을 가르치는 쪽**도 있습니다.</p>
+<p class="prewrap">예: 보험 지식뿐 아니라 영업 진행, 소개 중심으로 일해 온 사람이 한 단계 올라가도록 돕는 교육·서포트—「현장에서 쌓는 신뢰·관리」「약속을 지키는 진솔함」을 후배·동료에게 넘기는 형태. 소개 영업에 자신이 없다면, **영업 자체를 가르치기보다 당신이 잘하는 안정적 동반·관리**를 상품의 중심에 두는 편이 부담이 적을 수 있습니다.</p>
+<p class="prewrap">1일차 「생활 스킬 콜라보」「수입이 안정적이지 않다」도 보험 본업+생활 스킬 안의 토대입니다.</p>
+<p class="prewrap">소구가 「보험을 판다」「상품 비교」만이면 비교 사이트와 같은 선반—가격 전에 멈추기 쉽습니다.</p>
+<p class="prewrap">반면 「가족 리스크를 정리해 설명할 수 있는 상태」「결정 전 무엇을 봐야 하는지」 등 대화 말에 맞추면, 상품명이 아니라 「안심하고 고른다」 대가를 냅니다.</p>
+<p class="prewrap">과제 2 「지인 연락」 그대로 OK.</p>
+<p class="prewrap">판매보다 「요즘 무엇을 결정하는 데 시간이 가장 드나요?」 한 질문. 전화 5분도 충분.</p>
+<p class="prewrap">왜 지금: 브랜딩 전에 지인 생 말이 한 줄 재료.</p>
+<p class="prewrap">작은 체크리스트 1장·무료 통화 15분부터 입구. 갑자기 큰 콜라보만이면 준비가 무거울 수 있습니다.</p>
+<p class="prewrap">연락 없이면 「방향만 넓어졌다」로 끝날 위험.</p>
+<p class="prewrap">움직임이 먹히는지는 그 전 토대에 달려 있습니다. 누구·어떤 변화·왜 지금을, 갑자기 완벽히 쓰지 못해도 괜찮습니다.</p>
+<p class="prewrap">누구·어떤 변화·왜 지금은 워크숍 라이브 최종일에서 입구 정리. 한 줄 정한 뒤 넓히면 소개 흐름과도 맞습니다.
+완벽한 상품명·가격은 아직 정하지 않아도 됩니다.</p>
+      </section>
+    </article>
+    
+  </main>
+</body>
+</html>
