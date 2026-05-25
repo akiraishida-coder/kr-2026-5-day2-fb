@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JM — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.feedback .fb-p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin: 0 0 18px;
+  color: #333;
+}
+
+.feedback .fb-p:last-child {
+  margin-bottom: 0;
+}
+
+.feedback .fb-section-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 28px 0 12px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.feedback blockquote.fb-quote {
+  margin: 8px 0 20px;
+  padding: 14px 18px;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid #bdbdbd;
+  border-radius: 6px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.feedback ul.fb-ul {
+  margin: 0 0 20px;
+  padding-left: 1.35em;
+  font-size: 17px;
+  color: #333;
+}
+
+.feedback ul.fb-ul li {
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
+.feedback .fb-quote-plain {
+  color: #444;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+.feedback blockquote.fb-quote + .fb-p,
+.feedback .fb-p + blockquote.fb-quote {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="95.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">JM님의 과제 답변</h2>
+      <p class="meta">2일차 #95</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">서포터 비즈니스에 대해서 생각을 해보게 되었습니다. 결국 나의 시간을 사용해서 개개인에게 직접 서포트를 해야하기 때문에 확장이 힘들 것 같다는 생각이 들었습니다. 불가능한 것은 아니지만 확장을 하려면 직원을 뽑고 교육시키는 식으로 해야하는 데 퀄리티 문제와 사업에서 가장 힘들다는 사람 관리라는 문제가 있을 것 같다는 생각이 들었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">아직 정하지 못했습니다. 현재 입시 교육을 대체할 수 있는 비즈니스 방향으로 고민하고 있습니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">비지니스의 사용자 테스트를 빠르고 효과적으로 하는 방법에 대해서 고민 중입니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">AI 가 생각보다 좋은 결과를 도출해주지 못해서 아쉬웠음</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">[1]--------------------------------------------------------
+
+**1. 주요 경력**
+
+당신의 “주요 경력”을 알려주세요.
+
+업계, 직종, 연수, 구체적인 업무 내용을 포함해 주세요.
+
+현업 iOS 앱 개발, 
+
+시간 관리 책 5관 이상 완독, 뇌 관련 책 5권 이상 완독, 행복에 관한 책 완독, 심리학에 관한 책 완독, 꿈을 이루는 방법 책 완독
+
+멜라토닌 영양제 기획부터 판매까지 진행, 그로스 마케팅 개념 학습, 메타 광고 집행 경험(데이터 기반의 퍼널 최적화 시도 경험)
+
+꿈을 이루는 것을 돕기 위한 솔루션 앱 개발 중 
+
+
+
+**2. 가장 큰 고민과 극복 경험**
+
+당신이 일이나 인생에서 깊이 고민했던 것은 무엇인가요?
+
+그리고 그것을 어떻게 극복했나요?
+
+인간은 왜 사는가 
+
+인간은 어떨 때 행복한가 
+
+목표를 이루기 위해서는 어떻게 해야하는가
+
+할 수 있는 일부터 시작하고 막히는 일이 있다면 그 일을 해결하기 위해 책, 강의, 검색 등등을 이용해서 재료를 모아 그 재료를 조합하여 해결 방법을 도출해서 해결
+
+
+
+**3. 시간과 돈을 투자하거나 몰입한 것**
+
+지금까지의 인생에서 가장 많은 “시간”이나 “돈”을 쏟아온 것은 무엇인가요?
+
+혹은 시간 가는 줄 모르고 몰입하거나 연구하거나 열중하게 되는 것은 무엇인가요?
+
+인간은 왜 살아야하는지, 어떻게 해야 행복한지, 목표를 이루기 위한 방법은 어떤 것들이 있는지 그리고 어떻게 해야하는지, 
+
+비즈니스 도출과 앱 기획 및 개발 그리고 제품 개발과 제품을 팔려는 시도와 마케팅을 공부하고 실행하는데 시간과 돈을 많이 쏟아부었습니다.
+
+
+
+**4. 자기 돈을 들여 해결하거나 배운 것**
+
+과거에 당신이 “자기 돈을 들여”, 즉 돈을 지불해서 누군가에게 해결받은 고민이나 배운 것은 무엇인가요?
+
+돈을 내고 인간의 심리, 행복, 계획 수립, 마케팅 등에 대한 책을 구입하여 공부하였습니다.
+
+돈을 내고 비즈니스에 대해 배웠습니다.
+
+인간의 심리를 이용해서 마케팅을 하는 방법과 그로스 마케팅을 배웠습니다.
+클로징이 고액 비즈니스에서는 통하지 않는 다는 것을 배웠습니다.
+
+
+
+**5. 상담받는 것**
+
+친구나 동료로부터 자주 “상담받는 것”이나 “조언을 구하는 것”이 있나요?
+
+그것은 어떤 장르의 고민인가요?
+
+또 그에 대해 평소 어떤 식으로 조언해 주고 있나요?
+
+어떻게하면 돈을 벌 수 있을지 + 뭘하면서 살아야할지 + 어떻게 하면 행복할 수 있을지 + 어떻게 하면 최선의 선택을 할 수 있을지
+
+
+
+**6. 자기도 모르게 열변을 토하는 것**
+
+술자리나 잡담 중에, 누가 묻지도 않았는데 “자기도 모르게 열변을 토하게 되는 것”이나, 시간이 가는 줄 모르고 이야기하게 되는 “주제”가 있나요?
+
+신의를 지켜야하는 이유, 앞으로 무엇을 하면서 살아야할지, 세계관을 넓혀야하는 이유, 행복하기 위해서는 어떻게 해야하는가, 인간의 뇌는 이성적인 부분과 본능적인 부분이 있어서 무의식적인 부분에서 아주 여러개의 의사결정이 힘을 겨뤄서 이긴 내용이 의식으로 나온다 즉, 인간은 단하나의 의식이 존재하는 것이 아니라 아주 많은 의식이 존재한다. , 자신의 주위의 사람들이 중요한 이유, 똑똑하다의 나만의 정의: 좋은 선택을 하는 것, 자랑을 하는 행위는 타인을 구타하는 것과 같다 ⇒ 즉, 자랑을 하면 그 자랑은 타인을 상처입힌다. 그래서 자랑을 안하는 것이 좋다. , 비교하는 삶은 불행한 삶이다.
+
+
+
+**7. 비정상적일 정도의 집착과 잘하는 것**
+
+일이나 취미에서, 다른 사람은 신경 쓰지 않을 법한 세세한 부분에 유독 “집착하게 되는 것”이 있나요?
+
+또한 다른 사람에게 평가받았거나 스스로 잘한다고 생각하는 것은 무엇인가요?
+
+어떤 선택이 최선인가? 목적(꿈)을 이루기 위해서는 어떻게 하는 것이 최선인가?
+
+잘한다고 평가받은 것 글쓰기, 세일즈 SPIN을 이용한 글쓰기, 앱개발, 수학, 생각이 깊다 등
+
+
+
+**8. 질투의 대상**
+
+동종업계 사람이나 타인을 보면서 “좋겠다”, “분하다”라고 질투하게 되는 사람은 누구인가요?
+
+또는 어떤 상태를 보면 그런 감정이 드나요?
+
+타인과 비교는 불행한 것을 알기 때문에 최대한 비교 안하려고 하지만 
+
+사람인지라 현재 나보다 상황이 좋은 사람 (돈을 많이 벌거나, 좋은 사람과 결혼하거나 등등)에 대해 좋겠다라는 생각이 든다.
+
+
+
+**9. 분노나 의로운 분노**
+
+최근 세상이나 당신의 업계에 대해 “이건 이상하다”, “좀 더 이렇게 되어야 한다”라고 분노나 의로운 분노를 느끼는 것이 있나요?
+
+마케팅을 하면서 알게 된 것이 정말 잘못된 정보를 이용해서 사람들이 많이 속고 있다.
+
+좋은 제품이 팔리는 것이 아니라 노출을 많이 시키는 것이 잘팔린다는 사실이 화난다.
+
+꿈을 이루려고 하지 않고 자기 합리화로 나는 할 수 없어 등 어떻게든 안되는 이유를 만들어서 실행을 안하는 사람과 
+
+게으른 사람을 보면 화가 난다.
+
+
+
+**10. 무료로라도 돕고 싶은 사람**
+
+돈 걱정이 전혀 없고 완전히 자원봉사라고 하더라도, “이 사람을 위해서라면 힘이 되어주고 싶다”고 생각하는 사람은 구체적으로 어떤 사람인가요?
+
+아픈 사람 , 힘들어하는 사람, 꿈을 이루고 싶은 사람
+
+
+
+**11. 인생의 목표**
+
+당신의 인생이 끝났을 때, 묘비에 한마디가 새겨진다면 어떤 말이 새겨지기를 바라나요?
+
+또는 어떤 인물이었다고 기록되기를 바라나요?
+
+많은 사람들을 행복하게 만든 사람
+
+많은 사람들의 고통을 해결해준사람
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[2]--------------------------------------------------------
+
+아이디어 1: 뇌과학 기반의 목표 달성 및 멘탈 해킹 프로그램, &#x27;브레인 퍼널(Brain Funnel) 프로젝트&#x27;】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+개요: 인간의 뇌 메커니즘(이성과 본능의 충돌)을 분석하여, 의지력에 의존하지 않고 시스템적으로 무의식적 의사결정을 정렬해 &#x27;무조건 실행할 수밖에 없는 상태&#x27;를 만드는 1:1 라이프 엔지니어링 프로그램입니다.
+
+왜 질문자님이어야 하는가 (USP): 질문자님은 목표 달성, 뇌과학, 심리학 서적을 탐독(Q1)했을 뿐만 아니라, 실제로 막히는 일이 있을 때 필요한 재료(지식)를 모아 조합하여 최선의 해결책을 도출해 낸 성공 방정식(Q2)을 가지고 있습니다. 돈을 내고 심리와 마케팅을 배우며(Q4) 축적한 &#x27;인간 행동 촉진 데이터&#x27;와 &#x27;최선의 선택에 대한 집착(Q7)&#x27;은 고객에게 &quot;이 사람은 내 뇌의 오류를 고쳐줄 시스템 설계자&quot;라는 강력한 신뢰를 줍니다.
+
+2. 제공 스타일 — 동반 지원형 (Coaching &amp; Engineering)
+이유: 자기합리화와 게으름(Q9)은 단순 강의나 책(정보)만으로는 절대 치료되지 않습니다. 질문자님이 직접 개입하여 고객의 무의식적 저항을 분석하고, 매주 행동 퍼널을 최적화해 주는 &#x27;밀착 동반 지원&#x27;이어야만 실질적인 성과(After)가 나기 때문입니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃: 높은 목표를 세우지만 매번 자기합리화와 게으름으로 주저앉아 자괴감을 느끼는 전문직, 예비 창업가, 직장인.
+
+깊은 고민: &quot;아는 건 많은데 왜 실행을 못 할까?&quot;, &quot;내 의지력은 왜 이토록 쓰레기 같을까?&quot;라며 내적 고통을 겪고 있으며, 시중의 흔한 동기부여 영상에 속아 시간과 돈만 날렸다고 느끼는 절실한 상태입니다(Q6, Q9).
+
+4. 제공하는 가치 — Before → After
+Before: 무의식 속 수많은 자아가 충돌하여 늘 에너지를 낭비하고, 실행을 미루며, 남들과 비교하느라 불행한 상태.
+
+After: 내 뇌의 메커니즘을 완벽히 통제하여 &#x27;생각 즉시 실행&#x27;하는 구조를 확립하고, 주도적인 최선의 선택을 내리며 매일 목표에 다가가는 행복을 느낌.
+
+5. 벤치마크 리서치
+유사 사례 및 키워드: 국내외 &#x27;인지행동치료 기반 라이프 코칭&#x27;, &#x27;뇌과학 생산성 컨설팅&#x27;.
+
+검색 키워드: 뇌과학 생산성 코칭, 무의식 정렬 멘탈 케어, 행동 과학 컨설팅
+
+참고 모델: 유튜브 채널 &#x27;자청&#x27;의 초창기 심리학 기반 역행자 콘셉트, 혹은 해외 생산성 유튜버 &#x27;Ali Abdaal&#x27;의 과학적 생산성 시스템 구축 모델.
+
+6. 상품 설계 로드맵
+스텝 1: 단발 세션 (뇌 구조 진단 및 행동 퍼널 분석)
+
+내용: 90분간 고객의 현재 목표와 미루는 습관의 원인을 뇌과학적/심리학적 관점에서 진단하고, 즉시 실행 가능한 &#x27;원씽(One-Thing) 재료 조합 솔루션&#x27; 제공.
+
+예상 가격: 15만 원
+
+스텝 2: 고가 동반 지원 패키지 (12주 브레인 시스템 구축)
+
+내용: 3개월간 주 1회 화상 코칭 + 데일리 행동 퍼널 트래킹(채팅 무제한). 무의식적 저항이 일어날 때마다 실시간 멘탈 캘리브레이션 지원.
+
+예상 가격: 250만 원
+
+
+
+
+
+
+[3]--------------------------------------------------------
+
+AI가 생성한 내용이 100% 맘에 드는 건 아니라서 
+고객 조사를 통해 다듬을 필요가 있다는 생각이 듭니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">글로벌로 진출했을 때 문화적인 차이로 인한 마케팅이 고민입니다.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">손실</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">시장 조사하기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>
