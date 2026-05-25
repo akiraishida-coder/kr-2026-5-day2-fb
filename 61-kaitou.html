@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>byeongsub — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.feedback .fb-p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin: 0 0 18px;
+  color: #333;
+}
+
+.feedback .fb-p:last-child {
+  margin-bottom: 0;
+}
+
+.feedback .fb-section-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 28px 0 12px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.feedback blockquote.fb-quote {
+  margin: 8px 0 20px;
+  padding: 14px 18px;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid #bdbdbd;
+  border-radius: 6px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.feedback ul.fb-ul {
+  margin: 0 0 20px;
+  padding-left: 1.35em;
+  font-size: 17px;
+  color: #333;
+}
+
+.feedback ul.fb-ul li {
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
+.feedback .fb-quote-plain {
+  color: #444;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+.feedback blockquote.fb-quote + .fb-p,
+.feedback .fb-p + blockquote.fb-quote {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="61.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">byeongsub님의 과제 답변</h2>
+      <p class="meta">2일차 #61</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">서포트 비즈니스라는 말을 처음 들었는데, 생각해보면 우리 주변에 자신이 가진 경험이나 기술을 가지고 판매하는 분들이 많습니다. 다만, 그 주제가 전문적인 주제였기에 개인이 가진 경험이나 일상 속 기술들도 충분히 판매할 수 있다는 점이 새로웠습니다. 물론 그렇게 하기 위해서 사람들의 관심과 호기심을 불러일으킬 나만의 이야기가 중요하고요. &#x27;내가 가진 게 도움이 될까?&#x27;라는 생각이 지금 가장 먼저 해결해야 할 질문인 것 같습니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">아직은 마땅히 떠오르는 건 없습니다. 요즘에는 웬만한 내용은 AI에 물어보면 대부분 해결이 되어서, 단순히 방법이나 정보를 물어보는 건 큰 성과가 없을 거 같다는 생각이 듭니다. 그래서 경험과 연관된 것이 좋거나, 진짜 관심있는 주제의 책을 5권 읽어서 실천한 결과를 공유하는게 가장 어필이 잘 될 것 같습니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">어떻게 하면 빨리 회사 월급에서 벗어나서 경제적 여유를 얻을 수 있을까, 입니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">자신에 대한 고민에서 시작해서 이를 이용한 비즈니스 기획으로 확장되는 과정을 보면서 신기하기도 하고, 계속 이렇게 생각하는 습관이나 노력을 지속하면 서포트 비즈니스를 할 수 있겠다는 생각이 들었습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">① 11가지 질문에 대한 답변
+Q1. 주요 경력: 대학교에서 공대를 졸업한 후, 지금까지 자동차 산업쪽에서 쭉 일해왔는데, 첫 회사는 글로벌 OEM 의 1차 협력사에서 자동차 내장재 소재 개발 업무를 약 5년간 진행했음. 두번째 회사 역시 1차 협력사였는데 이 때는 한창 전기차가 시작할 때라서 배터리에 들어가는 부품인 BMS 개발을 담당하는 PM으로 약 7개월 간 일했음. 세 번째 회사는 글로벌 OEM의 그룹사였는데, 이때는 직무를 바꿔 산학협동연구 과제를 운영하는 업무를 2년 7개월 정도 일했음. 그러다가 그룹사 내 조직 변경으로 글로벌 OEM으로 옮겨 현재 산학협동연구를 기획하는 업무를 진행 중이며, 현재 1년 1개월차가 되었음.
+
+Q2. 가장 큰 고민과 극복 경험: 어릴 떄는 일에 대한 고민이 많았지만 나이가 들수록 인생에 대한 고민으로 바뀌었는데, 어떻게 하면 경제적 자유를 얻을 수 있을지가 가장 큰 고민임. 경제적 자유를 통해 내가 하고 싶은 일을 하거나, 가족 또는 친구들과 시간을 보내며 추억을 만드는게 훨씬 행복하기 때문. 게다가 점점 부모님이 나이도 많으신데 여전히 몸이 아플 정도로 일하시는 모습을 보면서 안타까운 마음이 많이 듦. 아직 극복을 하지 못하고 계속 고민을 하고 있는 중.
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: 가장 많은 시간을 쓴 건은 자기 계발에 관련된 생각이나 활동들임. 어떻게 하면 지금보다 외적으로나 내적으로나 나은 내가 될 수 있을지를 고민하다보니 혼자 있으면 시간을 그냥 즐기지 않고 의미있게 써야 한다는 압박감이 있어서 책을 읽거나 인생에 도움이 될 영상들을 찾아서 보는 경우가 많음. 요즘은 근력 운동을 하거나 정보전달성 유튜브를 보는데 시간을 많이 쓰고 있음
+
+Q4. 자기 돈을 들여 해결하거나 배운 것: 대학생 때는 취업 준비 과정을 들어본 적도 있고, 자기 계발 관련 수업을 들어본 적도 있음. 부동산 공부나 경제 공부에도 수업을 등록해서 들은 적도 있었고, 재테크 과정도 등록해서 부업을 통해 월급 외 부수입을 벌고자 한 적도 있었지만, 결국 잘 되지 않았다. 수업에서는 이전에는 몰랐던 정보들을 알게 되어서 세상을 바라보는 또다른 눈이 생긴 느낌은 받았음
+
+Q5. 상담받는 것: 사람들이 나에게 고민을 잘 물어보지 않는 편이다. 그나마 고민을 이야기 하는 것들은 회사에서 업무에 관련된 내용들이 대부분이다. 그럴 때마다 나는 먼저 잘 들어주고, 상황을 확인한 다음, 내가 가진 경험과 지식을 기반으로 최대한 도움이 되는 방향으로 말을 해주는 편이고 도와줄 수 있는 부분이 있는지 물어보고 도와주는 편임.
+
+Q6. 자기도 모르게 열변을 토하는 것: 사람들과 이야기를 하다보면 질문을 많이 하는 편이다. 특히 &#x27;왜&#x27;라는 질문을 많이 하는 편인데, 어떤 것이든 온전히 이해하고 싶어서 질문하게 된다. 요즘에 대화를 많이 꺼내고 또 시간 가는 줄 모르고 하는 이야기는 주식 투자, 부동산 등과 같이 재테크다. 이 역시 경제적 자유와 연관이 되어 있다보니 그런 것 같음.
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: 어디를 가든, 누가 시키지 않아도 내가 있는 공간이나 내가 사용할 물건 등은 가능한 청소하는 편이다. 남들이 신경쓰지 않더라도, 내가 머문 공간이나 내가 사용한 물건들은 가능한 그 때 상태 그대로 잘 간직되었으면 하기도 하고, 실제로 내가 사용한 것들이니 잘 정돈되어 있어야 나도 심리적으로 안정이 되고, 그 다음에 어떤 것이든 잘 시작할 수 있게 된다. 또 주변 상태가 나의 정신 상태를 대변한다는 말도 들었기에 깔끔하게 하는게 중요하다고 생각하는 편임.
+
+Q8. 질투의 대상:  당연히 회사에서는 일을 잘 하는 사람이다. 주변 사람들과 말도 잘하고, 어려워 보이는 업무도 단계적으로 잘 해내는 모습을 보면 내가 가진 역량이 부족하다는 것이 바로 느껴져서 속으로 시기심이 느껴질 때도 있다. 회사 밖에서는 내가 바라는 외모와 성격을 가진 사람들을 보면 부럽다는 생각이 많이 든다. 내가 바라는 미래의 삶의 모습을 저 사람들은 이미 누리고 있는데 나는 못하고 있으니, 부러우면서도 질투를 느끼는데 내가 어떻게 해야 할지 방법을 모르니 답답한 마음 뿐임.
+
+Q9. 분노나 의분: 요즘 회사에서 느끼는 분노와 비슷한 감정은 그건 어떻게 하면 업무 분장이 제대로 되고, 프로세스가 바로 세워지는지이다. 팀의 비전이나 미션 등이 없이 팀을 이끄는 팀장이나 파트장들의 리더십에 대한 불만도 있고, 업무도 정확한 방향성이나 목적 없이 수명 사항으로 하거나, 그냥 팀이 있으니 해야 하는 일을 찾으라고 하는 등 팀의 존재감이나 소속감에 대한 자부심을 느낄 수 있는 일이 잘 없다. 개인 일상에서는 아무리 내가 스스로 좋게 생각하고 성공 확언을 읊는다고 해도, 작심 삼일로 끝나는 경우가 많고, 실제로 내 삶이 변하는 모습이 보이지 않고, 또 내 주변이 변하지 않는다는 게 온몸으로 느껴질 때 왜 나는 내가 원하는 성공적인 모습으로 살지 못하고 있는지 분노와 같은 감정을 느끼곤 함.
+
+Q10. 무료로라도 돕고 싶은 사람: 어떤 사람이든 심성이 착하고 순수한 사람을 보면, 그 사람에 대해 관심이 가게 된다. 좋은 일이 있다면 축하해주고 싶고, 안좋은 일이 있다면 위로해주고 싶고, 고민이 있다면 곁에서 응원해주면서 잘 이겨낼 수 있게 도와주고 싶다. 그렇게 했을 때 나도 기분이 좋아지는 것 같음.
+
+Q11. 인생의 목표: 주변 사람들을 항상 잘 챙기고, 언제든 심적으로 의지할 수 있었던 사람으로 기억되고 싶다. 언제 봐도 반갑고 어색하지 않은 사람, 그리고 힘이 들 때 위로를 받을 수 있는 사람처럼 내 주변 사람들에게 내가 있음으로 그 사람들도 인생이 행복해지길 바라기 때문임.
+
+
+② AI 비즈니스 아이디어
+아이디어 1: &#x27;마인드 셋업(Mind-Set up)&#x27; 환경 설계 컨설팅】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+단순한 정리수납이 아닙니다. &quot;주변 환경이 정신 상태를 대변한다&quot;는 귀하의 확고한 철학(Q7)과 공학적 프로세스 설계 능력(Q1)을 결합한 성취 중심형 환경 최적화 서비스입니다.
+귀하는 스스로 &#x27;작심삼일&#x27;의 고통을 겪어보았기에(Q9), 단순히 &quot;열심히 하라&quot;는 말 대신 &quot;의지력이 필요 없는 환경&quot;을 설계해 줄 수 있습니다. 수많은 자기계발 강의에 돈을 쓰고도 실패해 본 경험(Q4)은 고객들에게 &quot;나도 당신과 같았지만, 결국 물리적 환경을 제어함으로써 답을 찾았다&quot;는 강력한 신뢰(USP)를 줍니다.
+
+2. 제공 스타일 — 동반 지원형
+고객의 집이나 집무실 환경을 분석하고, 그들의 루틴에 최적화된 공간 배치와 디지털 환경(PC/스마트폰)까지 함께 정리하며 1:1로 습관 형성을 돕는 &#x27;페이스메이커&#x27; 스타일이 적합합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃: 마음은 간절하나 주변이 산만해 실행력이 떨어지는 3040 예비 창업자 및 직장인.
+깊은 고민: &quot;왜 나는 매번 결심만 하고 바뀌지 않을까?&quot;라는 자괴감, 어지러운 책상과 복잡한 업무 프로세스 때문에 시작도 하기 전에 지치는 무력감(Q9의 분노 포인트).
+
+4. 제공하는 가치 — Before → After
+Before: 해야 할 일은 쌓여있고 주변은 엉망이며, 무엇부터 손대야 할지 몰라 불안한 상태.
+After: 공간과 생각이 정돈되어, 자리에 앉기만 하면 즉시 몰입 모드로 진입하는 &#x27;고효율 성과 창출자&#x27;.
+
+5. 벤치마크 리서치
+키워드: 루틴 설계, 환경 디자인, 미니멀리즘 비즈니스, 환경 제어 컨설팅.
+참고: 유튜버 &#x27;신사임당&#x27;의 환경 설정 관련 영상, &#x27;인테리어 티처&#x27;의 공간 컨설팅 사례.
+
+6. 상품 설계 로드맵
+스텝 1 (단발): [비움과 채움] 90분 온라인 공간 진단 및 마인드 맵핑 세션 (7만 원)
+스텝 2 (장기): [3개월 몰입 설계] 공간 재구성 + 매일 아침 루틴 인증 및 1:1 피드백 (250만 원)
+
+
+아이디어 2: &#x27;코퍼레이트 엑시트(Corporate Exit)&#x27; PM 컨설팅】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+글로벌 기업의 산학협동 기획 및 PM 경험(Q1)을 개인의 비즈니스에 이식하는 서비스입니다. 귀하는 &#x27;프로세스가 없는 조직&#x27;에 분노(Q9)를 느끼며, &#x27;왜&#x27;라는 질문을 통해 본질을 파악(Q6)하는 강점이 있습니다.
+실패했던 부업 경험(Q4)을 자산 삼아, 직장인이 회사를 다니면서 &#x27;시스템&#x27;으로서의 1인 비즈니스를 어떻게 설계해야 하는지 PM의 관점에서 가이드합니다. &quot;대기업의 기획 프로세스를 당신의 1인 기업에 심어드립니다&quot;라는 메시지는 전문성과 희소성을 동시에 갖습니다.
+
+2. 제공 스타일 — 동반 지원형
+단순 강의가 아니라, 고객의 비즈니스 아이디어를 함께 검토하고 실행 단계별로 칸반(Kanban) 보드를 짜주며 진척도를 관리하는 &#x27;비즈니스 PM&#x27; 역할을 수행합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃: 경제적 자유를 꿈꾸지만(Q2), 회사 일에 치여 정작 본인의 사업은 진도가 나가지 않는 대기업/중견기업 재직자.
+깊은 고민: &quot;회사는 잘 돌아가는데 내 삶은 왜 제자리인가?&quot;라는 회의감(Q8의 질투), 막연한 부업 정보 속에서 나만의 확실한 시스템을 구축하지 못하는 답답함.
+
+4. 제공하는 가치 — Before → After
+Before: 퇴근 후 지친 몸으로 이것저것 건드리다 포기하는 &#x27;방황하는 직장인&#x27;.
+After: 명확한 로드맵과 마일스톤에 따라 매일 조금씩 수익 자동화 시스템을 구축해가는 &#x27;예비 사업가&#x27;.
+
+5. 벤치마크 리서치
+키워드: 직장인 창업 PM, 비즈니스 시스템 설계, 1인 기업 기획자.
+참고: &#x27;라이프해킹스쿨&#x27;의 시스템 구축 강의, &#x27;자청&#x27;의 무자본 창업 모델 중 시스템화 전략.
+
+6. 상품 설계 로드맵
+스텝 1 (단발): [비즈니스 구조 진단] 현재 보유 역량 기반 사업 모델링 60분 세션 (10만 원)
+스텝 2 (장기): [6개월 엑시트 프로젝트] 사업 기획서 작성부터 런칭까지 실무 PM 동반 지원 (500만 원 이상)
+
+
+아이디어 3: &#x27;브릿지 리서치(Bridge Research)&#x27; 실무 마스터 클래스】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+귀하가 현재 수행 중인 &#x27;산학협동연구 기획 및 운영&#x27;은 매우 희소한 전문 영역(Q1)입니다. 기업이 대학의 기술을 어떻게 찾고, 대학은 기업의 과제를 어떻게 수주하는지 그 &#x27;언어의 장벽&#x27;을 허무는 노하우는 시장에서 매우 높은 가치를 가집니다.
+특히 잘 들어주고 상황을 확인한 뒤 도움을 주는 귀하의 성향(Q5, Q10)은 양측의 이해관계를 조정해야 하는 이 업무에 최적화되어 있습니다. 이는 타인이 쉽게 따라 할 수 없는 압도적인 전문성(Secret Value)입니다.
+
+2. 제공 스타일 — 강의형 + 커뮤니티(스쿨)형
+이 분야는 지식의 밀도가 높으므로, 체계적인 커리큘럼을 제공하는 &#x27;스쿨&#x27; 형식이 적합합니다. 다만, 실제 과제 수주를 돕는 컨설팅을 병행하여 고가 상품을 구성합니다.
+
+3. 타깃 고객과 그들이 안고 있는 깊은 고민
+타깃: 기업 과제를 따내고 싶지만 기업의 생리를 모르는 교수/연구원, 또는 대학의 기술을 도입하고 싶지만 절차를 모르는 중소기업 전략팀.
+깊은 고민: &quot;기술은 있는데 왜 사업화가 안 될까?&quot;, &quot;대기업과의 협업 프로세스는 도대체 어떻게 시작해야 하는가?&quot;에 대한 막막함.
+
+4. 제공하는 가치 — Before → After
+Before: 제안서를 써도 매번 탈락하거나 소통 오류로 결렬되는 연구 그룹.
+After: 대기업의 언어로 소통하며 대형 국책 과제 및 산학 과제를 성공적으로 수주하는 전문가 그룹.
+
+5. 벤치마크 리서치
+키워드: 기술사업화(TLO) 전문가 과정, 산학협력 코디네이터, 연구 기획 컨설팅.
+참고: 한국산업기술진흥원(KIAT) 교육 과정, 각 대학 산학협력단 실무 가이드.
+
+6. 상품 설계 로드맵
+스텝 1 (단발): [산학협력 첫걸음] 대기업이 원하는 연구 제안서 작성법 특강 (5만 원)
+스텝 2 (장기): [연구 수주 마스터 클래스] 과제 기획, 매칭, 계약 검토까지 전 과정 밀착 코칭 (300만 원 이상)
+
+
+③ 아이디어에 대한 의견
+2번, 3번 아이디어의 경우 고객을 모집하고 실제로 성과를 내려면, 비즈니스 아이디어에서 말한 내용을 실제로 해본 경험이 있어야 하는데, 그렇지는 않아서 하기는 어려움. 그나마 1번이 접근가능한 것 같으나, 비즈니스 아이디어가 구체적이지 않은 듯함. 그리고 일반적인 자기 계발서 내용과도 겹치는 부분들이 있어서 어떤 차별점을 만들 수 있을지가 관건이라고 생각함.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">1번을 한다고 헀을 때
+1) 고객에세 제공할 때의 기술적인 어려움
+ - 단계별로 접근을 해야 할 거 같은데, 공통 사항에서 시작해서 개인별 맞춤형 솔루션을 제공하는 방향으로 가는게 좋다고 생각함. 비즈니스를 하기 위해 필요한 기술은, 내용을 잘 전달할 수 있게 자료를 만드는 것과, 현장에서 그 자료의 공유 방법을 생각해야 함. 또는 온라인으로 공유하는 방법도 생각해봐야 함. 이 정도 수준은 기존에 사용하는 방식으로 충분해서 어려움은 없다고 생각함. 하지만 요즘 AI 활용이 커지고 있으니, AI를 접목해서 전체적인 수준을 높일 수 있는 방법을 지속적으로 찾아서 반영해야 할 것 같음
+
+2) 첫걸음 내딛을 때 마은드 측면에서 느끼는 어려움
+- 나의 비즈니스 아이디어를 상대방에게 설득할 수 있을 정도의 구체적인 변화와 성과가 있어야 적극적이고 자신있게 모객을 할 수 있다고 생각함. 전문가 수준까지는 아니라도 서포트 비즈니스를 시작할 수 있다고 하지만, 다양한 경험이 있어야 어느 상황을 질문을 받아도 해결책을 줄 수 있음. 그리고 요즘에는 홍보를 보통 SNS를 많이 사용하는데 개인적으로 SNS도 친숙하지 않아서 이 부분도 어려움을 느낌.
+
+3) 구체적으로 어떻게 고객을 유지해 나갈 것인지
+ - 일단 블로그로 홍보하거나 사이트를 따로 만드는 방법도 있고, 요즘에는 소모임 관련 앱도 많이 있으니 직접 호스트가 되어 홍보하고 모집할 수 있다고 생각. 소수더라도 실제로 시작한 경험을 만들고 운영해본 경험을 쌓아가야 이 이력들을 모아서 더 구체적인 내용으로 홍보 규모도 키워나갈 수 있다고 생각함.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">2. 손실 수준.</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">관련된 주제의 유튜브 영상을 보면서 해당 채널의 규모도 보고 댓글도 확인해보고, 관련 책이 얼마나 많이 있는지, 그리고 독자들의 반응은 어떤지 확인해보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>
