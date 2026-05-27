@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>최승현 — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.feedback .fb-p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin: 0 0 18px;
+  color: #333;
+}
+
+.feedback .fb-p:last-child {
+  margin-bottom: 0;
+}
+
+.feedback .fb-section-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 28px 0 12px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.feedback blockquote.fb-quote {
+  margin: 8px 0 20px;
+  padding: 14px 18px;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid #bdbdbd;
+  border-radius: 6px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.feedback ul.fb-ul {
+  margin: 0 0 20px;
+  padding-left: 1.35em;
+  font-size: 17px;
+  color: #333;
+}
+
+.feedback ul.fb-ul li {
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
+.feedback .fb-quote-plain {
+  color: #444;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+.feedback blockquote.fb-quote + .fb-p,
+.feedback .fb-p + blockquote.fb-quote {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="90.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">최승현님의 과제 답변</h2>
+      <p class="meta">2일차 #90</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<p class="missing">1일차 과제 답변을 찾지 못했습니다（이메일·닉네임 매칭을 확인해 주세요）.</p>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">나름 디테일하게 방향을 잡아주긴 하지만, 애초에 제가 살아온 경험이 그다지 매력적이라는 생각은 들지 않아서 동기가 막 생기진 않습니다</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">Q1. 주요 경력: 온라인 쇼핑몰 사업 4년 정도 위탁판매와 해외구매대행 위주
+
+Q2. 가장 큰 고민과 극복 경험: 지금 이런식의 지식 사업 같은걸 한다고 했을 때 남의 주머니를 열만한 퀄리티나 경력이나 검증이 안 됐다 내 스스로가 수익을 많이 낸 적이 없기에
+
+Q3. 시간과 돈을 투자하거나 몰입한 것: 게임, 스트리밍 방송, 음향기기 구매하며 청음, 유튜버 되기, 부업 수익화들 여러가지
+
+Q4. 자기 돈을 들여 해결하거나 배운 것: 노래, 사업 강의나 부업 강의, 세미나
+
+Q5. 상담받는 것: 딱히 없음
+
+Q6. 자기도 모르게 열변을 토하는 것: 컴퓨터에 대한 전반적인 지식 같은거 사용 팁이나
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: 컴퓨터 프로그램들이나 어떤 게임이든 기본 센스는 누적돼있음
+
+Q8. 질투의 대상: 타로 카드로 상담 받는 시스템을 만들어둔 사람들, 쇼핑몰 하면서 멘탈 관리 잘 하면서 꾸준히 유지하는 사람들, 독서 잘 해서 자기것으로 잘 만드는 사람들, 뭐든 꾸준히 해서 수익이든 성과를 낸 사람들
+
+Q9. 분노나 의분: 내 자신이 꾸준히 하는게 없이 도중에 포기한게 너무 많은데 이걸 오래전부터 아는데도 해결이 안되는 상황들 지금또한 마찬가지
+
+Q10. 무료로라도 돕고 싶은 사람: 내가 알고 있는 모든 분야들에서 살짝 뒤쳐진 사람들
+
+Q11. 인생의 목표: 유명해지고 많은 사람에게서 사랑 받고 만들어낸 창작물이 많고 행복의 빈도가 많은 삶을 사는 것
+
+당신의 답변에서 가장 중요한 포인트는 “전문성 그 자체”보다,
+“계속 시도하지만 자기확신 부족·지속 실패·정체성 혼란 때문에 무너지는 사람의 심리”를 아주 깊게 이해하고 있다는 점입니다.
+
+즉 당신은 단순 기술형 전문가보다,
+“재능과 관심사는 많은데 인생이 한 방향으로 축적되지 않는 사람”의 감각을 이미 몸으로 알고 있습니다.
+
+이건 생각보다 강력한 자산입니다.
+
+특히 아래 조합이 핵심 USP 후보입니다.
+
+4년간 실제 온라인 사업 지속 경험
+
+수많은 부업/콘텐츠/장비/강의 시행착오
+
+컴퓨터·게임·프로그램 적응력
+
+‘꾸준히 못하는 사람의 심리’를 자기 체험으로 이해
+
+“성과 없는 상태의 열등감”을 현실적으로 이해
+
+유명해지고 싶은 욕망 + 창작 욕구
+
+멘탈/자기확신 문제를 오래 겪은 사람 특유의 공감력
+
+이건 “성공자 코칭”보다 오히려:
+
+“계속 실패해서 자기효능감이 바닥난 사람을 다시 움직이게 만드는 지원형 비즈니스”
+
+와 굉장히 잘 맞습니다.
+
+아래 3개 방향이 특히 적합합니다.
+
+【아이디어 1: 리스타트 빌더 — 실행력 복구 동반 코칭】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+이 서비스의 핵심은 생산성 코칭이 아닙니다.
+
+핵심은:
+
+“재능도 관심사도 있는데, 몇 년째 방향을 못 잡고 자기혐오만 반복하는 사람”
+
+을 대상으로 한 “실행 복구 지원”입니다.
+
+당신은 이미:
+
+쇼핑몰 4년 유지
+
+수많은 부업 시도
+
+콘텐츠 욕망
+
+지속 실패 경험
+
+자기확신 부족
+
+을 실제로 겪었습니다.
+
+중요한 건 “대성공”이 아니라:
+
+실패 루프 안의 감정을 안다는 것
+
+입니다.
+
+많은 자기계발 코치는:
+
+원래 실행력이 좋았거나
+
+성공 이후 서사를 재구성합니다.
+
+반면 당신은:
+
+포기
+
+비교열등감
+
+지속 실패
+
+정체성 혼란
+
+을 현재진행형으로 이해합니다.
+
+이 공감 자체가 USP입니다.
+
+2. 제공 스타일 — 동반 지원형
+이건 정보형 상품이 아닙니다.
+
+오히려:
+
+체크인
+
+실행 인증
+
+루틴 유지
+
+멘탈 흔들림 대응
+
+이 핵심입니다.
+
+즉:
+
+“당신 혼자서는 또 무너질 걸 알기 때문에 함께 가는 시스템”
+
+이 상품 가치입니다.
+
+3. 타깃 고객과 깊은 고민
+타깃
+부업 여러 개 건드렸지만 성과 없는 사람
+
+유튜브/쇼핑몰/블로그 계속 포기하는 사람
+
+자기혐오 심한 사람
+
+실행력 콘텐츠만 수십 개 본 사람
+
+깊은 고민
+“나는 왜 꾸준히 못하지?”
+“재능이 없는 건가?”
+“남들은 되는데 왜 나는 안 되지?”
+
+이건 단순 돈 문제가 아니라 존재감 문제입니다.
+
+4. 제공 가치 — Before → After
+Before
+매번 새로운 것 시작
+
+완벽주의
+
+비교중독
+
+자기비난
+
+실행 중단
+
+After
+작은 성과 축적
+
+루틴 유지
+
+자기확신 회복
+
+한 방향 축적
+
+“나는 해낼 수 있다” 감각 회복
+
+5. 벤치마크 리서치
+참고 가능한 방향
+Ali Abdaal
+
+Better Ideas YouTube
+
+HealthyGamerGG
+
+James Clear
+
+검색 키워드
+ADHD productivity creator
+
+creator burnout coaching
+
+consistency coaching
+
+execution accountability
+
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+내용:
+
+현재 상태 진단
+
+왜 계속 중단되는지 분석
+
+맞지 않는 목표 제거
+
+현실 루틴 설계
+
+예상 가격:
+5만~15만 원
+
+스텝 2 — 고가 동반 지원
+내용:
+
+8~12주 실행 동행
+
+매일 체크인
+
+주간 피드백
+
+목표 재설계
+
+멘탈 흔들림 대응
+
+예상 가격:
+150만~400만 원
+
+【아이디어 2: 덕후형 디지털 생존 코치】
+1. 콘셉트 개요
+당신은 전형적인:
+
+컴퓨터 친화형
+
+게임 문화 이해형
+
+장비 덕후형
+
+인터넷 감각형
+
+인간입니다.
+
+이 타입은:
+
+일반 직장 문화와 잘 안 맞고
+
+현실 자존감이 낮은 경우가 많습니다.
+
+하지만 디지털 시대에서는 강력한 자산입니다.
+
+핵심은:
+
+“덕후 감각을 사회적 가치로 연결하는 지원”
+
+입니다.
+
+2. 제공 스타일 — 동반 지원형 + 일부 강의형
+이건:
+
+툴 활용
+
+AI
+
+디지털 적응
+
+콘텐츠 제작
+
+등을 포함할 수 있어 일부 강의형 가능성이 있습니다.
+
+다만 본질은:
+
+“컴퓨터 잘 아는 찐따형 인간들이 현실 수익 구조를 만드는 것”
+
+에 있습니다.
+
+3. 타깃 고객과 깊은 고민
+타깃
+게임 좋아하는데 인생 방향 없는 사람
+
+컴퓨터만 오래 만진 사람
+
+사회성 부족으로 위축된 사람
+
+덕후인데 돈 못 버는 사람
+
+깊은 고민
+“내 취미는 사회에서 쓸모없는 건가?”
+
+4. Before → After
+Before
+게임/유튜브만 소비
+
+자기비하
+
+현실도피
+
+After
+디지털 활용 능력 수익화
+
+콘텐츠화
+
+자기표현 시작
+
+온라인 수익 구조 형성
+
+5. 벤치마크 리서치
+Pirate Software
+
+HealthyGamerGG
+
+Linus Tech Tips
+
+검색 키워드
+gamer self improvement
+
+nerd to creator
+
+digital creator coaching
+
+6. 상품 설계
+스텝 1
+디지털 강점 분석 세션
+
+콘텐츠 방향 진단
+
+가격:
+3만~10만 원
+
+스텝 2
+3개월 콘텐츠/수익화 동행
+
+장비/세팅/AI 활용 지원
+
+실행 관리
+
+가격:
+100만~300만 원
+
+【아이디어 3: 실패 데이터 기반 현실형 부업 코칭】
+1. 콘셉트 개요
+대부분 부업 코치는 성공담만 말합니다.
+
+하지만 실제 초보자는:
+
+실패
+
+중단
+
+정보과부하
+
+비교
+
+멘탈 붕괴
+
+에서 무너집니다.
+
+당신의 USP는:
+
+“성공자 시점”이 아니라
+“수없이 무너진 사람 시점”
+
+이라는 점입니다.
+
+이건 오히려 신뢰가 됩니다.
+
+특히:
+
+사기성 부업에 지친 사람
+
+현실적인 사람
+
+에게 먹힙니다.
+
+2. 제공 스타일 — 동반 지원형
+정보보다:
+
+방향 제거
+
+현실화
+
+지속
+
+실패 방지
+
+가 중요합니다.
+
+3. 타깃 고객
+부업 강의 중독자
+
+시작만 반복하는 사람
+
+유튜브/쇼핑몰/블로그 포기 반복자
+
+깊은 고민
+“나는 평생 이렇게 흐지부지 끝나는 인간인가?”
+
+4. Before → After
+Before
+계속 새 강의 구매
+
+실행 없음
+
+비교만 함
+
+After
+현실적 목표 설정
+
+한 가지 지속
+
+자기 기준 형성
+
+5. 벤치마크
+Pat Flynn
+
+Justin Welsh
+
+K creators economy newsletter
+
+검색 키워드
+realistic side hustle coaching
+
+creator accountability
+
+beginner creator system
+
+6. 상품 설계
+스텝 1
+“왜 지금까지 실패했는가” 분석 상담
+
+가격:
+5만~12만 원
+
+스텝 2
+90일 실행 동행
+
+주간 피드백
+
+중도포기 방지
+
+실행 루틴 구축
+
+가격:
+120만~350만 원
+
+가장 중요한 건 당신은 현재:
+“엄청난 전문성”보다,
+“실패와 자기의심의 감정 해석 능력”
+
+쪽이 훨씬 강합니다.
+
+그리고 시장에는 의외로:
+
+성공한 척하는 사람은 넘치지만
+
+실패 루프를 현실적으로 이해하는 사람
+
+은 매우 적습니다.
+
+이 방향은 “압도적 성공자 브랜딩”보다 훨씬 인간적인 신뢰를 만들 가능성이 큽니다.
+
+
+3. 바로 해보고 싶진 않은데...이미 이 분야에서 더 합리적인 가격의 경쟁자들이 많이 있을것 같다는 생각이고, 본업과 병행하면서 해야하는것도 장벽인데 이 장벽은 어떻게든 무시를 해야...뭐라도 할 수 있을것 같긴 하네요</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">고객에게 제공할 때의 기술적인 어려움 - 말 그대로 전문적이진 않아서 스스로 자신이 없음
+첫걸음을 내딛을 때 마인드 측면에서 느끼는 어려움 - 성공적인 결과가 그려지지 않아서 시작이 어려움
+구체적으로 어떻게 고객을 유치해 나갈 것인가 - 유튜브, 인스타그램 활용하는것 외에는 딱히 아이디어가 없음</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">1</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">유튜브에 검색해보기</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>
