@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soojin Yeo — 과제 답변 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.feedback .fb-p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin: 0 0 18px;
+  color: #333;
+}
+
+.feedback .fb-p:last-child {
+  margin-bottom: 0;
+}
+
+.feedback .fb-section-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 28px 0 12px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.feedback blockquote.fb-quote {
+  margin: 8px 0 20px;
+  padding: 14px 18px;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid #bdbdbd;
+  border-radius: 6px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.feedback ul.fb-ul {
+  margin: 0 0 20px;
+  padding-left: 1.35em;
+  font-size: 17px;
+  color: #333;
+}
+
+.feedback ul.fb-ul li {
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
+.feedback .fb-quote-plain {
+  color: #444;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+.feedback blockquote.fb-quote + .fb-p,
+.feedback .fb-p + blockquote.fb-quote {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="96.html">← 피드백으로 돌아가기</a></nav>
+    
+    <article class="card">
+      <h2 class="person">Soojin Yeo님의 과제 답변</h2>
+      <p class="meta">2일차 #96</p>
+      <h2 class="day-heading">1일차 과제</h2>
+<div class="qa-item"><p class="qa-q">오늘 강의를 통해 얻은 깨달음·감상</p><div class="qa-a prewrap">요즘은 퍼스널 브랜딩에 대한 강의나 컨설팅 등이 정말 많아서 나만의 강점을 살리고 나만이 할 수 있는 것을 나타내야 한다는 말은 많이 들었지만 그것으로 누군가를 서포트 한다는 생각은 해보지 않았던 것 같아요. 늘 나는 다른 사람에게 어떤 도움을 줄 수 있을지 고민 하다가 결론은 전문가가 아니라서 자신감이 떨어졌었는데 오히려 평범함이 강력한 무기가 될 수 있다는 말씀이 인상 깊었습니다. 앞으로의 내용도 굉장히 기대가 됩니다.</div></div>
+<div class="qa-item"><p class="qa-q">현재 시점의 비즈니스 아이디어</p><div class="qa-a prewrap">아이를 키우느라 자신을 내려놓고 살던 엄마들이 막상 아이들이 자라면 자신을 위한 일을 하기가 두렵고 망설여지는 경우가 많은데, 그런 여성들을 위해 아이와의 관계도 좋아지고 본인의 커리어도 살릴 수 있는 방향을 서포트 할 수 있는 비즈니스를 생각해 보았습니다.</div></div>
+<div class="qa-item"><p class="qa-q">인생·일에 관한 고민·불안</p><div class="qa-a prewrap">세 아이를 육아 하느라 12년 정도를 경단녀로 살면서 전업 육아맘이라 육아와 교육에 대한 공부를 많이 했습니다. 그런데 막상 아이들이 독립적으로 자라고 나니 자녀 교육에 대한 생각도 많이 바뀌고 나를 위한 일을 하고 싶다는 생각이 많이 드는 시점입니다. 인스타그램에 운영하는 계정도 육아/자녀교육 관련 주제인데, 주제를 바꿔서 계속 운영해 보고 싶고, 지속적으로 할 수 있는 나의 강점을 살린 일을 찾는 것이 쉽지 않아 불안합니다.</div></div>
+<h2 class="day-heading">2일차 과제</h2>
+<div class="qa-item"><p class="qa-q">2일차 소감·깨달음</p><div class="qa-a prewrap">생각보다 거창하지 않게 시작을 할 수도 있겠구나..라는 희망이 생겼습니다.</div></div>
+<div class="qa-item"><p class="qa-q">11문 답변·AI 3안（전문）</p><div class="qa-a prewrap">① 11가지 질문에 대한 답변
+
+Q1. 주요 경력: 대학교에서 영화제작을 전공해 시나리오를 쓰고 콘티를 그려 나만의 이야기를 영화로 만드는 법을 경험함. 
+졸업 후 미국에 있는 한인 방송국에서 1년간 리포터로 근무하며 많은 한인 사업자들을 만나고
+투잡으로 뉴욕 현지에서 여러가지 일을 하며 다양한 인종의 사람들을 만남.
+귀국 후 호텔 프론트에서 일하며 신생 비즈니스 호텔이 등급심사에서 관광1급을 받도록 서류 및 실무심사를 이끔. 다양한 국가의 손님들을 만남. 
+이 후 결혼해서 세 명의 아들을 낳고 육아를 하면서 아이들 발달과 심리를 공부했고, 플래쉬카드 강사로 영재유치원에 근무하며 아이들을 다루고 교육을 하는 것을 경험함. 아이 세 명을 오래 독박육아하며 아이 다루는 법을 잘 알게됨.
+최근에 인스타그램에서 육아 계정을 운영하며 기존의 영상을 만드는 기술과 스토리 짜는 기술, 아이들 양육 및 교육에 대한 노하우를 접목시켜 컨텐츠를 만들어 2.9만 팔로워까지 성장.
+
+Q2. 가장 큰 고민과 극복 경험:  자아에 대한 고민. 어린시절에 가정 환경이 불안정해서 늘 부모 걱정과 집안 걱정을 하느라 사춘기 시절 자아에 대한 고민을 할 여력이 없었던 전형적 K 장녀. 
+그래서 결혼을 할 때 배우자 선택에 많은 고민을 하고 정상적인 가정환경에서 자란 성실하고 책임감 있고 끈기 있는 사람을 만남. 아이들에게는 나와 같은 결핍을 주지 않기 위해 굉장히 많은 공부와 노력을 했음. 지금은 아이들이 독립적으로 자라면서 정서도 안정되고 나는 아이들에게 의존하거나 집착하지 않고 역시 독립적으로 나의 길을 걸으려 노력하면서 가족간의 관계도 친밀하게 유지되고 안정적임.
+
+
+Q3. 시간과 돈을 투자하거나 몰입한 것:  나의 자아(강점, 재능)찾기와 그것을 통해 수익화 하는 여러가지 기술들에 많은 시간과 비용을 투자하고 여전히 몰입하고 있음. 아이를 잘 키우기 위해 배우고 자연스레 인간의 심리와 정서, 가족 관계에 대해서도 많은 시간과 비용을 투자하고 몰입. 특히 인스타그램에서 퍼스널 브랜딩과 수익화 하는 것에도 많은 시간과 비용을 투자함. 최근에는 AI활용하고 배우기 위해 많은 비용과 시간 투자. 아이들의 자립심을 위해 루틴을 만드는 것에도 굉장히 많은 시간과 노력을 들였고 최근에는 바이브 코딩으로 루틴 관리 사이트를 개발함. (앱은 개발중)
+
+
+Q4. 자기 돈을 들여 해결하거나 배운 것: 심리상담 및 자아탐색. 아이와 나의 기질 검사. 
+아이들 어릴 때 상담료를 내고 지능검사 및 상담을 받았고, 큰 아이와 둘째가 고지능 영재 판정을 받음. 그 계기로 아이의 뇌발달 및 성장과 신체 발달에 대해서도 많이 공부하고 부모와의 관계 및 애착에 대한 많은 공부를 하게됨. 큰 아이 비싼 유치원에 보내기 위해 같은 원에 강사로 들어가 실전 경험도 쌓고 그 때 배우고 독학한 플래쉬카드로 최근에 온라인 강의까지 하게됨. 배운 것과 아이셋 키우며 생긴 노하우를 접목해 수강생이 2천명이 넘음.
+이외에 강의를 듣느라 최근에 투자한 것은 인스타 공동구매 강의(큰 비용에 비해 문제가 많이 해결되지는 않음. 오히려 무언가에 의존하지 않고 실행하며 부딪히는 것이 더 중요함을 배움), 마케팅 강의. 
+
+
+Q5. 상담받는 것: 아이와의 문제가 까다로운 아이의 기질 문제(특히 엄마는 평범한데 고지능 아이의 경우)를 많이 상담함. 최근에는 고등학교 친구가 아이가 유치원에서 문제가 있었던 일을 말하며 검사 결과 아이가 언어 영재임이 밝혀졌고, 키우는 것이 너무 까다로워서 어찌해야 할지 모르겠다고 상담을 요청해옴. 나는 내가 겪었던 경험과 양육관을 통해 앞으로 엄마의 마음가짐과 아이를 대하는 자세, 엄마가 유지해야할 포지션과 어떤 상황에 어떻게 말해줘야 하는지도 알려줌.
+그 외에도 나는 남편이 오랫동안 사업을 하면서 아이셋을 독박육아한 경험이 많아서 엄마 혼자서 여러 아이들을 돌보는 방법과 규칙 잡아가는 방법, 루틴을 만들어 육아를 자동화 시키는 방법, 엄마 혼자서 아이들을 데리고 여행가는 등의 경험을 전해주는 상담 가능.
+
+
+Q6. 자기도 모르게 열변을 토하는 것: 아이의 자립심을 기르는 방법, 엄마의 단단한 마음가짐과 자세, 아이가 어릴 때 엄마가 해주어야 할 것과 해주지 말아햐 할 것 등, 사업하는 남편을 내조하며 육아도 하는 여성의 입장 등.
+
+
+Q7. 비정상적일 정도의 집착과 잘하는 것: 육아의 최종 목적이 건강한 독립 이다보니 (나중에 다 커서 문제 생기지 않아야함) 결국 어린 시절에 아이를 바르게 잡는 것에 집착하게 됨. 자연스레 아이의 건강-먹거리-운동-루틴-정서 모두가 연결되어 이 부분에 많이 집착하는 편. 입시, 공부 등에는 크게 개의치 않는 확고한 신념이 있음.
+
+
+Q8. 질투의 대상: 가끔 인스타에 집안도 잘 살고 이미 엄마 아빠도 학벌 좋고 똑똑한 금수저 출신인데 아이를 특별하게 키우는 컨텐츠를 올리는 것을 보면, 부럽고 시작이 다르니까 쉽겠다 라는 생각이 들지만 반면에 나는 평범한 배경에서 내 손으로 쌓아간 것이 강점이라는 생각을 함. 
+그리고 아이를 키우면서도 자신의 커리어를 놓지 않거나 도전을 해서 무언가를 이룬 여성을 보면 부러움. 그러면서 나도 아이들에게 당당히 보여줄 수 있는 나만의 능력을 찾아 도전하고 싶은 마음이 굉장히 강함.
+
+
+Q9. 분노나 의분: 아직도 입시 이야기를 하며 성적을 중요시 하는 것을 보면 세상의 흐름을 못따라 가는 것 처럼 보여서 답답함. 물론 그런 것들이 중요한 분야도 있겠지만 앞으로 변화하는 세상에 맞는 교육법을 실천하는 것이 더 중요하다고 생각함. 여전히 예전의 방식을 강조하며 불안을 조성하는 사람들에게 더 많은 대중의 반응이 쏠리는 것이 답답하고 화가 나지만 그렇게 관심을 이끌지 못하는 내가 부족하게 느껴져서 더 답답하기도 함.
+
+
+Q10. 무료로라도 돕고 싶은 사람: 아이와 남편과 좋은 관계를 유지하면서 자신의 일을 찾고 싶은 엄마들. 하소연 할 곳도 없어 답답한 마음에 업체의 상술에 넘어가는 육아 고민이 있는 엄마들. 아이들을 새로운 방법으로(4차 산업혁명 시대, AI 시대에 맞는)교육하고 싶은데 주변의 불안하게 하는 말들에 흔들려서 결국 대세를 따르게 되는 엄마들.
+
+
+Q11. 인생의 목표: 삼형제를 훌륭하게 키우고 남편과 함께 사회에 공헌을 한 현명한 여성.
+
+
+② AI에 입력하여 나온 비즈니스 아이디어
+
+【아이디어 1: AI시대 자립육아 마스터맘 랩】
+1. 콘셉트 개요와 “왜 당신이 제공하면 팔리는가”
+
+이 서비스는 단순 육아 코칭이 아닙니다.
+
+핵심은:
+
+“불안 기반 육아 → 자립 기반 육아”로 전환시키는 것
+
+입니다.
+
+대부분의 엄마들은:
+
+학원
+영재
+입시
+문제 행동
+SNS 비교
+사교육 불안
+
+속에서 흔들립니다.
+
+그런데 당신은:
+
+실제로 세 아이를 장기 독박육아했고
+고지능 아이를 키웠고
+루틴과 시스템으로 가정을 안정화했고
+엄마 자신도 아이에게 과몰입하지 않고 독립해낸 경험이 있습니다.
+
+이건 이론이 아니라 “검증된 삶”입니다.
+
+특히 Q2의:
+
+불안정한 원가정 경험
+“나는 아이에게 같은 결핍을 주지 않겠다”는 집착
+관계 안정화 성공
+
+이 부분은 매우 강력합니다.
+
+왜냐하면 타깃 엄마들의 진짜 고민은:
+
+“아이 교육”이 아니라
+“내 불안이 아이를 망칠까봐 두려운 것”
+
+이기 때문입니다.
+
+당신은 여기서 깊게 공감받을 수 있습니다.
+
+2. 제공 스타일 — 동반 지원형
+이유
+
+이 분야는 정보 전달로 해결되지 않습니다.
+
+엄마들은 이미:
+
+유튜브
+책
+인스타
+강의
+
+다 봤습니다.
+
+문제는:
+
+“알지만 흔들린다”
+
+입니다.
+
+따라서 핵심은:
+
+상황별 피드백
+감정 교정
+루틴 설계
+가족 구조 재정비
+엄마의 포지션 코칭
+
+입니다.
+
+즉 “정서적 동반 지원”이 핵심입니다.
+
+3. 타깃 고객과 깊은 고민
+타깃
+
+30~40대 초등 이하 자녀 엄마
+
+특히:
+
+예민한 아이
+고지능 아이
+ADHD 경계
+감정기복 큰 아이
+엄마 말을 안 듣는 아이
+
+를 키우는 엄마.
+
+깊은 고민
+“내가 잘못 키우고 있는 건 아닐까?”
+“왜 우리 아이만 이렇게 힘들까?”
+“학원 안 보내면 뒤처질까?”
+“나는 엄마 역할 말고 아무것도 없는 것 같아”
+“아이에게 집착하고 싶지 않은데 자꾸 흔들려”
+
+이건 매우 고통 지불력이 높은 시장입니다.
+
+4. 제공 가치 — Before → After
+Before
+육아 정보 중독
+감정적 반응
+아이 문제에 과몰입
+남편과 갈등
+자기 삶 상실
+After
+흔들리지 않는 양육 기준 형성
+아이 자립 루틴 구축
+엄마 감정 안정
+가족 분위기 안정
+엄마 자신의 삶 회복
+5. 벤치마크 리서치
+참고 계정/브랜드
+몽실언니 공식 홈페이지
+김종원 작가
+세이노 공식 사이트
+Brene Brown
+검색 키워드
+“고지능 아이 육아”
+“엄마 감정코칭”
+“자립육아”
+“AI시대 교육”
+“루틴 육아”
+“엄마 자기회복”
+중요한 차별점
+
+기존 시장은:
+
+정보형
+감성 위로형
+
+이 많습니다.
+
+당신은:
+
+“현실 운영형 + 시스템형 엄마”
+
+포지션이 가능합니다.
+
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+내용
+90분 육아 구조 진단
+아이 기질 분석
+엄마 감정 패턴 분석
+루틴 설계
+예상 가격
+
+15만~30만 원
+
+스텝 2 — 고가 동반 지원 패키지
+내용
+3개월 동반 코칭
+주간 피드백
+카톡 음성 코칭
+아이 루틴 설계
+엄마 정체성 회복 코칭
+남편과 역할 구조 설계
+예상 가격
+
+250만~700만 원
+
+【아이디어 2: 엄마의 두 번째 인생 — 퍼스널 브랜딩 동반 코칭】
+1. 콘셉트 개요와 왜 팔리는가
+
+당신의 핵심 강점은:
+
+“육아에 인생을 쏟은 여성이 다시 자기 인생을 회복하는 과정”
+
+입니다.
+
+이건 엄청난 시장입니다.
+
+왜냐하면 수많은 엄마들이:
+
+육아 후 공허감
+경력 단절
+자존감 하락
+사회적 단절
+
+을 겪고 있기 때문입니다.
+
+그런데 당신은:
+
+3자녀 육아
+독박육아
+남편 사업 서포트
+인스타 2.9만 성장
+콘텐츠 수익화
+AI 활용
+
+까지 실제로 해냈습니다.
+
+즉:
+
+“엄마도 다시 자기 일을 만들 수 있다”
+
+를 삶으로 증명합니다.
+
+2. 제공 스타일 — 동반 지원형 + 소규모 그룹형
+이유
+
+퍼스널 브랜딩은 정보보다:
+
+실행
+노출 두려움 극복
+정체성 재정립
+콘텐츠 방향성
+
+이 핵심입니다.
+
+엄마들은 기술보다:
+
+“내가 뭘 말해야 할지 모르겠다”
+
+에서 막힙니다.
+
+여기를 당신이 잡아줄 수 있습니다.
+
+3. 타깃과 깊은 고민
+타깃
+육아 후 자기 일 찾고 싶은 엄마
+SNS 시작하고 싶은 엄마
+강점이 뭔지 모르는 여성
+깊은 고민
+“나는 이제 사회성이 없는 것 같아”
+“육아 말고 내 이름으로 인정받고 싶다”
+“아이에게 당당한 엄마가 되고 싶다”
+“나도 돈 벌고 싶은데 뭘 해야 할지 모르겠다”
+4. Before → After
+Before
+자기 정체성 상실
+실행 못함
+콘텐츠 방향 혼란
+비교 중독
+After
+자기 USP 발견
+첫 콘텐츠 발행
+자기 언어 확보
+첫 수익 경험
+자기 브랜드 구축
+5. 벤치마크 리서치
+Marie Forleo
+Ali Abdaal
+The Futur
+노아AI 공식 사이트
+검색 키워드
+“엄마 브랜딩”
+“경단녀 창업”
+“1인 지식사업”
+“인스타 퍼스널 브랜딩”
+“AI 활용 콘텐츠 제작”
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+내용
+강점 분석
+브랜드 방향 설계
+콘텐츠 포지셔닝
+인스타 진단
+예상 가격
+
+10만~20만 원
+
+스텝 2 — 고가 동반 지원
+내용
+12주 브랜딩 코칭
+콘텐츠 피드백
+주간 실행 관리
+AI 활용법
+첫 상품 런칭 지원
+예상 가격
+
+300만~1,000만 원
+
+【아이디어 3: 고지능·예민한 아이 엄마 멘탈 리더십 코칭】
+1. 콘셉트 개요와 왜 팔리는가
+
+이건 가장 고가화 가능성이 높은 영역입니다.
+
+왜냐하면:
+
+고지능 아이
+언어 영재
+예민한 아이
+
+시장은 부모들의 불안 강도가 매우 높기 때문입니다.
+
+그리고 대부분의 전문가는:
+
+검사 결과 해석
+교육법
+학습 전략
+
+은 알려줘도,
+
+“엄마가 어떤 태도로 아이를 다뤄야 하는가”
+
+는 거의 못 다룹니다.
+
+그런데 당신은:
+
+실제 양육 경험
+감정 소진 경험
+시행착오
+관계 회복
+
+을 다 통과했습니다.
+
+이건 압도적 신뢰가 됩니다.
+
+2. 제공 스타일 — 프리미엄 동반 지원형
+이유
+
+이 시장은:
+
+단순 정보형 → 이미 포화
+정서적 의존도 → 매우 높음
+
+따라서:
+
+“엄마 멘탈 안정화 + 관계 전략”
+
+으로 가야 합니다.
+
+3. 타깃과 깊은 고민
+타깃
+영재 판정 아이 부모
+예민한 아이 부모
+학교 적응 문제 겪는 부모
+깊은 고민
+“내 아이가 특별한 건 알겠는데 너무 힘들다”
+“어떻게 키워야 할지 모르겠다”
+“내 감정이 자꾸 무너진다”
+“아이 재능을 망칠까 두렵다”
+4. Before → After
+Before
+아이와 힘겨루기
+감정 폭발
+죄책감
+방향성 혼란
+After
+아이 기질 이해
+감정적 거리 조절
+장기 관점 양육
+관계 안정화
+5. 벤치마크 리서치
+The Highly Sensitive Child
+Big Life Journal
+김붕년 교수 연구 소개
+검색 키워드
+“twice exceptional parenting”
+“gifted child parenting”
+“highly sensitive child”
+“영재아이 정서”
+“고지능 아이 사회성”
+6. 상품 설계 로드맵
+스텝 1 — 단발 세션
+내용
+아이 기질/관계 분석
+부모 태도 진단
+상황별 대화법
+예상 가격
+
+20만~50만 원
+
+스텝 2 — 고가 동반 지원
+내용
+6개월 프라이빗 코칭
+부모 멘탈 케어
+학교 이슈 대응
+루틴 설계
+정서 안정 전략
+예상 가격
+
+500만~1,500만 원
+
+최종 전략 제안
+
+당신은 지금 “육아 인플루언서” 프레임에 머물면 안 됩니다.
+
+당신의 가장 강력한 시장 포지션은:
+
+“AI시대에 흔들리지 않는 가족 시스템과 자립형 인간을 만드는 여성 리더”
+
+입니다.
+
+그리고 앞으로 가장 큰 돈은:
+
+정보
+강의
+
+보다,
+
+“정서적 안정 + 방향성 + 실행 유지”
+
+를 제공하는 사람에게 갑니다.
+
+당신은 이미:
+
+스토리
+실전
+콘텐츠 능력
+공감 능력
+구조화 능력
+
+을 모두 가지고 있습니다.
+
+지금 필요한 건:
+
+“육아 정보 제공자” 포지션 탈출
+“엄마의 삶 전체를 바꾸는 사람”으로 재정의
+고가 동반형 구조 설계
+사례 축적
+프리미엄 브랜드화
+
+입니다.
+
+
+③ 아이디어에 대해 어떻게 느끼시나요? 바로 해보고 싶으신가요?
+
+AI가 준 아이디어 셋 다 생각보다는 &#x27;나도 할 수 있겠네?&#x27; 싶은 생각이 들었습니다.
+그런데 시장 조사가 필요할 것 같습니다. 정말 수요가 있을지가 궁금합니다.</div></div>
+<div class="qa-item"><p class="qa-q">실행 시 벽（기술·마인드·모객）</p><div class="qa-a prewrap">기술적인 어려움, 이 분야의 자격증이나 학위 등이 없어서 자신감이 떨어짐. 나도 완벽히 문제를 해결하지 못했는데 과연 코칭을 할 자격이 있나? 라는 두려움.</div></div>
+<div class="qa-item"><p class="qa-q">고통 레벨 판정</p><div class="qa-a prewrap">셋 다 조금씩 해당되는 것 같지만 가장 크게는 2(손실) 아닐까 생각합니다.</div></div>
+<div class="qa-item"><p class="qa-q">내일부터의 원 액션</p><div class="qa-a prewrap">저는 우선 SNS 계정이 있으니 관련 컨텐츠를 만들어 반응을 보면 좋을 것 같습니다.</div></div>
+    </article>
+    
+  </main>
+</body>
+</html>
