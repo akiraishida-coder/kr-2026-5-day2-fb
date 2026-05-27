@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>고정 — 서포트 비즈니스 시작하기 — 과제 피드백</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #1a1a1a;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header.site .site-title-line {
+  display: block;
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+header.site .site-title-line + .site-title-line {
+  margin-top: 6px;
+}
+
+nav.back {
+  margin: 20px 0 0;
+}
+
+nav.back a {
+  color: #d84315;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav.back a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2.person {
+  font-size: 22px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.card .meta {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: #d84315;
+}
+
+.card .submission {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 28px;
+  border: 1px solid #eee;
+}
+
+.card .submission h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.card .feedback h3 {
+  margin-top: 0;
+}
+
+.feedback .fb-p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin: 0 0 18px;
+  color: #333;
+}
+
+.feedback .fb-p:last-child {
+  margin-bottom: 0;
+}
+
+.feedback .fb-section-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 28px 0 12px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.feedback blockquote.fb-quote {
+  margin: 8px 0 20px;
+  padding: 14px 18px;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid #bdbdbd;
+  border-radius: 6px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.feedback ul.fb-ul {
+  margin: 0 0 20px;
+  padding-left: 1.35em;
+  font-size: 17px;
+  color: #333;
+}
+
+.feedback ul.fb-ul li {
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
+.feedback .fb-quote-plain {
+  color: #444;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+.feedback blockquote.fb-quote + .fb-p,
+.feedback .fb-p + blockquote.fb-quote {
+  margin-top: 0;
+}
+
+.kaitou-link-wrap {
+  margin: 0 0 24px;
+}
+
+a.kaitou-link {
+  display: block;
+  padding: 14px 18px;
+  background: #fff5f2;
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  color: #d84315;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.kaitou-link:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.day-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d84315;
+  color: #333;
+}
+
+.day-heading:first-of-type {
+  margin-top: 0;
+}
+
+.qa-item {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.qa-item:last-child {
+  border-bottom: none;
+}
+
+.qa-q {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d84315;
+  margin: 0 0 10px;
+}
+
+.qa-a {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prewrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.missing {
+  color: #888;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 17px;
+  margin: 0 0 16px;
+  color: #333;
+}
+
+.card ul,
+.card ol {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+  font-size: 17px;
+  color: #333;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card blockquote {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #ddd;
+  color: #555;
+  font-size: 16px;
+}
+
+ul.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.name-list li {
+  margin: 0 0 10px;
+}
+
+ul.name-list a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+ul.name-list a:hover {
+  border-color: #d84315;
+  color: #d84315;
+}
+
+ul.name-list .num {
+  display: inline-block;
+  min-width: 2em;
+  color: #888;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+footer.note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 32px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site">
+    <span class="site-title-line">서포트 비즈니스 시작하기</span><span class="site-title-line">과제 피드백</span>
+  </header>
+  <main class="wrap">
+    <nav class="back"><a href="index.html">← 목록으로</a></nav>
+    
+    <article class="card">
+      <h2 class="person">고정님께</h2>
+      <p class="meta">2일차 #97</p>
+      <p class="kaitou-link-wrap">
+        과제 답변 내용：
+        <a class="kaitou-link" href="97-kaitou.html">97-kaitou.html</a>
+      </p>
+      <section class="feedback">
+        <h3>피드백</h3>
+        <p class="fb-p">GEO 수요가 있어도, 당신의 말이 박히는 상대는</p>
+<p class="fb-p fb-quote-plain">「기술」</p>
+<p class="fb-p">보다</p>
+<p class="fb-p fb-quote-plain">「막막함」</p>
+<p class="fb-p">측에 있는 것이 많습니다. 대화가 서투른 경우, 챌린지는</p>
+<p class="fb-p fb-quote-plain">「쓰기」</p>
+<p class="fb-p fb-quote-plain">「일행 피드백」</p>
+<p class="fb-p">중심으로 설계하면 됩니다.</p>
+<p class="fb-p">안 2(의료·웰니스 GEO)는, 시장 타이밍의 이야기도 쓰고 있었습니다. 수요는 있지만 공급이 부족하다——라면, 지금의</p>
+<p class="fb-p fb-quote-plain">「DB·방문 영업」</p>
+<p class="fb-p">에 더해, 입구의 일행을 닦는 편이 먼저입니다. 소구는 기능 설명보다,</p>
+<blockquote class="fb-quote">「병원이 검색·AI 응답에서 선택받는 구조」</blockquote>
+<p class="fb-p">＋</p>
+<blockquote class="fb-quote">「의료 신뢰를 해치지 않는 브랜딩」</blockquote>
+<p class="fb-p">이 박히기 쉽습니다. 세일즈가 약하다는 자각은 오히려 의료영역에서는 &#x27;밀어 팔지 않는 사람&#x27;으로서 신뢰가 됩니다.</p>
+<p class="fb-p">안 3의</p>
+<p class="fb-p fb-quote-plain">「달변가가 아니서」</p>
+<p class="fb-p">—대화형 코칭을 싫어해도, 인터뷰형・스토리 설계형・비동기 피드백형이라면, 기자・편집자의 강점이 그대로 상품이 됩니다.</p>
+<p class="fb-p">과제 2의 &quot;커뮤니티 / 인스타 살펴보기 / 웰니스 커뮤니티 챌린지&quot;는 그대로 진행하십시오. 단지, 보는 것만・기획만으로 끝내지 말아 주었으면 합니다.</p>
+<p class="fb-p">예:</p>
+<p class="fb-p">1. 키워드:</p>
+<p class="fb-p fb-quote-plain">「병원 GEO」</p>
+<p class="fb-p fb-quote-plain">「의료 브랜딩」</p>
+<p class="fb-p fb-quote-plain">「AI 검색 최적화」</p>
+<p class="fb-p fb-quote-plain">「웰니스 루틴」</p>
+<p class="fb-p">2. 투고 5건을 읽고 1건에 짧게 회신</p>
+<p class="fb-p">3. 운영중인 커뮤니티에서 3~5명만 &#x27;1주일, 브랜드 한 줄 쓰기&#x27; 챌린지를 시도</p>
+<p class="fb-p">원 액션</p>
+<p class="fb-p fb-quote-plain">「커뮤니티·인스타 조사/웰니스 챌린지」</p>
+<p class="fb-p">는, 그 환경 속에서</p>
+<p class="fb-p fb-quote-plain">「조사로 끝낼 수 없는」</p>
+<p class="fb-p">입구로서 사용해 주세요.</p>
+<p class="fb-p">AI안에 대해. 안2가</p>
+<p class="fb-p fb-quote-plain">「지금 수익이 나오기 시작하고 있는 본선」</p>
+<p class="fb-p">, 안1・3은</p>
+<p class="fb-p fb-quote-plain">「매력이 있으므로 깊이 파고 싶다」</p>
+<p class="fb-p">—이 정리는 건전합니다. 무리하게 3개 동시에 달리지 않아도 됩니다.</p>
+<p class="fb-p">방안 1을</p>
+<p class="fb-p fb-quote-plain">「경험이 부족하기 때문에 후회해」</p>
+<p class="fb-p">라고 쓰고 있었습니다. 솔직히 말해, 안 1은</p>
+<p class="fb-p fb-quote-plain">「AI의 선생님」</p>
+<p class="fb-p">으로서 팔기보다,</p>
+<blockquote class="fb-quote">「AI로 자신의 사업을 늘린 실행자가, 같은 단계의 사람에게 반주한다」</blockquote>
+<p class="fb-p">틀로 하면, 당신의 지금의 입장과 맞습니다. 완벽한 AI 강사일 필요는 없습니다.</p>
+<p class="fb-p">벽은 기술보다 &#x27;자신을 내는 것&#x27;과 &#x27;병원 설득&#x27;에 집약되어 ​​있습니다. 17년의 회사원 생활의</p>
+<p class="fb-p fb-quote-plain">「수신」</p>
+<p class="fb-p">은, 갑자기 변하지 않아도 됩니다. 우선은 기존의 웰니스 커뮤니티에서, 안 1·3 전용의 사람에게</p>
+<p class="fb-p fb-quote-plain">「2주일 루틴」</p>
+<p class="fb-p">이나</p>
+<p class="fb-p fb-quote-plain">「이야기의 일행을 함께 만든다」</p>
+<p class="fb-p">작은 챌린지를 1개만 시험한다—-과제 2의 원 액션과도 일치합니다.</p>
+<p class="fb-p">고통 수준 3 (긴급)이라고 썼습니다. 스타트업기는 시간과 캐시의 압력이 강하기 때문에 그 감각은 자연스럽습니다. 그러므로, 신규 개척보다</p>
+<blockquote class="fb-quote">「이미 따뜻한 커뮤니티 내에서 1건의 성공 사례」</blockquote>
+<p class="fb-p">를 최우선으로 해 주세요.</p>
+<p class="fb-p fb-quote-plain">「누구에게·어떻게 소리를 낼까」</p>
+<p class="fb-p">가 아직 말이 되어 있지 않은 채, 영업과 컨텐츠를 늘리면, 피로만이 먼저 오기 쉽습니다.</p>
+<p class="fb-p">30일 캠프에서는, 방법의 이야기와, 그 자리에서 실행하는 이야기를 세트로 하고 있습니다. 특히 순간 컨셉은 30일 캠프 내에서 함께 닦는 내용입니다. 워크숍 4일째의 녹화와, 순간 컨셉 심굴 추가 녹화를, 참가전에 봐 주세요.</p>
+<p class="fb-p">개별 컨설트(Zoom·1대1)도 있습니다. 안 2를 늘릴 것인가, 안 1·3을 별상품으로 할까——당신의 경우의 구체적안을, 이야기를 들으면서 조립합니다.</p>
+<p class="fb-p">30일 캠프가 아니어도 괜찮습니다만, 자신만으로는 행동이 멈추지 않는 환경은, 소진하기 위해 거의 필요합니다.</p>
+      </section>
+    </article>
+    
+  </main>
+</body>
+</html>
