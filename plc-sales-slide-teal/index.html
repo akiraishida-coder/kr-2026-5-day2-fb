@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLC個別説明会（ティール明朝デザイン試作）</title>
+<style>
+  :root { --bg:#0f1f1d; --fg:#e8f2f0; --accent:#087C6B; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+  }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; gap: 12px; align-items: center; justify-content: space-between;
+    padding: 10px 16px; background: rgba(15,31,29,.92); border-bottom: 1px solid #1f3d38;
+  }
+  header h1 { font-size: 14px; margin: 0; font-weight: 600; }
+  .nav { display: flex; gap: 8px; align-items: center; }
+  button {
+    background: var(--accent); color: #fff; border: 0; border-radius: 8px;
+    padding: 8px 12px; font-size: 14px; cursor: pointer;
+  }
+  button.secondary { background: #234842; }
+  #counter { font-variant-numeric: tabular-nums; min-width: 5em; text-align: center; }
+  main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  .slide { display: none; }
+  .slide.active { display: block; }
+  .slide img {
+    width: 100%; height: auto; border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.35); background: #fff;
+  }
+  .hint { opacity: .7; font-size: 12px; padding: 8px 16px 24px; text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>PLC個別説明会（ティール明朝デザイン試作）</h1>
+  <div class="nav">
+    <button class="secondary" type="button" id="prev">前へ</button>
+    <span id="counter">1 / 111</span>
+    <button type="button" id="next">次へ</button>
+  </div>
+</header>
+<main>
+<section class="slide" id="s1" data-i="1"><img src="slides/slide_001.png" alt="スライド 1" loading="lazy"></section>
+<section class="slide" id="s2" data-i="2"><img src="slides/slide_002.png" alt="スライド 2" loading="lazy"></section>
+<section class="slide" id="s3" data-i="3"><img src="slides/slide_003.png" alt="スライド 3" loading="lazy"></section>
+<section class="slide" id="s4" data-i="4"><img src="slides/slide_004.png" alt="スライド 4" loading="lazy"></section>
+<section class="slide" id="s5" data-i="5"><img src="slides/slide_005.png" alt="スライド 5" loading="lazy"></section>
+<section class="slide" id="s6" data-i="6"><img src="slides/slide_006.png" alt="スライド 6" loading="lazy"></section>
+<section class="slide" id="s7" data-i="7"><img src="slides/slide_007.png" alt="スライド 7" loading="lazy"></section>
+<section class="slide" id="s8" data-i="8"><img src="slides/slide_008.png" alt="スライド 8" loading="lazy"></section>
+<section class="slide" id="s9" data-i="9"><img src="slides/slide_009.png" alt="スライド 9" loading="lazy"></section>
+<section class="slide" id="s10" data-i="10"><img src="slides/slide_010.png" alt="スライド 10" loading="lazy"></section>
+<section class="slide" id="s11" data-i="11"><img src="slides/slide_011.png" alt="スライド 11" loading="lazy"></section>
+<section class="slide" id="s12" data-i="12"><img src="slides/slide_012.png" alt="スライド 12" loading="lazy"></section>
+<section class="slide" id="s13" data-i="13"><img src="slides/slide_013.png" alt="スライド 13" loading="lazy"></section>
+<section class="slide" id="s14" data-i="14"><img src="slides/slide_014.png" alt="スライド 14" loading="lazy"></section>
+<section class="slide" id="s15" data-i="15"><img src="slides/slide_015.png" alt="スライド 15" loading="lazy"></section>
+<section class="slide" id="s16" data-i="16"><img src="slides/slide_016.png" alt="スライド 16" loading="lazy"></section>
+<section class="slide" id="s17" data-i="17"><img src="slides/slide_017.png" alt="スライド 17" loading="lazy"></section>
+<section class="slide" id="s18" data-i="18"><img src="slides/slide_018.png" alt="スライド 18" loading="lazy"></section>
+<section class="slide" id="s19" data-i="19"><img src="slides/slide_019.png" alt="スライド 19" loading="lazy"></section>
+<section class="slide" id="s20" data-i="20"><img src="slides/slide_020.png" alt="スライド 20" loading="lazy"></section>
+<section class="slide" id="s21" data-i="21"><img src="slides/slide_021.png" alt="スライド 21" loading="lazy"></section>
+<section class="slide" id="s22" data-i="22"><img src="slides/slide_022.png" alt="スライド 22" loading="lazy"></section>
+<section class="slide" id="s23" data-i="23"><img src="slides/slide_023.png" alt="スライド 23" loading="lazy"></section>
+<section class="slide" id="s24" data-i="24"><img src="slides/slide_024.png" alt="スライド 24" loading="lazy"></section>
+<section class="slide" id="s25" data-i="25"><img src="slides/slide_025.png" alt="スライド 25" loading="lazy"></section>
+<section class="slide" id="s26" data-i="26"><img src="slides/slide_026.png" alt="スライド 26" loading="lazy"></section>
+<section class="slide" id="s27" data-i="27"><img src="slides/slide_027.png" alt="スライド 27" loading="lazy"></section>
+<section class="slide" id="s28" data-i="28"><img src="slides/slide_028.png" alt="スライド 28" loading="lazy"></section>
+<section class="slide" id="s29" data-i="29"><img src="slides/slide_029.png" alt="スライド 29" loading="lazy"></section>
+<section class="slide" id="s30" data-i="30"><img src="slides/slide_030.png" alt="スライド 30" loading="lazy"></section>
+<section class="slide" id="s31" data-i="31"><img src="slides/slide_031.png" alt="スライド 31" loading="lazy"></section>
+<section class="slide" id="s32" data-i="32"><img src="slides/slide_032.png" alt="スライド 32" loading="lazy"></section>
+<section class="slide" id="s33" data-i="33"><img src="slides/slide_033.png" alt="スライド 33" loading="lazy"></section>
+<section class="slide" id="s34" data-i="34"><img src="slides/slide_034.png" alt="スライド 34" loading="lazy"></section>
+<section class="slide" id="s35" data-i="35"><img src="slides/slide_035.png" alt="スライド 35" loading="lazy"></section>
+<section class="slide" id="s36" data-i="36"><img src="slides/slide_036.png" alt="スライド 36" loading="lazy"></section>
+<section class="slide" id="s37" data-i="37"><img src="slides/slide_037.png" alt="スライド 37" loading="lazy"></section>
+<section class="slide" id="s38" data-i="38"><img src="slides/slide_038.png" alt="スライド 38" loading="lazy"></section>
+<section class="slide" id="s39" data-i="39"><img src="slides/slide_039.png" alt="スライド 39" loading="lazy"></section>
+<section class="slide" id="s40" data-i="40"><img src="slides/slide_040.png" alt="スライド 40" loading="lazy"></section>
+<section class="slide" id="s41" data-i="41"><img src="slides/slide_041.png" alt="スライド 41" loading="lazy"></section>
+<section class="slide" id="s42" data-i="42"><img src="slides/slide_042.png" alt="スライド 42" loading="lazy"></section>
+<section class="slide" id="s43" data-i="43"><img src="slides/slide_043.png" alt="スライド 43" loading="lazy"></section>
+<section class="slide" id="s44" data-i="44"><img src="slides/slide_044.png" alt="スライド 44" loading="lazy"></section>
+<section class="slide" id="s45" data-i="45"><img src="slides/slide_045.png" alt="スライド 45" loading="lazy"></section>
+<section class="slide" id="s46" data-i="46"><img src="slides/slide_046.png" alt="スライド 46" loading="lazy"></section>
+<section class="slide" id="s47" data-i="47"><img src="slides/slide_047.png" alt="スライド 47" loading="lazy"></section>
+<section class="slide" id="s48" data-i="48"><img src="slides/slide_048.png" alt="スライド 48" loading="lazy"></section>
+<section class="slide" id="s49" data-i="49"><img src="slides/slide_049.png" alt="スライド 49" loading="lazy"></section>
+<section class="slide" id="s50" data-i="50"><img src="slides/slide_050.png" alt="スライド 50" loading="lazy"></section>
+<section class="slide" id="s51" data-i="51"><img src="slides/slide_051.png" alt="スライド 51" loading="lazy"></section>
+<section class="slide" id="s52" data-i="52"><img src="slides/slide_052.png" alt="スライド 52" loading="lazy"></section>
+<section class="slide" id="s53" data-i="53"><img src="slides/slide_053.png" alt="スライド 53" loading="lazy"></section>
+<section class="slide" id="s54" data-i="54"><img src="slides/slide_054.png" alt="スライド 54" loading="lazy"></section>
+<section class="slide" id="s55" data-i="55"><img src="slides/slide_055.png" alt="スライド 55" loading="lazy"></section>
+<section class="slide" id="s56" data-i="56"><img src="slides/slide_056.png" alt="スライド 56" loading="lazy"></section>
+<section class="slide" id="s57" data-i="57"><img src="slides/slide_057.png" alt="スライド 57" loading="lazy"></section>
+<section class="slide" id="s58" data-i="58"><img src="slides/slide_058.png" alt="スライド 58" loading="lazy"></section>
+<section class="slide" id="s59" data-i="59"><img src="slides/slide_059.png" alt="スライド 59" loading="lazy"></section>
+<section class="slide" id="s60" data-i="60"><img src="slides/slide_060.png" alt="スライド 60" loading="lazy"></section>
+<section class="slide" id="s61" data-i="61"><img src="slides/slide_061.png" alt="スライド 61" loading="lazy"></section>
+<section class="slide" id="s62" data-i="62"><img src="slides/slide_062.png" alt="スライド 62" loading="lazy"></section>
+<section class="slide" id="s63" data-i="63"><img src="slides/slide_063.png" alt="スライド 63" loading="lazy"></section>
+<section class="slide" id="s64" data-i="64"><img src="slides/slide_064.png" alt="スライド 64" loading="lazy"></section>
+<section class="slide" id="s65" data-i="65"><img src="slides/slide_065.png" alt="スライド 65" loading="lazy"></section>
+<section class="slide" id="s66" data-i="66"><img src="slides/slide_066.png" alt="スライド 66" loading="lazy"></section>
+<section class="slide" id="s67" data-i="67"><img src="slides/slide_067.png" alt="スライド 67" loading="lazy"></section>
+<section class="slide" id="s68" data-i="68"><img src="slides/slide_068.png" alt="スライド 68" loading="lazy"></section>
+<section class="slide" id="s69" data-i="69"><img src="slides/slide_069.png" alt="スライド 69" loading="lazy"></section>
+<section class="slide" id="s70" data-i="70"><img src="slides/slide_070.png" alt="スライド 70" loading="lazy"></section>
+<section class="slide" id="s71" data-i="71"><img src="slides/slide_071.png" alt="スライド 71" loading="lazy"></section>
+<section class="slide" id="s72" data-i="72"><img src="slides/slide_072.png" alt="スライド 72" loading="lazy"></section>
+<section class="slide" id="s73" data-i="73"><img src="slides/slide_073.png" alt="スライド 73" loading="lazy"></section>
+<section class="slide" id="s74" data-i="74"><img src="slides/slide_074.png" alt="スライド 74" loading="lazy"></section>
+<section class="slide" id="s75" data-i="75"><img src="slides/slide_075.png" alt="スライド 75" loading="lazy"></section>
+<section class="slide" id="s76" data-i="76"><img src="slides/slide_076.png" alt="スライド 76" loading="lazy"></section>
+<section class="slide" id="s77" data-i="77"><img src="slides/slide_077.png" alt="スライド 77" loading="lazy"></section>
+<section class="slide" id="s78" data-i="78"><img src="slides/slide_078.png" alt="スライド 78" loading="lazy"></section>
+<section class="slide" id="s79" data-i="79"><img src="slides/slide_079.png" alt="スライド 79" loading="lazy"></section>
+<section class="slide" id="s80" data-i="80"><img src="slides/slide_080.png" alt="スライド 80" loading="lazy"></section>
+<section class="slide" id="s81" data-i="81"><img src="slides/slide_081.png" alt="スライド 81" loading="lazy"></section>
+<section class="slide" id="s82" data-i="82"><img src="slides/slide_082.png" alt="スライド 82" loading="lazy"></section>
+<section class="slide" id="s83" data-i="83"><img src="slides/slide_083.png" alt="スライド 83" loading="lazy"></section>
+<section class="slide" id="s84" data-i="84"><img src="slides/slide_084.png" alt="スライド 84" loading="lazy"></section>
+<section class="slide" id="s85" data-i="85"><img src="slides/slide_085.png" alt="スライド 85" loading="lazy"></section>
+<section class="slide" id="s86" data-i="86"><img src="slides/slide_086.png" alt="スライド 86" loading="lazy"></section>
+<section class="slide" id="s87" data-i="87"><img src="slides/slide_087.png" alt="スライド 87" loading="lazy"></section>
+<section class="slide" id="s88" data-i="88"><img src="slides/slide_088.png" alt="スライド 88" loading="lazy"></section>
+<section class="slide" id="s89" data-i="89"><img src="slides/slide_089.png" alt="スライド 89" loading="lazy"></section>
+<section class="slide" id="s90" data-i="90"><img src="slides/slide_090.png" alt="スライド 90" loading="lazy"></section>
+<section class="slide" id="s91" data-i="91"><img src="slides/slide_091.png" alt="スライド 91" loading="lazy"></section>
+<section class="slide" id="s92" data-i="92"><img src="slides/slide_092.png" alt="スライド 92" loading="lazy"></section>
+<section class="slide" id="s93" data-i="93"><img src="slides/slide_093.png" alt="スライド 93" loading="lazy"></section>
+<section class="slide" id="s94" data-i="94"><img src="slides/slide_094.png" alt="スライド 94" loading="lazy"></section>
+<section class="slide" id="s95" data-i="95"><img src="slides/slide_095.png" alt="スライド 95" loading="lazy"></section>
+<section class="slide" id="s96" data-i="96"><img src="slides/slide_096.png" alt="スライド 96" loading="lazy"></section>
+<section class="slide" id="s97" data-i="97"><img src="slides/slide_097.png" alt="スライド 97" loading="lazy"></section>
+<section class="slide" id="s98" data-i="98"><img src="slides/slide_098.png" alt="スライド 98" loading="lazy"></section>
+<section class="slide" id="s99" data-i="99"><img src="slides/slide_099.png" alt="スライド 99" loading="lazy"></section>
+<section class="slide" id="s100" data-i="100"><img src="slides/slide_100.png" alt="スライド 100" loading="lazy"></section>
+<section class="slide" id="s101" data-i="101"><img src="slides/slide_101.png" alt="スライド 101" loading="lazy"></section>
+<section class="slide" id="s102" data-i="102"><img src="slides/slide_102.png" alt="スライド 102" loading="lazy"></section>
+<section class="slide" id="s103" data-i="103"><img src="slides/slide_103.png" alt="スライド 103" loading="lazy"></section>
+<section class="slide" id="s104" data-i="104"><img src="slides/slide_104.png" alt="スライド 104" loading="lazy"></section>
+<section class="slide" id="s105" data-i="105"><img src="slides/slide_105.png" alt="スライド 105" loading="lazy"></section>
+<section class="slide" id="s106" data-i="106"><img src="slides/slide_106.png" alt="スライド 106" loading="lazy"></section>
+<section class="slide" id="s107" data-i="107"><img src="slides/slide_107.png" alt="スライド 107" loading="lazy"></section>
+<section class="slide" id="s108" data-i="108"><img src="slides/slide_108.png" alt="スライド 108" loading="lazy"></section>
+<section class="slide" id="s109" data-i="109"><img src="slides/slide_109.png" alt="スライド 109" loading="lazy"></section>
+<section class="slide" id="s110" data-i="110"><img src="slides/slide_110.png" alt="スライド 110" loading="lazy"></section>
+<section class="slide" id="s111" data-i="111"><img src="slides/slide_111.png" alt="スライド 111" loading="lazy"></section>
+</main>
+<p class="hint">キーボードの ← → でも移動できます</p>
+<script>
+(function() {
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  let i = 0;
+  const counter = document.getElementById('counter');
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((el, idx) => el.classList.toggle('active', idx === i));
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    history.replaceState(null, '', '#s' + (i + 1));
+  }
+  document.getElementById('prev').onclick = () => show(i - 1);
+  document.getElementById('next').onclick = () => show(i + 1);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1); }
+  });
+  const m = location.hash.match(/s(\d+)/);
+  show(m ? parseInt(m[1], 10) - 1 : 0);
+})();
+</script>
+</body>
+</html>
