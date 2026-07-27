@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>先頭10枚・7型振り分け生成</title>
+<style>body{margin:0;background:#071428;color:#eaf4ff;font-family:-apple-system,"Hiragino Sans",sans-serif}
+header{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 16px;background:#0b2c5c;position:sticky;top:0;z-index:5}
+button{background:#3db5e8;border:0;border-radius:8px;padding:8px 14px;font-weight:700}
+main{max-width:1100px;margin:0 auto;padding:16px}.slide{display:none}.slide.active{display:block}
+.slide img{width:100%;border-radius:8px;background:#fff}.label{opacity:.9;margin:0 0 8px}</style></head><body>
+<header><div><strong>先頭10枚（7型当てはめ生成）</strong><div style="font-size:12px;opacity:.8">ペンギンなし / 型参照つき画像生成</div></div>
+<div><button type="button" id="prev">前へ</button> <span id="c"></span> <button type="button" id="next">次へ</button></div></header>
+<main><section class="slide" id="s1"><p class="label">1. 型1 歓迎</p><img src="slides/01_型1_歓迎.png" alt=""></section><section class="slide" id="s2"><p class="label">2. 型5 石田プロフィール</p><img src="slides/02_型5_石田プロフィール.png" alt=""></section><section class="slide" id="s3"><p class="label">3. 型6 ご安心ください</p><img src="slides/03_型6_ご安心ください.png" alt=""></section><section class="slide" id="s4"><p class="label">4. 型3 注意事項</p><img src="slides/04_型3_注意事項.png" alt=""></section><section class="slide" id="s5"><p class="label">5. 型7 有意義な時間</p><img src="slides/05_型7_有意義な時間.png" alt=""></section><section class="slide" id="s6"><p class="label">6. 型2 ぜひ教えて</p><img src="slides/06_型2_ぜひ教えて.png" alt=""></section><section class="slide" id="s7"><p class="label">7. 型3 質問リスト</p><img src="slides/07_型3_質問リスト.png" alt=""></section><section class="slide" id="s8"><p class="label">8. 型1 講師紹介中扉</p><img src="slides/08_型1_講師紹介中扉.png" alt=""></section><section class="slide" id="s9"><p class="label">9. 型5 田中祐一</p><img src="slides/09_型5_田中祐一.png" alt=""></section><section class="slide" id="s10"><p class="label">10. 型3 プロデュース実績</p><img src="slides/10_型3_プロデュース実績.png" alt=""></section></main>
+<script>const s=[...document.querySelectorAll('.slide')];let i=0;const c=document.getElementById('c');
+function show(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach((e,x)=>e.classList.toggle('active',x===i));c.textContent=(i+1)+' / '+s.length}
+document.getElementById('prev').onclick=()=>show(i-1);document.getElementById('next').onclick=()=>show(i+1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(i+1)}if(e.key==='ArrowLeft')show(i-1)});show(0)</script>
+</body></html>
