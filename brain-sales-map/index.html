@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>セールス代行の始め方 目次マップ</title>
+  <style>
+    html { background: #f3efe6; }
+    body {
+      margin: 0;
+      color: #1e2a26;
+      font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    .page {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 22px 64px;
+    }
+    .root {
+      position: sticky;
+      top: 20px;
+      flex: 0 0 210px;
+      background: #1c3f38;
+      color: #f7f4ee;
+      border-radius: 14px;
+      padding: 18px 16px 16px;
+    }
+    .root-kicker {
+      margin: 0 0 8px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+    .root h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+    .root-note {
+      margin: 14px 0 0;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #e4efe9;
+    }
+    .sheet {
+      flex: 1;
+      min-width: 0;
+      border-left: 2px solid #d9d0c2;
+      padding-left: 18px;
+    }
+    .tools {
+      display: flex;
+      gap: 8px;
+      margin: 0 0 14px;
+    }
+    .tools button {
+      font: inherit;
+      font-size: 14px;
+      color: #1c3f38;
+      background: #fff;
+      border: 1px solid #cfc6b8;
+      border-radius: 999px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    ul.tree, ul.tree ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul.tree ul {
+      margin-left: 12px;
+      padding-left: 16px;
+      border-left: 2px solid #e0d8cc;
+    }
+    li {
+      position: relative;
+      margin: 8px 0;
+    }
+    ul.tree ul > li::before {
+      content: "";
+      position: absolute;
+      left: -16px;
+      top: 18px;
+      width: 14px;
+      height: 2px;
+      background: #e0d8cc;
+    }
+    .label {
+      background: #fff;
+      border-radius: 10px;
+    }
+    .section {
+      border-left: 4px solid #1c3f38;
+    }
+    .sub {
+      border-left: 4px solid #b08948;
+    }
+    button.toggle {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      width: 100%;
+      margin: 0;
+      padding: 10px 12px;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      font-weight: 700;
+      line-height: 1.55;
+      text-align: left;
+      cursor: pointer;
+    }
+    .section button.toggle { font-size: 18px; }
+    .sub button.toggle { font-size: 16px; }
+    button.toggle::before {
+      content: "";
+      flex: none;
+      width: 0;
+      height: 0;
+      margin-top: 8px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 7px solid #1c3f38;
+      transform: rotate(90deg);
+    }
+    button.toggle[aria-expanded="false"]::before {
+      transform: rotate(0deg);
+    }
+    .leaf-label {
+      margin: 0;
+      padding: 2px 4px 2px 0;
+      font-size: 16px;
+    }
+    li.chapter > .label {
+      background: #e7f2ee;
+    }
+    @media (max-width: 760px) {
+      .page {
+        display: block;
+        padding: 16px 14px 48px;
+      }
+      .root {
+        position: static;
+        margin-bottom: 16px;
+      }
+      .sheet {
+        border-left: 0;
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="root">
+      <p class="root-kicker">目次マップ</p>
+      <h1>セールス代行の始め方</h1>
+      <p class="root-note">見出しは左、中身はその右に、ファイルの上から順に並んでいます。見出しを押すと、開いたり閉じたりできます。</p>
+    </aside>
+    <main class="sheet">
+      <div class="tools">
+        <button type="button" id="open-all">すべて開く</button>
+        <button type="button" id="chapters-only">章だけ開く</button>
+      </div>
+      <ul class="tree" id="tree">
+<li class="depth-1 branch">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">この教材で手に入るもの</button></div>
+<ul>
+<li class="depth-2 leaf"><p class="leaf-label">報酬の決まり方から面談1件の流れまで。セールス代行の全体像がこの1冊でわかる</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">押し売りをしなくても売れる。お客様に感謝されるセールスの考え方</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">面談の5ステップと、明日からそのまま使える質問・トーク・切り返し</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">読んで終わりにしない。実際の案件につながるマッチングサロン</p></li>
+</ul>
+</li>
+<li class="depth-1 branch">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">こんな人に向いている／向いていない</button></div>
+<ul>
+<li class="depth-2 leaf"><p class="leaf-label">自分の商品はまだない。それでも収入とスキルを同時に手に入れたい人へ</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">商品は持っているのに、個別相談になると売れない人へ</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">楽して稼ぎたい人、売れれば何を言ってもいいと考える人は、この先を読まないでください</p></li>
+</ul>
+</li>
+<li class="depth-1 branch">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">著者プロフィールと実績</button></div>
+<ul>
+<li class="depth-2 leaf"><p class="leaf-label">20代前半、高額学習教材の訪問販売。年商100億円規模・800名の組織で30位に入るまで</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">最年少で支社長に。支社の売上を1.6倍にした方法</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">50万〜130万円の高額講座を、1人で年間1億円売り上げた</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">200名のコミュニティで、成約率10%から40%に上がった人が100名以上。録画から長所と弱点を見抜く指導とは</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">ゼロから立ち上げたセールスチームは15案件。60万円の商品を1か月で1,600万円、成約率50%で売ったプロデュース実績</p></li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第1章 なぜ今、あなたのビジネスに「セールス代行」が必要なのか</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">売上の不安に悩むコンテンツホルダーと、副業組のリアル</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">集客はできるのに、個別相談で売れない。コンテンツホルダーが抱える売上の波</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">会社以外の収入が欲しい。でも何から始めればいいかわからない副業組</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">どちらにも共通している、たった1つの足りないもの</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">売る力さえ身につけば、状況はここまで変わる</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「自分の商品作り」から始めると、収益化まで時間がかかるという現実</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">商品作りから集客、セールスまで全部1人で抱えると、最初の売上はいつになるのか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">時間をかけて作った商品が売れない。その原因は、商品ではないかもしれない</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">自分の商品は、売る力と市場感覚をつけてからでも遅くない理由</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">収入の安定と「売る力」を同時に手に入れる最短ルート</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">成約ごとに報酬が発生する。成果がお金として早く返ってくる働き方</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">面談1件がそのまま実践練習。報酬をもらいながら上達できる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">いろいろな商品とお客様に触れるから、短期間で経験値がたまる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">一度身につければ、どんな業界・商品にも持ち運べる。それが売る力</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">訪問販売時代に身につけたスキルが、その後どう役に立ったか【石田実例】</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">購入特典：セールス代行案件マッチングサロン参加券</button></div>
+<ul>
+<li class="depth-2 leaf"><p class="leaf-label">石田が受けきれない案件を、サロンメンバーに紹介</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">1人では続かないロープレも、仲間となら続けられる</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">面談の録画を持ち寄って振り返る。自分では気づけない改善点が見つかる</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">成約事例だけでなく、失注事例まで共有する理由</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">同じ仕事をする仲間がいる。1人で悩まなくていい環境</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">このサロンが案件接続しやすい理由</p></li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">参加できる期間と、参加費の有無</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">期間は</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">案件を紹介しても、紹介料は一切受け取らない。報酬は代行者とクライアントの間で決める</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">なぜ紹介料を取らないのか。このサロンをつくった本当の目的</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">強引な売り方はしない。サロンで守ってもらう行動基準</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">この教材を書いた本当の理由</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">セールス代行の依頼が自分に集まり、受けきれなくなっている現状</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">講座を持つ起業家から、なぜ「売ってほしい」という依頼が絶えないのか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">紹介が紹介を呼ぶ。15のセールスチームを立ち上げてきた裏側</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">1日に入れる面談には限りがある。依頼を受けきれなくなった本当の事情</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">断るしかなかった案件の中に眠っていた、「売れる商品」の数々【実例】</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「売れる商品があるのに、売る人がいない」。この状態を放っておけなかった理由</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">断るしかなかった案件を、信頼できる仲間に任せたい</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">セールスを外注したい人は多いのに、任せられる人が見つからない</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">セールス代行は人柄が丸見えになる仕事。誰にでも案件を紹介できない理由</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">やり方と基準を共有した人にだけ、安心して案件を任せられる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">未経験の受講生が戦力に変わるのを何度も見てきた。だからこそ「型」を渡したい</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">クライアントも、代行する人も、紹介する側も、全員が得をする仕組み</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第2章 収入とスキルが同時に手に入る、セールス代行のポテンシャル</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">自分のビジネスを始める前の、最高の予行演習になる</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">人の商品を売ると見えてくる、売れる商品と売れない商品の決定的な違い</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様の悩み、言葉、反論を生で大量に聞ける。それが自分の商品作りの材料になる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">価格、オファー、特典は成約にどう効くのか。現場で体感できる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">自分の商品を出すとき、最初から「売れる確率」の高いものが作れる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">自分の商品を売らないプロデューサーという選択肢</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">業界が変わっても使える販売スキルが身につく</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">売れる人が持っているのは、商品知識ではない。本当に必要な力とは</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">ヒアリング、提案、クロージング。業界が変わっても変わらない流れ</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">AIが進んでも、人の決断を後押しする仕事が残りやすい理由</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">稼ぎながら「売れる商品の条件」を内側から学べる</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">報酬の仕組み（成果報酬型、固定報酬＋成果報酬型、時間単価型の違い）</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">成果報酬型：成約金額の何%をもらうのか。料率が案件ごとに違う理由</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">固定報酬＋成果報酬型：成約しなくても、面談をするだけで報酬が出る契約の形</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">時間単価型・月額型：稼働時間や月単位で契約するという選択肢</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">収益シミュレーション：商品単価×成約率×面談数で考える</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">収入を決めているのは、たった3つの数字</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">面談数を増やすより効く、収入アップの近道</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">月15件で30万円、月30件で60万円。報酬5万円・成約率40%で計算した収益シミュレーション（成約率20%の場合も公開）</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">成約率20%と40%では、同じ面談数でも収入は2倍。成約率10%から40%に上がった人が100名以上いる理由</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「必ず稼げる」とは言わない。シミュレーションの前提条件まですべて公開</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">稼働時間の目安</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">準備から報告まで、面談1件にかかる時間は約2時間</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">月30件なら約60時間、15件なら約30時間</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第3章 未経験でも仕事になりやすい理由と、最初の案件の取り方</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「売るのが苦手な起業家」は身近にいる</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">教えるのは得意、でも売るのは苦手。そんな講師が多い理由</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">集客できても成約できず、広告費だけが消えていく起業家もいる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">売れている人ほど、セールスに手が回らなくなる。チーム立ち上げの依頼が来るタイミング【実例】</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">セールス代行の需要がたくさんある場所（起業塾、コミュニティ、SNS）</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">人間関係とコミュニティで立ち回り、依頼が来る人になる</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">営業しなくても依頼が来る人は、コミュニティの中で何をしているのか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「セールスを学んでいる」ことを、周りにどう伝えておくか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">依頼してくれた人を成功させると、次の依頼が自然に生まれる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">石田に依頼が集まるようになるまで【実例】</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">最初の1件を取るための声のかけ方</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">声をかけるべきなのは、個別相談をやっているのに手が回っていない人</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「個別相談の一部をお手伝いさせてもらえませんか」。最初の声かけの文例</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">自分の売り込みより先に、相手のメリットを伝える</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">断られても関係を壊さない、引き際の作法</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">サロン経由なら、最初の1件のハードルがぐっと下がる</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">実績ゼロからの立ち回り方</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">無料でやる必要はない。成果報酬のみならクライアントのリスクは低い</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">成果が出たら実績として紹介する許可をもらっておく</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">受けてはいけない案件の見分け方</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">自分が惚れ込めない商品、お客様が結果を出せていない</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">誇大な表現や強引な売り方を求められる案件</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">返金やクレーム対応のルールがあいまいな案件</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第4章 「セールス＝怖い・押し売り」の思い込みを外す</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">セールスは押し売りではなく、悩みを解決する仕事</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">押し売りとセールスを分ける、たった1つの違い</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様はなぜ個別相談に申し込んできたのか。そこにセールスが怖くなくなるヒントがある</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">面談の役割は「売ること」ではない。悩みを整理して選択肢を示すだけ</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">合わない人には「合わない」と伝える。それが信頼されるセールスの仕事</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">すらすら話せなくていい。成約の8割は「聞く力」で決まる</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">成約する人の会話バランス</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">売れない人ほど「これ」をやりすぎている。本人だけが気づけない落とし穴（商品プッシュ）</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">口下手な人ほど信頼される意外な理由</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">自分が心から惚れ込んだ商品だけを売ればいい</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">自分が信じていない商品は、言葉と表情でお客様に伝わってしまう</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">その商品に惚れ込めるか。受講生の実績、講師の人柄、お客様の声で見極める</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">商品を自分で体験し、受講生の話を聞く。売る前にやっておくこと</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">惚れ込んでいると、クロージングの罪悪感が消える</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">惚れ込めない案件は断る勇気</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">クロージングは、お客様を「現状維持」から救い出す行為</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">何も決めないことも、「現状維持を選ぶ」という決断である</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様が本当に望んでいるのは、今の状態から変わること</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">背中を押すことと、押し付けること。その境界線はどこにあるのか（関係性が作れたか）</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">最後に決めるのはお客様。この線だけは必ず守る</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「あのとき背中を押してもらってよかった」と言われた事例【実例】</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「売れなくてクライアントに迷惑をかけたらどうしよう」という重圧の手放し方</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">最初から全部売れる人はいない。クライアントもそれはわかっている</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">失注は失敗ではない。クライアントにとって価値ある「お客様の生の声」になる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">売れなかった面談でも信頼される、報告の仕方</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">不安を減らすのは気合いではなく練習量。自信はロープレの数でつくる</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">断られたときの受け止め方</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">断られた＝自分を否定された、ではない</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">タイミング、お金、相性。断られる理由は1つではない</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">断られた面談こそ、次の成約につながる材料になる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">次の面談の前にやる、気持ちの切り替え方</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">訪問販売で何度も断られる中で学んだこと【実例】（メタ認知）</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第5章 準備編：初回面談までに整えること</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">必要な環境とツール</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">カメラ、マイク、照明、背景、服装</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">Zoomで最初に確認しておくべき、録画とプランの設定</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">申込から面談結果を記載する顧客管理シート</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">決済リンクや申込フォームなど、セールスに使用するツール</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">商品理解を深め成約率を上げるために確認すべきこと</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">面談手前のファネルを全て見る</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">誰の、どんな悩みを、どう解決する商品なのか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">価格、支払い方法、分割の条件、返金の規定</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">実績やお客様の声</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">言ってはいけない表現、約束してはいけないこと</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">売れる台本の作り方（クライアントの台本の受け取り方と、自分用への直し方）</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">台本を受け取ったら、最初に見るべきは全体の流れ</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">台本を自分の言葉に直すコツ</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">売れる台本は、説明より「質問」が厚い</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">台本は「話す順番のメモ」くらいでちょうどいい</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">面談のたびに直して、台本を育てていく</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">ロープレの練習方法（1人で、2人で、録画を見返して）</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">1人でもできる。台本を声に出し、録音して聞き返す練習法</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">2人なら、お客様役とセールス役を交代しながら</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">録画を見返すと、自分では気づけないくせが見えてくる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">PLCで、録画から長所を伸ばし弱点を補強してきたやり方【実例】</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">ロープレのチェックシート</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">自分が話しすぎていないか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">質問の数と深さは足りているか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">唐突で不自然な会話になっていないか。質問の前の「前置き」が大切な理由</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様の言語で会話できたか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">決済や回答の日時など、次の約束まで決められたか</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第6章 売る商品は2種類。「職種型」と「問題解決型」で会話の重点を変える</button></div>
+<ul>
+<li class="depth-2 leaf"><p class="leaf-label">同じトークで売っているのに、商品によって成約率が伸びない。その原因は「商品の種類」にあった</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">職種型と問題解決型では、面談でフォーカスすべきポイントが違う</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">「前にも試してダメだった」と「自分にできるのか」出てくる不安の違い</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">効く事例も違う。同じ悩みを解決した人の話か、自分に似た人の転身ストーリーか</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">同じ商品でも、お客様によって入口が違う。両方の顔を持つ商品の売り方</p></li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第7章 実践編：成約率が上がるセールスの5ステップ</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">事前準備：ドタキャンを防ぎ成約率を上げる</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">申込フォームの内容から、面談前に読み取っておくこと</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">ドタキャンを防ぐ、前日のリマインド連絡（文例つき）</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">当日の連絡で、面談の目的と時間をあらためて伝える</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">面談前に相手にマッチしたコンテンツを送付する</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">AIと事前にシミュレーション。その人に合わせた質問とトークを用意しておく</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">ヒアリング：お客様の「痛みと理想」を引き出す質問術</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">「現状、理想、課題」の循環</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">口数が少ない人には自分の話や事例を話しながら質問する</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">理想と今のギャップは、なぜ生まれているのか（試したことは？なぜ解決しなかったか？）</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">このまま放っておくとどうなるか。お客様自身の言葉で話してもらう</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「具体的には？」「それはいつからですか？」話を深めていく質問</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">商品説明：機能ではなく、お客様が手に入れる変化を見せる</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">機能ではなく、使う前と使った後の「変化」を見せる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">似た状況の人の事例は、どんな説明よりも伝わる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">話しっぱなしNG。理解を確かめて「はい」をもらいながら進める</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">価格を伝えるのは、価値が伝わった後</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">クロージング：決断の怖さを取り除き、最後の一歩を後押しする</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">最初の一言は「同調」。「そのお気持ち、よくわかります」</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様が口にした理由の裏には、別の本音が隠れている</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お金か、続けられるかか、内容が合うかか。迷っている理由を特定する</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">面談の最初に聞いた理想、現状、課題に立ち返る</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">最後はお客様に決めてもらう。断られても関係は壊さない</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">契約・フォロー：キャンセルをゼロにし、クライアントとの信頼を固める</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">ネット振込とATM振込の違い、カードの利用可能残高。決済でつまずかないための案内</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">キャンセルを防ぐ、契約書の読み合わせ</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">クライアントへの引き継ぎで、信頼を固める</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">買った後に不安になるお客様へのフォロー</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第8章 よくある断り文句への切り返し集</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「お金がない」</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">「払えない」のか、「払う価値がまだ見えていない」のか、「不安が残っている」のか。見分ける</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様に合った支払い方法の選択肢</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">価値が伝わっていないなら、お客様の理想と変化に話を戻す</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">本当に払えないなら、下位の商品や時期をずらすという提案</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「時間がない」</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">今の時間の使い方を、一緒に見直す</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「時間がない」こと自体が、お客様が変えたい現状ではないか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">同じように忙しい状況から始めた人の事例</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">本当に無理なら、無理だと伝える</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「家族に相談したい」</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">最初に確かめる一言「ご家族のことを除けば、やりたい気持ちで間違いないですか？」</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">家族が気にしそうな点、過去に相談したときの反応、家族の性格まで聞いておく</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">家族に説明しやすい材料を渡す</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">家族同席の三者面談という選択肢</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">回答の日時を決める</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「他と比べたい」</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">ヒアリング段階で把握できていたか？</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">比べたいのは当然のこと。まずそれを認める</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">何を基準に比べるのかを、一緒に整理する</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">サポート、実績、自分との相性。比べるときに見るべきポイント</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">ほかのサービスを悪く言わない</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「自分にできるか不安」</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">「不安」の中身を、具体的に聞く</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">似た状況から結果を出した人の事例</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">どんなサポートが受けられるのかを伝える</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">最初の一歩を、具体的な行動にまで落とす</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">できない理由を、一つずつ一緒につぶしていく</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">「少し考えたい」（保留の本音の見抜き方）</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">まず「考えていただいて大丈夫です」と受け止める</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">迷っている理由は、選択肢を出して聞く</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">理由があいまいなまま時間を置くと、気持ちは薄れていく</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">理由がわかれば、その場で答えられる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">持ち帰るなら、回答の日時を決めておく</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">それでも無理に押さない、という線引き</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">自分の中に「引くライン」を決めておく</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">強く押した契約ほど、キャンセルになりやすい</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「また相談したい」と思ってもらえる終わり方</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第9章 単価も継続率も上がる「報告の技術」とアフターフォロー</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">ただ売るだけでは三流。ビジネスパートナーとして重宝される条件</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">数字だけの報告で終わらせない。面談の中身まで伝える</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">返信が早いだけで、クライアントの評価は変わる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">約束とルールを守る</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">クライアントの評判まで守る売り方（自分は商品の顔というマインドセット）</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">成約以上に価値がある「失注理由のフィードバック」</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">失注の理由こそ、クライアントが一番知りたい情報</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">価格、時期、商品の内容、信頼。失注理由は4つに分けて考える</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様の言葉は、自分の解釈を入れずにそのまま伝える</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">その報告が、集客やLP、商品の改善につながる</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">報告書のテンプレート</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">案件ごとに決まった報告方法に従う</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様の名前、面談日時</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">失注の理由</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">お客様が言っていたこと</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">今回の経験を、次の面談にどう活かすか</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">クライアントの商品改良に貢献しながら、自分のマーケティング視点を磨く</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">現場で聞くお客様の声は、商品作りに欠かせない一次情報</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">よく出る反論から、LPやオファーの改善点が見えてくる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">提案が採用されるたびに、クライアントの信頼が増していく</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">集客から成約までのつながりが見えるようになる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">プロデュースで成約率50%を出せた背景には、この視点があった【実例】</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">継続案件や紹介につながる関係のつくり方</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">MTGに参加する</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">成果を一緒に喜ぶ</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">気づきを積極的に報告する</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">ポジティブな立ち振る舞いが、次の依頼を呼ぶ</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第10章 契約・報酬・トラブルの防ぎ方</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">契約前に確認すべきこと</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">報酬の支払日と支払い方法</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">返金が出たときの扱い</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">担当範囲は面談だけか、フォローや連絡も含むのか</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">面談数の目安と、稼働の条件</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">クレームへの責任と、返金されたときの報酬</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">クレームや返金は、すべてが代行者の責任ではない</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">商品内容へのクレームと、セールスへのクレームの違い</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">返金時に報酬を返すルール</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">面談の録画が「言った・言わない」から自分を守る</p></li>
+</ul>
+</li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">言ってはいけない表現、してはいけないこと</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">効果の断定</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">根拠のない数字や事例は使わない</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">不安をあおる、人格否定</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">キャンセルの申し出を無理に引き止める</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">第11章 サロンで案件を紹介してもらうまでの流れ</button></div>
+<ul>
+<li class="depth-2 leaf"><p class="leaf-label">自己紹介では、経歴と得意や興味があるジャンルを伝える</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">練習会や勉強会に積極的に参加し、練習の報告を出す。それが紹介の判断材料になる</p></li>
+<li class="depth-2 leaf"><p class="leaf-label">練習等の行動や初めての案件の結果をサロンで共有する</p></li>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">先輩代行者に相談するときのコツ</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">録画や状況を添えて相談すると、答えの精度が上がる</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">「どこで流れが止まったか」。質問は具体的に</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">アドバイスを試した結果を、必ず報告する</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">教わったことを、後から来た人に返す</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">人と比べず、自分の伸びを見る</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="depth-1 branch chapter">
+<div class="label section"><button type="button" class="toggle" aria-expanded="true">おわりに：一緒にセールス代行の仲間として活動しよう</button></div>
+<ul>
+<li class="depth-2 branch">
+<div class="label sub"><button type="button" class="toggle" aria-expanded="true">一緒にセールス代行の仲間として活動しよう</button></div>
+<ul>
+<li class="depth-3 leaf"><p class="leaf-label">セールスは、誰かの人生を前に進める仕事</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">受けきれない案件を、信頼できる仲間に任せたい</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">同じ基準を共有できる人と、一緒にやりたい</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">まずは最初の1件から</p></li>
+<li class="depth-3 leaf"><p class="leaf-label">サロンで会えるのを楽しみにしています</p></li>
+</ul>
+</li>
+</ul>
+</li>
+      </ul>
+    </main>
+  </div>
+  <script>
+    function childList(li) {
+      return li.querySelector(":scope > ul");
+    }
+    function toggleButton(li) {
+      return li.querySelector(":scope > div > button.toggle");
+    }
+    function setOpen(li, open) {
+      var ul = childList(li);
+      var btn = toggleButton(li);
+      if (!ul || !btn) return;
+      if (open) {
+        ul.removeAttribute("hidden");
+        btn.setAttribute("aria-expanded", "true");
+      } else {
+        ul.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    }
+    document.querySelectorAll("li.branch").forEach(function (li) {
+      var btn = toggleButton(li);
+      btn.addEventListener("click", function () {
+        setOpen(li, btn.getAttribute("aria-expanded") !== "true");
+      });
+    });
+    document.getElementById("open-all").addEventListener("click", function () {
+      document.querySelectorAll("li.branch").forEach(function (li) { setOpen(li, true); });
+    });
+    document.getElementById("chapters-only").addEventListener("click", function () {
+      document.querySelectorAll("li.branch").forEach(function (li) {
+        setOpen(li, li.classList.contains("depth-1"));
+      });
+    });
+  </script>
+</body>
+</html>
